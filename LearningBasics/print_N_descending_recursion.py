@@ -1,3 +1,4 @@
+#This program prints N numbers in descending order using recursion
 def printN (N,i):
                
     if i<1:
