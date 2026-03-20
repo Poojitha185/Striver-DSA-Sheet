@@ -1,4 +1,5 @@
-#using Euclidean algorithm:gcd(a,b)=gcd(a%b,b) if a>b and gcd(a,b)=gcd(a,b%a) if b>a
+#using Euclidean algorithm:gcd(a,b)=gcd(a%b,b) if a>b and gcd(a,b)=gcd(a,b%a) if b>a 
+#TC:O(log(min(a,b))) as we are reducing the problem size by a factor of 2 in each step and S.C:O(1) as we are not using any extra space
 def gcd(a,b):
     while a>0 and b>0:
         if a>b:
