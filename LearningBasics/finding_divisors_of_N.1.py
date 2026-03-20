@@ -1,5 +1,5 @@
 #This is optimal approach to find divisors of a number as we are only iterating till sqrt(n) and not n
-# TC:O(sqrt(n))
+# TC:O(sqrt(n)) S.C:O(n) as we are storing the factors in a list and in worst case we can have n factors for a number
 
 n=int(input("enter the number to find divisors: "))
 k=[]
