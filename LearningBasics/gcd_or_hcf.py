@@ -1,3 +1,4 @@
+#using Euclidean algorithm:gcd(a,b)=gcd(a%b,b) if a>b and gcd(a,b)=gcd(a,b%a) if b>a
 def gcd(a,b):
     while a>0 and b>0:
         if a>b:

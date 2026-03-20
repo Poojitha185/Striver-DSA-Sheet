@@ -7,6 +7,6 @@ for i in range(1,int(n**0.5)+1):
     if n%i==0:
        k.append(i)           #first factor
        if ((n//i)!=i):
-           k.append(n//i)        #second factor
-k.sort()
+           k.append(n//i)      #second factor
+k.sort()                         #T.c=o(nlogn) as we are sorting the list of factors
 print(k)
