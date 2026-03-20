@@ -1,5 +1,5 @@
 #optimal approach to check whether a number is prime or not as we are only iterating till sqrt(n) and not n
-#TC:O(sqrt(n)) 
+#TC:O(sqrt(n)) ,S.C:O(1) as we are not using any extra space
 n=int(input("enter the number to find divisors: "))
 count=0
 for i in range(1,int(n**0.5)+1):
