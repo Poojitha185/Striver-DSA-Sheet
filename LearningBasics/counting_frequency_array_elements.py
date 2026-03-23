@@ -1,3 +1,7 @@
+#Time Complexity: O(N²), as for every element we may scan the remaining elements in the array.
+
+#Space Complexity: O(N), for the visited array of size N.
+
 arr = list(map(int, input("enter array: ").split()))
 s = set(arr)
 result = []
