@@ -1,5 +1,6 @@
 #Time Complexity: O(N*logN), merging two arrays take linear time and array is recursively divided into halves (logN times).
 #Space Complexity: O(N), we use a temporary array to store elements in sorted order.
+#“In index-based merge sort, we copy back to the original array because recursion operates on subarray ranges, not separate arrays.”
 def merge(arr,low,mid,high):
     left=low
     right=mid+1
@@ -17,7 +18,7 @@ def merge(arr,low,mid,high):
     while(right<=high):
          temp.append(arr[right])
          right=right+1
-    for i in range(low, high + 1):
+    for i in range(low, high + 1):    #We reassign to arr because recursion depends on original arraywe are sorting subarrays using indicestemp is just temporary storage
             arr[i] = temp[i - low]    # temp is a new small array starting at 0
                                       # arr is a big array starting at low, so we need to do i-low to get the correct index in temp
 def merge_sort(arr,low,high):
