@@ -18,8 +18,8 @@ def merge(arr,low,mid,high):
          temp.append(arr[right])
          right=right+1
     for i in range(low, high + 1):
-            arr[i] = temp[i - low]
-
+            arr[i] = temp[i - low]    # temp is a new small array starting at 0
+                                      # arr is a big array starting at low, so we need to do i-low to get the correct index in temp
 def merge_sort(arr,low,high):
     if low>=high:
         return 
