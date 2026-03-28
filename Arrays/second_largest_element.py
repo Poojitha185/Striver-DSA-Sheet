@@ -1,3 +1,5 @@
+#Time Complexity: O(N log N), where N is the size of the array, due to the sorting step.
+#Space Complexity: O(1), as we are using a constant amount of extra space.
 def second_largest(arr,n):
     arr.sort()
     large=arr[-1]
