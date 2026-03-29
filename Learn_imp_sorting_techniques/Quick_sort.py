@@ -1,3 +1,6 @@
+#Time Complexity: O(N*logN), At each step, we divide the whole array, for that we take logN time and n steps are taken for the partitioning. In worst case i.e. when our pivot is always the greatest or the smallest element of the array, the time complexity can be O(N^2).
+#Space Complexity: O(N), auxiliary stack space.
+
 def partition(arr,low,high):
     pivot=arr[low]
     i=low
