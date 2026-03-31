@@ -1,3 +1,6 @@
+#Time Complexity: O(N), We traverse the entire array and insert elements into set.
+#Space Complexity: O(N), additional space used to store elements in set.
+
 def remove_duplicates(arr,n):
     set_1=set()
     index=0
