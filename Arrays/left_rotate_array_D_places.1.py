@@ -1,3 +1,5 @@
+#TC:O(2N)
+#SC:O(1), as we are using a constant amount of extra space to store temporary variables and not using extra space for new array.
 def reverse(arr, start, end):
     while start < end:
         arr[start], arr[end] = arr[end], arr[start]
