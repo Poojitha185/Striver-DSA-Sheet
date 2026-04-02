@@ -1,3 +1,5 @@
+#TC:O(N) as we are iterating through the array once to move the non-zero elements to the temp array and then again iterating through the temp array to copy the non-zero elements back to the original array, and finally iterating through the remaining positions in the original array to fill them with zeros.
+#SC:O(N), as we are using an additional array temp to store the non-zero elements
 def move_zero_end(arr,n):
     temp=[]
     for i in range(n):
