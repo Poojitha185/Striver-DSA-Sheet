@@ -1,3 +1,5 @@
+#TC:O(N),at worst case and average case if element is not there or at last index andO(1) at best case if element is at first index
+#SC:O(1)
 def linear_search(arr,n,target):
     for i in range(n):
         if arr[i]==target:
