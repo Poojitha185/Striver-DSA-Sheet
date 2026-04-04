@@ -1,3 +1,5 @@
+#TC:O(n1*n2), as we are using nested loops to compare each element of arr1 with each element of arr2.
+#SC:O(n2), as we are using an additional visited array of size n2 to keep track of the elements in arr2 that have already been included in the intersection.
 def intersection(arr1,arr2,n1,n2):
     visited=[0]*n2
     ans=[]
