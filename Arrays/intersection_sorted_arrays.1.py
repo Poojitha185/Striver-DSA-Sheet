@@ -1,3 +1,6 @@
+#TC:O(n1+n2), as we are iterating through both arrays once to find the common elements.
+#SC=O(1), as we are not using any additional space to store the common elements, we are modifying the original array in place.
+#Two pointer approach
 def intersection(arr1,arr2,n1,n2):
        ans=[]
        i=0
