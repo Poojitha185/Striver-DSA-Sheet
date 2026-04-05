@@ -1,3 +1,5 @@
+#Time Complexity: O(N), since we scan the array once.
+#Space Complexity: O(1), as only constant extra variables are used.
 def maximum_consecutive_ones(arr):
     cnt=0
     maxi=0
