@@ -1,9 +1,12 @@
+#TC~O(N*N*N)
+#SC:O(1), as we are not using any extra space.
 def longest_subarray_sum_k(arr,n,k):
     length=0
-    for i in range(n):
-        for j in range(i,n):
+    #creating all possible subarrays and calculating their sum and comparing with k
+    for i in range(n):                 #tc:o(n) as we are iterating through the array once
+        for j in range(i,n):           #tc~o(n) as we are iterating through the array once for each element
            sum=0
-           for l in range(i,j+1):
+           for l in range(i,j+1):      #tc~o(n), as we are iterating through the array once for each element in the subarray
                sum=sum+arr[l]
            if sum==k:
             length=max(length,j-i+1) 
