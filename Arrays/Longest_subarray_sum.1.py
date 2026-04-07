@@ -1,3 +1,7 @@
+#Time Complexity: O(N), where N is the size of the array. The algorithm traverses the array once with two pointers, making it linear in time complexity.
+#Space Complexity: O(1), as it uses a constant amount of space.
+#using two pointers approach 
+#It is optimal solution for array contain zeros and positives
 def longest_subarray_sum(arr,n,k):
     right=0
     left=0
