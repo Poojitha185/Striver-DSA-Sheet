@@ -1,3 +1,7 @@
+#TC:O(N), as we are iterating through the array once to calculate the prefix sums and check for the required sum.
+#SC:O(N), as we are using a dictionary to store the prefix sums and their corresponding indices, which can take up to O(N) space in the worst case when all prefix sums are distinct.
+#using prefix sum and dictionary approach
+#This is optimal solution only when array contains Negatives,Positives and Zeros.
 def longest_subarray_sum_k(arr, k):
     prefix_sum = 0
     max_len = 0
