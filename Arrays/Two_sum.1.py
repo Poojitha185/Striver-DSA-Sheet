@@ -1,5 +1,6 @@
 #Time Complexity: O(N) because we traverse the array only once, and each lookup or insertion in the hash map takes O(1) on average, where N is the size of the array.
 #Space Complexity: O(N) since in the worst case we may store all elements of the array in the hash map.
+#Thisis optimal solution when we return the indexes of the two numbers that add up to the target sum.
 def two_sum(arr,n,target):
    seen={}
    for i,num in enumerate(arr):
