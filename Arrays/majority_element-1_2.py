@@ -3,6 +3,12 @@
 #Space Complexity: O(1), as we are using only a constant amount of extra space.
 
 #Boyer-Moore Voting Algorithm to find the majority element in an array.
+#It uses two important heuristics:
+#Bad Character Rule
+#If a mismatch happens, shift the pattern so the mismatched character aligns with its last occurrence in the pattern.
+#Good Suffix Rule
+#If a substring matched before mismatch, shift pattern to align with another occurrence of that substring.
+
 def majority_element(arr,n):
     ele=0
     cnt=0
