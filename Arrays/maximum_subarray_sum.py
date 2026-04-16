@@ -1,36 +1,17 @@
-from typing import List
 
-class Solution:
-    # Function to find maximum sum of subarrays
-    def maxSubArray(self, nums: list[int]) -> int:
-        
-        """ Initialize maximum sum with
-        the smallest possible integer"""
-        maxi = float('-inf')
+#Time Complexity: O(N^3), where N is the size of the array. This is because we have three nested loops: one for the starting index, one for the ending index, and one for calculating the sum of the subarray.
 
-        # Iterate over each starting index of subarrays
-        for i in range(len(nums)):
-            
-            """ Iterate over each ending index
-            of subarrays starting from i"""
-            for j in range(i, len(nums)):
-                
-                """ Variable to store the sum
-                of the current subarray"""
-                sum = 0
+#Space Complexity: O(1), as we are using a constant amount of space for variables, regardless of the input size.
 
-                # Calculate the sum of subarray nums[i...j]
-                for k in range(i, j + 1):
-                    sum += nums[k]
-
-                """ Update maxi with the maximum of itscurrent
-                value and the sum of the current subarray"""
-                maxi = max(maxi, sum)
-
-        # Return the maximum subarray sum found
-        return maxi
-
-# Test
-arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
-solution = Solution()
-print("Maximum subarray sum:", solution.maxSubArray(arr))
+def maximum_subarray_sum(arr,n):
+    maxi=arr[0]
+    for i in range(n):
+        for j in range(i,n):
+            sum=0
+            for k in range(i,j+1):
+                sum+=arr[k]
+            maxi=max(maxi,sum)
+    return maxi
+arr=list(map(int,input("enter the array: ").split(',')))
+n=len(arr)
+print("The maximum subarray sum is: ",maximum_subarray_sum(arr,n))
