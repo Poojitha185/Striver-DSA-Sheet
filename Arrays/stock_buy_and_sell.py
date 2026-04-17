@@ -1,3 +1,7 @@
+#Time Complexity: O(n²) Because for each element, we are checking every future element nested loops.
+
+#Space Complexity: O(1) No extra space used, only variables for storing max profit.
+
 def stock_buy_and_sell(arr,n):
     maxi=0
     profit=0
