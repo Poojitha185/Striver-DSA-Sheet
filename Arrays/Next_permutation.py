@@ -1,3 +1,6 @@
+#Time Complexity: O(N!*N), since we are generating all possible permutations, it takes N! time.
+#Space Complexity: O(N!), storing all permutations.
+
 from itertools import permutations
 def next_permutation(arr,n):
     perm=sorted(set(permutations(arr)))    #permutations(n) generates all possible permutations of the input array and give list of tupeles containing a permutation of the array and to delete duplicates we use set and pass set to sorted to sort the list of tuples and answer will return in list format 
