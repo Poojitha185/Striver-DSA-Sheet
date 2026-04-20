@@ -1,3 +1,8 @@
+#Time Complexity: O(n log n), where n is the number of elements in the array. This is due to the sorting step, which is the most time-consuming operation in this approach.
+#Space Complexity: O(1), as we are using only a constant amount of extra space.
+#This method disorts the given array 
+#It counts the longest consecutive sequence by comparing adjacent elements. It keeps track of the current count of consecutive numbers and updates the longest count whenever a break in the sequence is found.
+
 def longest_consecutive_sequence(arr,n):
     if n==0:
         return 0
