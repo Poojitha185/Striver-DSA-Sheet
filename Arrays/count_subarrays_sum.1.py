@@ -1,3 +1,8 @@
+#Time Complexity: O(n) We traverse the array once, where n is the size of the array. Each prefix sum operation and hashmap lookup is O(1) on average.
+
+#Space Complexity: O(n) In the worst case, all prefix sums are distinct and stored in the hashmap, so space grows linearly with input size.
+
+#using prefixsum stored in dictionary to count the number of subarrays with sum k approach
 def count_subarrays_sum(arr,k,n):
     prefixsum_count={}
     count=0
