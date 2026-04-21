@@ -1,3 +1,7 @@
+#Time Complexity: O(n²),We use two nested loops to check all subarrays, where n is the size of the array.
+
+#Space Complexity: O(1),Only a few extra variables are used, so constant extra space regardless of input size.
+
 def count_subarray_sum(arr,k,n):
     total=0
     for i in range(n):
