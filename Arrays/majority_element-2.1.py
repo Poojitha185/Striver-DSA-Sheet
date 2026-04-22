@@ -1,3 +1,7 @@
+#Time Complexity: O(N^2), where N is the size of the array. This is because for each element, we are traversing the entire array to count its occurrences.
+
+#Space Complexity: O(1), as we are using a constant amount of space for the result array, which can hold at most 2 elements.
+
 def majority_element(arr,n):
     result=[]
     for i in range(n):
