@@ -1,3 +1,7 @@
+#Time Complexity: O(N), where N is the size of the input array. We traverse the array twice: once to find potential candidates and once to validate them.
+
+#Space Complexity: O(1), as we are using a constant amount of space for the counters and candidate elements, regardless of the input size.
+
 def majority_element2(arr,n):
     cnt1,cnt2=0,0
     ele1,ele2=0,0
