@@ -1,3 +1,6 @@
+#Time Complexity: O(N^2), for every interval we check all future intervals.
+#Space Complexity: ON), additonal space used to store the non-overlapping intervals.
+
 def merge_overlapping_subintervald(arr,n):
     arr.sort()
     ans=[]
