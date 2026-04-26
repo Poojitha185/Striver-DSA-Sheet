@@ -1,3 +1,6 @@
+#Time Complexity: O(N*logN) + O(N), we sort the entire array and then merge them in a single pass.
+#Space Complexity: O(N), additional space used to store the non-overlapping intervals.
+
 def merge_overlapping_subintervals(arr,n):
      arr.sort()
      merged=[]
