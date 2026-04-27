@@ -1,3 +1,6 @@
+#Time Complexity: O(N+M), we traverse both the arrays exactly once.
+#Space Complexity: O(1), constant extra space is used to store pointers.
+#using Three pointers , we start from the end of both arrays and compare the elements. We place the larger element at the end of the first array and move the pointers accordingly. This way, we can merge the two sorted arrays in place without using any extra space.
 def merge_two_sorted_arrays(arr1,arr2,m,n):
     i=m-1
     j=n-1
