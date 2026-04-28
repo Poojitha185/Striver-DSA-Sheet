@@ -1,3 +1,9 @@
+#Time Complexity: O(2*N), where N is the size of the array. This is because we are iterating through the array once to build the dictionary and then iterating through the dictionary to find the repeating and missing numbers.
+
+#Space Complexity: O(N), as we are using an additional dictionary of size N+1 to store the frequency of each element.
+
+#Dictionary approach: We create a dictionary to count the frequency of each element in the array. Then we iterate through the numbers from 1 to n and check the frequency in the dictionary. If the frequency is 2, it means that number is repeating, and if the frequency is 0, it means that number is missing. Finally, we return the repeating and missing numbers as a list.
+
 def repeating_and_missing_numbers(arr, n):
     k = {}
     repeating = 0
