@@ -1,3 +1,9 @@
+#Time Complexity: O(N), where N is the size of the array. This is because we are iterating through the array to calculate the sums and sums of squares.
+
+#Space Complexity: O(1), as we are using a constant amount of space for variables, regardless of the input size.
+
+#using formulas approach
+
 def repeating_and_missing_numbers(arr, n):
     sum_of_n = n * (n + 1) // 2
     sum_of_n_squared = n * (n + 1) * (2 * n + 1) // 6
