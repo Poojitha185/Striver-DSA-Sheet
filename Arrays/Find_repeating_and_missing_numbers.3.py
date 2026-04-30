@@ -1,3 +1,7 @@
+#Time Complexity: O(N), where N is the size of the array. This is because we are iterating through the array to calculate the XOR values.
+
+#Space Complexity: O(1), as we are using a constant amount of space for variables, regardless of the input size.
+
 class Solution:
     # Function to find repeating and missing numbers
     def findMissingRepeatingNumbers(self, nums):
