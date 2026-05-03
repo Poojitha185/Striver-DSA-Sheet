@@ -1,5 +1,4 @@
-#Time Complexity: O(N), every element of array is visited once.
-#Space Complexity: O(1) , only constant variables are used.
+
 
 class Solution:
     # This function returns the maximum product
