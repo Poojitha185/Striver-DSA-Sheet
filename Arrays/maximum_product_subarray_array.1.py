@@ -4,40 +4,23 @@
 #Time Complexity: O(N), every element of array is visited once.
 #Space Complexity: O(1), constant number of variables are used.
 
-class Solution:
-    def maxProductSubArray(self, arr):
-        # Store length of array
-        n = len(arr)
+def max_product_subarray(arr):
+    prefix = 1
+    suffix = 1
+    maxi = float('-inf')
+    n = len(arr)
 
-        # Initialize prefix and suffix products
-        pre, suff = 1, 1
+    for i in range(n):
+        prefix *= arr[i]
+        suffix *= arr[n - 1 - i]
 
-        # Initialize answer as negative infinity
-        ans = float('-inf')
+        maxi = max(maxi, prefix, suffix)
 
-        # Traverse from both front and back
-        for i in range(n):
-            # Reset prefix if zero
-            if pre == 0:
-                pre = 1
+        if prefix == 0:
+            prefix = 1
+        if suffix == 0:
+            suffix = 1
 
-            # Reset suffix if zero
-            if suff == 0:
-                suff = 1
-
-            # Multiply prefix with front element
-            pre *= arr[i]
-
-            # Multiply suffix with back element
-            suff *= arr[n - i - 1]
-
-            # Update maximum product so far
-            ans = max(ans, pre, suff)
-
-        # Return the result
-        return ans
-
-# Sample usage
-arr = [2, 3, -2, 4]
-sol = Solution()
-print(sol.maxProductSubArray(arr))
+    return maxi
+arr = list(map(int, input("enter the array: ").split(',')))
+print("The maximum product subarray is:", max_product_subarray(arr))
