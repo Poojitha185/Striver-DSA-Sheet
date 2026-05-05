@@ -1,3 +1,7 @@
+#Time Complexity: O(logN), in the algorithm, in every step, we are basically dividing the search space into 2 equal halves. This is actually equivalent to dividing the size of the array by 2, every time. After a certain number of divisions, the size will reduce to such an extent that we will not be able to divide that anymore and the process will stop. The number of total divisions will be equal to the time complexity. 
+#Space Complexity: O(1), no extra space being used
+#Binary Search approach(Recursive implementation)
+
 def binary_search_recursive(arr,low,high,target,n):
     if low>high:
         return -1
