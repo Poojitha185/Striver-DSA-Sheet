@@ -1,3 +1,7 @@
+#Time Complexity: O(logn), used for typical binary search
+#Space Complexity: O(1), no extra space used
+#using binary search approach
+
 def upper_bound(arr,x,n):
     low=0
     high=n-1
