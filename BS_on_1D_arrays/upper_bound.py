@@ -1,3 +1,6 @@
+#Time Complexity: O(N), where N = size of the given array.
+#Space Complexity: O(1), no extra space used.
+#using linear search
 def upper_bound(arr,n,x):
     for i in range(n):
         if arr[i]>x:
