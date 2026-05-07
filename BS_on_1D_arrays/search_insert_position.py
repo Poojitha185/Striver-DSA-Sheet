@@ -1,3 +1,7 @@
+#Time Complexity: O(logN), where N = size of the given array.
+
+#Space Complexity: O(1) as we are using no extra space.
+
 class BinarySearchInsert:
     def search_insert(self, arr, x):
         n = len(arr)
