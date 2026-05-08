@@ -2,6 +2,8 @@
 
 #Space Complexity: O(1). No extra space used
 
+#using binary search approach
+
 def floor(arr,n,k):
     low=0
     high=n-1
