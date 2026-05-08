@@ -1,12 +1,9 @@
 #Time Complexity: O(logN), where N = size of the given array.
 
 #Space Complexity: O(1) as we are using no extra space.
-
-class BinarySearchInsert:
-    def search_insert(self, arr, x):
-        n = len(arr)
+def search_insert(arr, x, n):
         low, high = 0, n - 1
-        ans = n  # Default if x is larger than all elements
+        ans = n  
 
         while low <= high:
             mid = (low + high) // 2
@@ -18,11 +15,8 @@ class BinarySearchInsert:
                 low = mid + 1  # Look on right side
 
         return ans
+arr=list(map(int,input("enter the array: ").split(',')))
+target=int(input("enter the target: "))
+n=len(arr)
+print("the target is found at index:",search_insert(arr,target,n))
 
-# Main execution
-if __name__ == "__main__":
-    arr = [1, 2, 4, 7]
-    x = 6
-    obj = BinarySearchInsert()
-    index = obj.search_insert(arr, x)
-    print(f"The index is: {index}")
