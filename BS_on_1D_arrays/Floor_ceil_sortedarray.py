@@ -1,3 +1,7 @@
+#Time Complexity:O(logN), where N = size of the given array. We are using the Binary Search algorithm
+
+#Space Complexity: O(1). No extra space used
+
 def floor(arr,n,k):
     low=0
     high=n-1
