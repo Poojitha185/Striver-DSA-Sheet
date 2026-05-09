@@ -1,3 +1,9 @@
+#Time Complexity: O(log N), where N is the size of the array. This is because we are using binary search, which reduces the search space by half in each iteration.
+
+#Space Complexity: O(1), as we are using a constant amount of space for the result variable and the loop indices. We are not using any additional data structures that grow with the input size.
+
+#Binary search approach
+
 def first_occurrence(arr, n, target):
     low = 0
     high = n - 1
