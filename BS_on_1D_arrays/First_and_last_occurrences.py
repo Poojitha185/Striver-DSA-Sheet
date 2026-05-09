@@ -1,3 +1,6 @@
+#TC: O(N), where N is the size of the array. This is because we are iterating through the array once to find the target element.
+#SC: O(1), as we are using a constant amount of space for variables, regardless of the input size.
+
 def first_last_occurrence(arr, n, target):
     first = -1
     last = -1
