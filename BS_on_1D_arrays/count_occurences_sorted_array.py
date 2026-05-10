@@ -1,3 +1,8 @@
+#Time Complexity: O(N), We are traversing the whole array.
+
+#Space Complexity: O(1), as we are not using any extra space.
+
+#using linear search approach
 def count_occurences(arr,n,target):
     count=0
     for i in range(n):
