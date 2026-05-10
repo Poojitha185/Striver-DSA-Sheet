@@ -1,3 +1,9 @@
+#Time Complexity: O(2*logN), We are basically using the binary search algorithm twice.
+
+#Space Complexity: O(1), as we are using no extra space.
+
+#using binary search(bcz sorted array) approach
+
 def first_occurence(arr,n,x):
     first=-1
     low,high=0,n-1
