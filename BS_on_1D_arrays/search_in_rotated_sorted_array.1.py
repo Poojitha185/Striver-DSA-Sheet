@@ -1,3 +1,9 @@
+#Time Complexity: O(log N),We eliminate half of the search space in each iteration using binary search.
+
+#Space Complexity: O(1),We use only a few variables (low, high, mid) no extra space used.
+
+#Binary search approach
+
 def search(arr,n,target):
     low,high=0,n-1
     while low<=high:
