@@ -1,3 +1,9 @@
+#Time Complexity: O(N),We may need to check every element in the worst case if the target is not present.
+
+#Space Complexity: O(1),No extra space is used; only constant variables.
+
+#linear search approach
+
 def search(arr,n,target):
     for i in range(n):
         if arr[i]==target:
