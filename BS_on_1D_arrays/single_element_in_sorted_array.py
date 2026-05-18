@@ -1,6 +1,9 @@
+#Time Complexity = O(n²)
+#Space Complexity = O(1)
+
 def single_element(arr,n):
-    for i in range(n):
-        k=arr.count(arr[i])
+    for i in range(n):         #tc:o(n)
+        k=arr.count(arr[i])    #tc:o(n)
         if k==1:
          return arr[i]
     return 0
