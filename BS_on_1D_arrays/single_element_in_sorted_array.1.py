@@ -1,3 +1,9 @@
+#Time Complexity: O(N), N = size of the given array.We are traversing the entire array.
+
+#Space Complexity: O(1) as we are not using any extra space.
+
+#traverse through the array and compare each element with its neighbors, we can detect the unique number. If an element is not equal to its left and right neighbors, then it must be the single number.
+
 def single_element(arr,n):
     if n==0:
       return arr[0]
