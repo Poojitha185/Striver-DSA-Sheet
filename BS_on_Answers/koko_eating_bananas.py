@@ -1,3 +1,6 @@
+#Time Complexity: O(n * max(a[])), since for each possible speed we go through all the piles.
+#Space Complexity: O(1), since the algorithm does not use any additional space or data structures.
+
 import math
 
 class Solution:
