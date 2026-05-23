@@ -4,8 +4,6 @@
 
 #using binary search
 
-#
-
 def single_element(arr,n):
     if n==1:
         return arr[0]
