@@ -1,3 +1,11 @@
+#Time Complexity: O(logN), N = size of the given array ,as we are basically using the Binary Search algorithm.
+
+#Space Complexity: O(1) as we are not using any extra space.
+
+#using binary search
+
+#
+
 def single_element(arr,n):
     if n==1:
         return arr[0]
