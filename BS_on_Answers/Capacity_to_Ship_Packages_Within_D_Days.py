@@ -1,3 +1,7 @@
+#Time Complexity: O((sum_weights - max_weight) * N), where N is the number of packages. For each capacity between max weight and total sum, we simulate shipping over N packages.
+
+#Space Complexity: O(1), only constant extra space is used.
+
 class Solution:
     # Function to check how many days needed for given capacity
     def daysNeeded(self, weights, capacity):
