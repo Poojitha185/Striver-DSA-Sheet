@@ -1,33 +1,17 @@
-#Time Complexity: O(n * max(a[])), since for each possible speed we go through all the piles.
-#Space Complexity: O(1), since the algorithm does not use any additional space or data structures.
-
 import math
-
-class Solution:
-    # Function to calculate total hours for given speed
-    def calculateTotalHours(self, a, hourly):
-        totalHours = 0
-        for pile in a:
-            # Add hours using ceil
-            totalHours += math.ceil(pile / hourly)
-        return totalHours
-
-    # Function to find minimum eating speed
-    def minEatingSpeed(self, a, h):
-        # Find maximum pile size
-        maxVal = max(a)
-
-        # Try every possible speed
-        for i in range(1, maxVal + 1):
-            hours = self.calculateTotalHours(a, i)
-
-            # If hours fit within h
-            if hours <= h:
-                return i
-        return maxVal
-
-# Driver code
-a = [3, 6, 7, 11]
-h = 8
-obj = Solution()
-print(obj.minEatingSpeed(a, h))
+from math import ceil
+def min_integer(arr,n,h):
+    reqtime=0
+    for i in range(1,max(arr)+1):  #bcz its starting from 1
+        reqtime=totaltime(arr,i)
+        if reqtime<=h:
+         return i
+def totaltime(arr,i):
+    totaltime=0
+    for j in arr:
+      totaltime+=ceil(j/i)
+    return totaltime
+arr=list(map(int,input("enter the array: ").split(',')))
+n=len(arr)
+h=int(input("enter the hours: "))
+print("The minimum integer is:",min_integer(arr,n,h))
