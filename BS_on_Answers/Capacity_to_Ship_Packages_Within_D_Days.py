@@ -2,6 +2,8 @@
 
 #Space Complexity: O(1), only constant extra space is used.
 
+#A brute force way is to check every capacity starting from the maximum single package weight (since capacity can't be less than the heaviest package) up to the sum of all package weights (which guarantees all packages shipped in one day). For each capacity, simulate the shipping process day by day. The smallest capacity that ships all packages in ≤ d days is the answer.
+
 def min_days(arr,n,d):
     for i in range(max(arr),sum(arr)+1):
         reqdays=totaldays(arr,i)
