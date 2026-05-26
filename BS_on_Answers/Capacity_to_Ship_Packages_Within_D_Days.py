@@ -2,51 +2,22 @@
 
 #Space Complexity: O(1), only constant extra space is used.
 
-class Solution:
-    # Function to check how many days needed for given capacity
-    def daysNeeded(self, weights, capacity):
-        # Initialize day count to 1
-        days = 1
-        # Current load for the day
-        currentLoad = 0
-
-        # Iterate over all package weights
-        for w in weights:
-            # If adding weight exceeds capacity
-            if currentLoad + w > capacity:
-                # Increase day count and reset load
-                days += 1
-                currentLoad = w
-            else:
-                # Otherwise, add weight to current load
-                currentLoad += w
-        # Return total days needed
-        return days
-
-    # Function to find minimum ship capacity to ship in d days
-    def shipWithinDays(self, weights, d):
-        # Find maximum weight as minimum capacity
-        left = max(weights)
-        # Find total sum as maximum capacity
-        right = sum(weights)
-
-        # Iterate from minimum to maximum capacity
-        for capacity in range(left, right + 1):
-            # Calculate days needed for current capacity
-            needed = self.daysNeeded(weights, capacity)
-            # If days needed are less than or equal to d, return capacity
-            if needed <= d:
-                return capacity
-        # Should never reach here given constraints
-        return right
-
-
-if __name__ == "__main__":
-    # Input weights
-    weights = [5,4,5,2,3,4,5,6]
-    # Days to ship
-    d = 5
-    # Create Solution instance
-    sol = Solution()
-    # Call the function and print result
-    print(sol.shipWithinDays(weights, d))
+def min_days(arr,n,d):
+    for i in range(max(arr),sum(arr)+1):
+        reqdays=totaldays(arr,i)
+        if reqdays <= d:
+            return i
+def totaldays(arr,capacity):
+    days=1
+    load=0
+    for j in arr:
+        if((load+j)>capacity):
+            days+=1
+            load=j
+        else:
+            load+=j
+    return days
+arr=list(map(int,input("enter the array: ").split(',')))
+n=len(arr)
+d=int(input("enter the days: "))
+print("The minimum days required to ship all packages is:",min_days(arr,n,d))
