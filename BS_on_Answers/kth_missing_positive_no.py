@@ -1,3 +1,7 @@
+#Time Complexity: O(N), where N = size of the given array.
+
+#Space Complexity: O(1), no extra space used.
+
 def kth_missing_number(arr, k):
     for i in arr:
         if i <= k:
