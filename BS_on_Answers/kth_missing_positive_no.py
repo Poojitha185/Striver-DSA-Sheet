@@ -11,4 +11,4 @@ def kth_missing_number(arr, k):
     return k
 arr = list(map(int, input("Enter the array: ").split(',')))
 k = int(input("Enter the value of k: "))
-print(kth_missing_number(arr, k))
+print("The kth missing positive number is:", kth_missing_number(arr, k))
