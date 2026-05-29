@@ -1,3 +1,7 @@
+#Time Complexity: O(logn), used for typical binary search
+
+#Space Complexity: O(1), no extra space used
+
 class MissingKFinder:
     # Binary search to find the k-th missing number
     def missing_k(self, vec, k):
