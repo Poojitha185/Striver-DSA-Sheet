@@ -1,3 +1,6 @@
+#Time Complexity: O((max(arr[])-min(arr[])+1) * N), where {max(arr[]) -> maximum element of the array, min(arr[]) -> minimum element of the array, N = size of the array}.
+#Space Complexity : O(1) as we are not using any extra space to solve this problem.
+
 class RoseGarden:
     # Function to check if it's possible to make 'm' bouquets on 'day'
     def is_possible(self, bloom_days, day, m, k):
