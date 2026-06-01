@@ -1,3 +1,7 @@
+
+#Time Complexity: O(logn), used for typical binary search
+
+#Space Complexity: O(1), no extra space used
 class RoseGarden:
 
     # Function to check if we can form m bouquets by 'day'
