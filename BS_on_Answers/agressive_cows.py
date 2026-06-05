@@ -1,7 +1,5 @@
 #Time Complexity: O(NlogN) + O(N *(max(stalls[])-min(stalls[]))), where N = size of the array, max(stalls[]) = maximum element in stalls[] array, min(stalls[]) = minimum element in stalls[] array.
-
 #Space Complexity: O(1) as we are not using any extra space to solve this problem.
-
 class Solution:
     # Function to check if cows can be placed with min distance d
     def canPlace(self, stalls, cows, d):
