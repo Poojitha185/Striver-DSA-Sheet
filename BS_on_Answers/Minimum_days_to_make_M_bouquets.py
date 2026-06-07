@@ -1,3 +1,6 @@
+#Time Complexity: O((max(arr[])-min(arr[])+1) * N), where {max(arr[]) -> maximum element of the array, min(arr[]) -> minimum element of the array, N = size of the array}.
+#Space Complexity : O(1) as we are not using any extra space to solve this problem.
+
 def possible(arr,n,i,m,k):
     count=0
     no_of_bou=0
@@ -7,7 +10,7 @@ def possible(arr,n,i,m,k):
         else:
             no_of_bou+=(count//k)
             count=0
-    no_of_bou+=(count//k)
+    no_of_bou+=(count//k)            #To account for the last bouquet if the last flowers are blooming before or on day i
     if no_of_bou>=m:
         return True
     else:
