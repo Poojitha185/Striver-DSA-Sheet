@@ -1,48 +1,25 @@
-#Time Complexity: O((max(arr[])-min(arr[])+1) * N), where {max(arr[]) -> maximum element of the array, min(arr[]) -> minimum element of the array, N = size of the array}.
-#Space Complexity : O(1) as we are not using any extra space to solve this problem.
-
-class RoseGarden:
-    # Function to check if it's possible to make 'm' bouquets on 'day'
-    def is_possible(self, bloom_days, day, m, k):
-        count = 0  # count of consecutive bloomed flowers
-        bouquets = 0
-
-        for bloom in bloom_days:
-            if bloom <= day:
-                count += 1
-                if count == k:
-                    bouquets += 1
-                    count = 0
-            else:
-                count = 0
-
-        return bouquets >= m
-
-    # Main function to find the minimum day to make 'm' bouquets
-    def min_days_to_make_bouquets(self, bloom_days, m, k):
-        total_flowers = m * k
-        if total_flowers > len(bloom_days):
-            return -1
-
-        low = min(bloom_days)
-        high = max(bloom_days)
-
-        for day in range(low, high + 1):
-            if self.is_possible(bloom_days, day, m, k):
-                return day
-
+def possible(arr,n,i,m,k):
+    count=0
+    no_of_bou=0
+    for j in range(n):
+        if arr[j]<=i:
+            count+=1
+        else:
+            no_of_bou+=(count//k)
+            count=0
+    no_of_bou+=(count//k)
+    if no_of_bou>=m:
+        return True
+    else:
+        return False
+def minimum_day(arr,n,m,k):
+    if(m*k>n):
         return -1
-
-
-# Example usage
-bloom_days = [7, 7, 7, 7, 13, 11, 12, 7]
-k = 3
-m = 2
-
-garden = RoseGarden()
-result = garden.min_days_to_make_bouquets(bloom_days, m, k)
-
-if result == -1:
-    print("We cannot make m bouquets.")
-else:
-    print(f"We can make bouquets on day {result}")
+    for i in range(min(arr),max(arr)):
+        if(possible(arr,n,i,m,k)==True):
+         return i
+arr=list(map(int,input("enter the array: ").split(',')))
+n=len(arr)
+m=int(input("enter the number of bouquets: "))
+k=int(input("enter the number of flowers in each bouquet: "))
+print("The minimum day required to make bouquets is:",minimum_day(arr,n,m,k))
