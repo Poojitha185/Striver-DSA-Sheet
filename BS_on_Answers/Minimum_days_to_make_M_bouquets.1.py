@@ -1,52 +1,30 @@
-
-#Time Complexity: O(logn), used for typical binary search
-
-#Space Complexity: O(1), no extra space used
-class RoseGarden:
-
-    # Function to check if we can form m bouquets by 'day'
-    def is_possible(self, bloom_days, day, m, k):
-        count = 0  # count of consecutive bloomed flowers
-        bouquets = 0  # number of bouquets formed
-
-        for bloom in bloom_days:
-            if bloom <= day:
-                count += 1
-                if count == k:
-                    bouquets += 1  # one bouquet formed
-                    count = 0
-            else:
-                count = 0  # reset if a flower is not ready
-
-        return bouquets >= m
-
-    # Main function to find the minimum day to make m bouquets
-    def rose_garden(self, bloom_days, k, m):
-        if m * k > len(bloom_days):
-            return -1  # not enough flowers
-
-        low = min(bloom_days)
-        high = max(bloom_days)
-        answer = -1
-
-        while low <= high:
-            mid = (low + high) // 2
-            if self.is_possible(bloom_days, mid, m, k):
-                answer = mid  # try to find smaller day
-                high = mid - 1
-            else:
-                low = mid + 1  # need more days
-
-        return answer
-
-
-# Driver code
-garden = RoseGarden()
-bloom_days = [7, 7, 7, 7, 13, 11, 12, 7]
-k = 3
-m = 2
-result = garden.rose_garden(bloom_days, k, m)
-if result == -1:
-    print("We cannot make m bouquets.")
-else:
-    print(f"We can make bouquets on day {result}")
+def possible(arr,n,i,m,k):
+    count=0
+    no_of_bou=0
+    for j in range(n):
+        if arr[j]<=i:
+            count+=1
+        else:
+            no_of_bou+=(count//k)
+            count=0
+    no_of_bou+=(count//k)            #To account for the last bouquet if the last flowers are blooming before or on day i
+    if no_of_bou>=m:
+        return True
+    else:
+        return False
+def minimum_day(arr,n,m,k):
+    if(m*k>n):
+        return -1
+    low,high=min(arr),max(arr)
+    while low<=high:
+        mid=(low+high)//2
+        if (possible(arr,n,mid,m,k)==True):
+            high=mid-1
+        else:
+            low=mid+1
+    return low
+arr=list(map(int,input("enter the array: ").split(',')))
+n=len(arr)
+m=int(input("enter the number of bouquets: "))
+k=int(input("enter the number of flowers in each bouquet: "))
+print("The minimum day required to make bouquets is:",minimum_day(arr,n,m,k))
