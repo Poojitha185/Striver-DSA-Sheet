@@ -1,3 +1,9 @@
+#Time Complexity: O(NlogN) + O(N *(max(stalls[])-min(stalls[]))), where N = size of the array, max(stalls[]) = maximum element in stalls[] array, min(stalls[]) = minimum element in stalls[] array.
+
+#Space Complexity: O(1) as we are not using any extra space to solve this problem.
+
+#The basic idea is to test every possible distance between 1 and the difference between the farthest and nearest stalls. The largest distance for which canWePlace() returns true will be our answer.
+
 def canplace(arr,d,cows,n):
     count=1
     lastcow=arr[0]
