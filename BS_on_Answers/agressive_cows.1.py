@@ -1,3 +1,13 @@
+#Time Complexity: O(NlogN) + O(N * log(max(stalls[])-min(stalls[]))), where N = size of the array, max(stalls[]) = maximum element in stalls[] array, min(stalls[]) = minimum element in stalls[] array.
+
+#Space Complexity: O(1) as we are not using any extra space to solve this problem.
+
+#Use Binary Search: Repeat the process until the search range is exhausted:
+#Pick the middle distance: Test this distance as a possible answer.
+#Check if it works:
+#If it works: Try to increase the distance to see if a larger one is possible.
+#If it doesn’t work: Decrease the distance and test smaller ones.
+
 def canplace(arr,d,cows,n):
     count=1
     lastcow=arr[0]
