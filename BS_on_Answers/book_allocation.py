@@ -5,7 +5,6 @@
 #Next, inside the loop, we will send each ‘pages’, to the function countStudents() function to get the number of students to whom we can allocate the books.
 #The first number of pages, ‘pages’, for which the number of students will be equal to ‘m’, will be our answer. So, we will return that particular ‘pages’.
 
-
 def ispossible(arr,j,n,s):
     no_of_students=1
     pages=0
