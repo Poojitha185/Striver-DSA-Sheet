@@ -1,3 +1,6 @@
+#TC:Merging arrays: O(m + n)
+#SC:Extra space for merged array: O(m + n)
+
 def median(arr1,arr2,m,n):
     i=0
     j=0
@@ -15,13 +18,10 @@ def median(arr1,arr2,m,n):
     while(j<n):
         k.append(arr2[j])
         j=j+1
-    low=0
-    high=len(k)-1
-    mid=(low+high)//2
     if (len(k))%2==0:
-        return((k[mid]+k[mid+1])/2)
+        return(k[len(k)//2 - 1] + k[len(k)//2]) / 2
     else:
-        return k[mid]
+        return k[len(k)//2]
 arr1=list(map(int,input("enter the first array: ").split(',')))
 arr2=list(map(int,input("enter the first array: ").split(',')))
 m=len(arr1)
