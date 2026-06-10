@@ -4,14 +4,10 @@
 # to achieve O(log(min(m,n))) complexity.
 def median(arr1, arr2):
     m, n = len(arr1), len(arr2)
-
-    # Always binary search on smaller array
     if m > n:
         return median(arr2, arr1)
-
     low = 0
     high = m
-
     while low <= high:
         cut1 = (low + high) // 2                              #cut1 = number of elements taken from arr1 into the left half.
         cut2 = (m + n + 1) // 2 - cut1                        #cut2 = remaining elements required from arr2 ,so that the left half contains exactly (m+n+1)//2 elements. 
@@ -23,15 +19,11 @@ def median(arr1, arr2):
         r2 = float('inf') if cut2 == n else arr2[cut2]
 
         if l1 <= r2 and l2 <= r1:
-
             if (m + n) % 2 == 0:
                 return (max(l1, l2) + min(r1, r2)) / 2
-
             return max(l1, l2)
-
         elif l1 > r2:                     # If l1 > r2, we have taken too many elements from arr1, so move the cut to the left.
             high = cut1 - 1
-
         else:
             low = cut1 + 1
 arr1=list(map(int,input("enter the first array: ").split(',')))
