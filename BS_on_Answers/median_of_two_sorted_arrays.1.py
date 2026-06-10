@@ -18,7 +18,7 @@ def median(arr1, arr2):
         r1 = float('inf') if cut1 == m else arr1[cut1]
         r2 = float('inf') if cut2 == n else arr2[cut2]
 
-        if l1 <= r2 and l2 <= r1:
+        if l1 <= r2 and l2 <= r1:                             #Correct partition condition:every element on the left side must be <= and every element on the right side.
             if (m + n) % 2 == 0:
                 return (max(l1, l2) + min(r1, r2)) / 2
             return max(l1, l2)
