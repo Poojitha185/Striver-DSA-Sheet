@@ -1,3 +1,11 @@
+#Time Complexity: O(N * (sum(arr[])-max(arr[])+1)), where N = size of the array, sum(arr[]) = sum of all array elements, max(arr[]) = maximum of all array elements.
+
+#Space Complexity: O(1), no extra space used.
+
+#We will use a loop to check all possible answers from max(arr[]) to sum(arr[]).
+#Next, inside the loop, we will send ‘maxSum’, to the function countPartitions() function to get the number of partitions.
+#The first value of ‘maxSum’, for which the number of partitions will be equal to ‘k’, will be our answer. So, we will return that particular value of ‘maxSum’.
+
 def count_partitions(a, max_sum):
         partitions = 1  # at least one partition
         subarray_sum = 0  # current subarray sum
