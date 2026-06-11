@@ -1,5 +1,8 @@
-
-
+#Time Complexity: O(N * (sum(arr[])-max(arr[])+1)), where N = size of the array, sum(arr[]) = sum of all array elements, max(arr[]) = maximum of all array elements.
+#Space Complexity: O(1), no extra space used.
+#We will use a loop(say time) to check all possible answers from max(arr[]) to sum(arr[]).
+#Next, inside the loop, we will send ‘time’, to the function countPainters() function to get the number of painters to whom we can allocate the boards.
+#The first value of ‘time’, for which the number of painters will be lesser or equal to ‘k’, will be our answer. So, we will return that particular value of ‘time’.
 
 def count_painters(boards,time):
         painters = 1
