@@ -1,3 +1,10 @@
+#Time Complexity: O(n × log m), We go through each of the `n` rows once. For any valid row where the target can exist, we apply binary search which takes O(log m). So overall time = O(n × log m).
+
+#Space Complexity: O(1), No extra space is used just a few integer variables for looping and binary search. So space complexity is constant.
+
+#If matrix[i][0] <= target && target <= matrix[i][m-1]: If this condition is met, we can conclude that row i has the possibility of containing the target.
+#So, we will apply binary search on row i, and check if the ‘target’ is present. If it is present, we will return true from this step. Otherwise, we will return false.
+
 def binary_search(row,m,target):
     low,high=0,m-1
     while low<=high:
