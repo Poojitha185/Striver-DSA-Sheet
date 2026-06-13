@@ -1,6 +1,6 @@
-#Time Complexity: O(n × m), We are traversing the entire matrix with `n` rows and `m` columns. In the worst case, we may end up visiting every cell once if the target is not present. So, the total number of operations is proportional to the number of elements in the matrix.
+#Time Complexity: O(N X M), where N = given row number, M = given column number in order to traverse the matrix, we are using nested loops running for n and m times respectively.
 
-#Space Complexity: O(1),We are not using any additional space. The algorithm uses a constant amount of extra memory regardless of the size of the matrix just loop variables and the target. Therefore, the space complexity is constant.
+#Space Complexity: O(1) as we are not using any extra space
 
 #using linear search
 
