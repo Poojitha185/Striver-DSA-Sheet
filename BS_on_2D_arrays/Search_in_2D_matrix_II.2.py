@@ -1,3 +1,7 @@
+#Time Complexity: O(N+M), where N = given row number, M = given column number. We are starting traversal from (0, M-1), and at most, we can end up being in the cell (M-1, 0). So, the total distance can be at most (N+M). So, the time complexity is O(N+M).
+
+#Space Complexity: O(1) as we are not using any extra space.
+
 from typing import List
 
 # Class to perform staircase search in a 2D row and column-wise sorted matrix
