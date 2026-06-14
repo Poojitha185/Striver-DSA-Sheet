@@ -1,3 +1,7 @@
+#Time Complexity: O(N*logM), where N = given row number, M = given column number. We are traversing all rows and it takes O(N) time complexity. And for all rows, we are applying binary search. So, the total time complexity is O(N*logM).
+
+#Space Complexity: O(1) as we are not using any extra space.
+
 from typing import List
 
 # Class to perform binary search operations in a 2D matrix
