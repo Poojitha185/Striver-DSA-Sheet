@@ -6,7 +6,7 @@
 #If matrix[row][col] == target: We have found the target and so we will return true.
 #If matrix[row][col] > target: We need the smaller elements to reach the target. But the column is in increasing order and so it contains only greater elements. So, we will eliminate the column by decreasing the current column value by 1(i.e. col--) and thus we will move row-wise.
 #If matrix[row][col] < target: In this case, We need the bigger elements to reach the target. But the row is in decreasing order and so it contains only smaller elements. So, we will eliminate the row by increasing the current row value by 1(i.e. row++) and thus we will move column-wise.
-
+#eventhough we did not use binary search directly here but we are eliminating one row or one column in each step, which is similar to the way binary search eliminates half of the search space in each step. 
 def search(matrix,target,n,m):
     row=0
     col=m-1
