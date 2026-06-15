@@ -1,3 +1,11 @@
+#Time Complexity: O(N*logM), where N = given row number, M = given column number. We are traversing all rows and it takes O(N) time complexity. And for all rows, we are applying binary search. So, the total time complexity is O(N*logM).
+
+#Space Complexity: O(1) as we are not using any extra space.
+
+#We will use a loop to select a particular row at a time.
+#Next, for every row, i, we will check if it contains the target using binary search.
+#After applying binary search on row, if we found any element equal to the target, we will return true. Otherwise, we will move on to the next row.
+
 def binary_search(row,m,target):
     low,high=0,m-1
     while low<=high:
