@@ -1,3 +1,6 @@
+#Time Complexity:O(n X logm), where n = given row number, m = given column number. We are using a loop running for n times to traverse the rows. Then we are applying binary search on each row with m columns.
+
+#Space Complexity: O(1), no extra space is used.
 
 class Solution:
     # Binary search to find the lower bound (first index where element >= x)
