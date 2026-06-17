@@ -1,3 +1,8 @@
+#Time Complexity:O(n X logm), where n = given row number, m = given column number. We are using a loop running for n times to traverse the rows. Then we are applying binary search on each row with m columns.
+
+#Space Complexity: O(1), no extra space is used.
+
+#We will use Binary Search to make our solution more efficient. While we still need to check each row one by one, we can speed up how we count the 1s in each row. Instead of going through every element in a row to count the 1s, we find the position of the first 1 using Binary Search, and subtract that index from the total number of columns to get how many 1s are present.
 
 def lower_bound(arr, n, x):
     low, high = 0, n - 1
