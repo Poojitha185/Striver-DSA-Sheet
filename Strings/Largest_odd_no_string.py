@@ -1,3 +1,7 @@
+#Time Complexity: O(N), since the loop runs once through the string of length N.
+
+#Space Complexity: O(1), as we are using only a constant amount of extra space.
+
 class Solution:
     # Function to find the largest odd number that is a substring of given string 
     def largeOddNum(self, s: str) -> str:
