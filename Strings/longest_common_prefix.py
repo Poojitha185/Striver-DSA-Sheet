@@ -2,6 +2,8 @@
 
 #Space Complexity: O(M), as the ans variable can store the length of the prefix which in the worst case will be O(M).
 
+#The common prefix across all strings must exist between the smallest and largest string when sorted lexicographically.
+#Sorting the array helps bring these boundary strings to the extremes.
 class Solution:
     def longestCommonPrefix(self, strs):
         if not strs:
