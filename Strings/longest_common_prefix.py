@@ -3,13 +3,9 @@
 #Space Complexity: O(M), as the ans variable can store the length of the prefix which in the worst case will be O(M).
 
 class Solution:
-    # Returns the longest common prefix from a list of strings
     def longestCommonPrefix(self, strs):
-        # Handle empty list case
         if not strs:
             return ""
-        
-        # Sort the list lexicographically
         strs.sort()
         
         # First string in sorted list
