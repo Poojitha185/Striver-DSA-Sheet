@@ -1,3 +1,7 @@
+#Time Complexity: O(N * log N + M), where N is the number of strings and M is the minimum length of a string. The sorting operation takes O(N * log N) time, and the comparison of characters in the first and last strings takes O(M) time.
+
+#Space Complexity: O(M), as the ans variable can store the length of the prefix which in the worst case will be O(M).
+
 class Solution:
     # Returns the longest common prefix from a list of strings
     def longestCommonPrefix(self, strs):
