@@ -13,11 +13,7 @@ class Solution:
         
         # Last string in sorted list
         last = strs[-1]
-        
-        # Store the common prefix characters
         ans = []
-        
-        # Compare characters of first and last string
         for i in range(min(len(first), len(last))):
             # Stop if characters differ
             if first[i] != last[i]:
