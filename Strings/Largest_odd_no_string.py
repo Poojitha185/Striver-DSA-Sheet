@@ -1,30 +1,14 @@
-#Time Complexity: O(N), since the loop runs once through the string of length N.
 
-#Space Complexity: O(1), as we are using only a constant amount of extra space.
-
-class Solution:
-    # Function to find the largest odd number that is a substring of given string 
-    def largeOddNum(self, s: str) -> str:
-        ind = -1
-        
-        # Iterate through the string from the end to beginning
-        i = 0
-        for i in range(len(s) - 1, -1, -1):
-            # Break if an odd digit is found
-            if (int(s[i]) % 2) == 1:
-                ind = i
-                break
-        
-        # Skipping any leading zeroes
-        i = 0
-        while i <= ind and s[i] == '0':
-            i += 1
-        
-        # Return the largest odd number substring
-        return s[i:ind + 1]
-
-# Driver code
-solution = Solution()
-num = "504"
-result = solution.largeOddNum(num)
-print("Largest odd number:", result)
+def longest_odd_string(s,n):
+    ind=0
+    for i in range(n-1,-1,-1):
+        if (int(s[i])%2)==1:
+            ind=i
+            break
+    i=0
+    while i<=ind and s[i]=='0':
+        i=i+1
+    return s[i:ind+1]
+s=input("Enter the string: ")
+n=len(s)
+print("The largest odd number in the string is:",longest_odd_string(s,n))
