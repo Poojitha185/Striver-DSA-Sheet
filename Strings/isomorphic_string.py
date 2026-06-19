@@ -1,3 +1,6 @@
+#Time Complexity: O(N) where N is the length of the input strings, due to the single loop iterating through each character.
+
+#Space Complexity: O(1) since the space used by the arrays is constant (256 fixed size) regardless of input size
 class Solution:
       # Method to check if two strings are isomorphic
       def isomorphicString(self, s, t):
@@ -21,7 +24,7 @@ class Solution:
           return True
   
   # Driver code to test the method
-  if __name__ == "__main__":
+if __name__ == "__main__":
       # Create an instance of Solution
       solution = Solution()
   
