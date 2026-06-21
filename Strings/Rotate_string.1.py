@@ -1,3 +1,13 @@
+#Time Complexity: O(N), because checking for a substring in s + s is linear in time.
+
+#Space Complexity: O(N) for the space needed to store the concatenated string s + s.
+
+#This code works for any numb er roations
+
+#Double the original string by joining it with itself, creating a new string like s + s.
+
+#Look for the target string goalinside this new doubled string.
+
 def rotate_string(s,goal):
     if len(s)!=len(goal):
         return False
