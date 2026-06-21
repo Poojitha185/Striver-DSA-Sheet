@@ -2,7 +2,7 @@
 
 #Space Complexity: O(N) for the space needed to store the concatenated string s + s.
 
-#This code works for any numb er roations
+#This code works for any number roations
 
 #Double the original string by joining it with itself, creating a new string like s + s.
 
