@@ -1,6 +1,6 @@
 #TC:O(N^2)
 #SC:O(1)
-def anagram_check(s1,s2):
+def anagram_checker(s1,s2):
     if len(s1)!=len(s2):
         return False
     for i in range(len(s1)):
@@ -9,4 +9,4 @@ def anagram_check(s1,s2):
     return True
 s1=input("enter thr first string: ")
 s2=input("enter the second string: ")
-print("does both the strings anagram of each other: ",anagram_check(s1,s2))
+print("does both the strings anagram of each other: ",anagram_checker(s1,s2))
