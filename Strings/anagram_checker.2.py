@@ -1,3 +1,13 @@
+#Time Complexity: O(N), where N is the length of the strings. Each string is traversed once, and the frequency array is checked in constant time (26 iterations).
+
+#Space Complexity: O(1), as a fixed-size array of 26 elements is used regardless of the input size.
+
+#Initialize a frequency array of size 26 (for all uppercase English letters) and set all elements to 0.
+
+#Traverse the first string and increment the frequency of each character.
+
+#Traverse the second string and decrement the frequency of each character.
+
 def anagram_check(s1,s2):
     if len(s1)!=len(s2):
         return False
