@@ -15,7 +15,7 @@ def anagram_check(s1,s2):
     for i in s1:
         freq[ord(i)-ord('a')]+=1                #subtracting 'a' from the character gives us the index in the frequency array corresponding to that character
     for j in s2:
-        freq[ord(j)-ord('a')]-=1
+        freq[ord(j)-ord('a')]-=1                #ord() function returns the ASCII value of a character. By subtracting the ASCII value of 'a', we get an index between 0 and 25 for lowercase letters.
     for count in freq:
         if count!=0:
             return False
