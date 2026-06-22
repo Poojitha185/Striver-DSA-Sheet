@@ -3,7 +3,6 @@
 #Space Complexity: O(N),We store all words in a separate list/array, requiring extra space proportional to the number of characters.
 
 def reverse(s):
-        # List to store words
         words = []
         word = ""
         # Traverse each character in the string
