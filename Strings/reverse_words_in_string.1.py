@@ -1,3 +1,7 @@
+#Time Complexity: O(N),We traverse the string once to collect words (O(N)) and once more to reverse and join them (O(N)). Hence total time is O(N).
+
+#Space Complexity: O(N),We store all words in a separate list/array, requiring extra space proportional to the number of characters.
+
 def reverse(s):
         # List to store words
         words = []
