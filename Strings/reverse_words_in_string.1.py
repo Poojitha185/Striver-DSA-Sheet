@@ -7,7 +7,7 @@ def reverse(s):
         word = ""
         # Traverse each character in the string
         for ch in s:
-            # If not space, add character to word
+            # If not space, add character to word so that remove unnecessary spaces and this is not done by using split() function as it doesn't handle leading/trailing spaces properly. bcz it treats every spaces separately
             if ch != " ":
                 word += ch
             # If space and we have collected a word
