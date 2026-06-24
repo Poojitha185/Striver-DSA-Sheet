@@ -1,6 +1,13 @@
-#TC:O(n*logn) at worst case
-#SC:O(n) at worst case
-#uses dictionary method
+#Time Complexity: O(n + k log k), where n is the length of the string and k is the constant 26 for the alphabet.
+
+#Space Complexity: O(k) , where k is the constant 26 for the frequency array.
+
+#We need a structure that can track both the character and how often it occurs.
+
+#Sorting the characters by frequency helps surface the most significant ones first.
+
+#To maintain consistency when frequencies match, tie-breaking is done alphabetically.
+
 def sort_chars_by_frequency(s):
     k={}
     l=[]
