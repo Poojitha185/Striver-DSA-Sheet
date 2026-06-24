@@ -1,5 +1,5 @@
-#TC:O(n*logn)
-#SC:O(n)
+#TC:O(n*logn) at worst case
+#SC:O(n) at worst case
 #uses dictionary method
 def sort_chars_by_frequency(s):
     k={}
