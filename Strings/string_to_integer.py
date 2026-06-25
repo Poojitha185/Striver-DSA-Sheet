@@ -4,6 +4,10 @@
 
 #Define a helper function that takes the string s, current index i, current result num, and sign. Recursively skip leading whitespaces until a non-whitespace character is found. Handle the sign if present (positive or negative).
 
+#Recursively process each digit:
+#Continue until the end of the string or a non-digit character is encountered.
+#For each digit, update the result.
+
 INT_MIN = -2**31
 INT_MAX = 2**31 - 1
 def helper(s, i, num, sign):
