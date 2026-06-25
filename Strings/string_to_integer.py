@@ -2,6 +2,8 @@
 
 #Space Complexity: O(n) since the recursion stack grows up to n calls.
 
+#Define a helper function that takes the string s, current index i, current result num, and sign. Recursively skip leading whitespaces until a non-whitespace character is found. Handle the sign if present (positive or negative).
+
 INT_MIN = -2**31
 INT_MAX = 2**31 - 1
 def helper(s, i, num, sign):
