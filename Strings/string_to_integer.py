@@ -1,3 +1,7 @@
+#Time Complexity: O(n) since each character is processed once.
+
+#Space Complexity: O(n) since the recursion stack grows up to n calls.
+
 INT_MIN = -2**31
 INT_MAX = 2**31 - 1
 def helper(s, i, num, sign):
