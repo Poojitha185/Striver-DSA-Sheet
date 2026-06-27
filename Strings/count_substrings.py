@@ -1,6 +1,8 @@
 #Time Complexity: O(n) for each call to atMostKDistinct.
 
 #Space Complexity: O(1) map size bounded by 26 characters for alphabets.
+
+#Use a sliding window with two pointers (left and right) and a frequency map. Expand the window by moving the right pointer and count characters. If the count of distinct characters exceeds k, shrink the window by moving the left pointer. For each valid window, add (right - left + 1) to the result.
 # Function to count substrings with at most k distinct characters
 def at_most_k_distinct(s, k):
     left, res = 0, 0
