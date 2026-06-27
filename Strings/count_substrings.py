@@ -1,3 +1,6 @@
+#Time Complexity: O(n) for each call to atMostKDistinct.
+
+#Space Complexity: O(1) map size bounded by 26 characters for alphabets.
 # Function to count substrings with at most k distinct characters
 def at_most_k_distinct(s, k):
     left, res = 0, 0
