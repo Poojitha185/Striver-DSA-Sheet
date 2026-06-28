@@ -1,3 +1,6 @@
+#Time: O(n²)
+#Space: O(1)
+
 def longest_palindrome(s):
     if not s:
         return ""
