@@ -4,7 +4,7 @@
 def longest_palindrome(s):
     if not s:
         return ""
-
+    # # Store the start and end indices of the longest palindrome found
     start = end = 0
 
     def expand(left, right):
