@@ -4,9 +4,9 @@
 def longest_palindrome(s):
     if not s:
         return ""
-    # # Store the start and end indices of the longest palindrome found
+    # Store the start and end indices of the longest palindrome found
     start = end = 0
-
+    #  Expand around the given center and return palindrome boundaries
     def expand(left, right):
         while left >= 0 and right < len(s) and s[left] == s[right]:
             left -= 1
