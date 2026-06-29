@@ -1,3 +1,7 @@
+#Time Complexity: O(n), where n is the length of the string.
+
+#Space Complexity: O(1), as only constant extra space is used.
+
 class Solution:
     # Method to compute maximum depth of parentheses
     def maxDepth(self, s: str) -> int:
