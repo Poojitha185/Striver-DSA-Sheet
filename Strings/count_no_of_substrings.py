@@ -1,7 +1,7 @@
 # Function to count substrings with at most k distinct characters
 #Time Complexity: O(n) for each call to atMostKDistinct.
-
 #Space Complexity: O(1) map size bounded by 26 characters for alphabets.
+#Define a helper function atMostKDistinct(s, k) Use a sliding window with two pointers (left and right) and a frequency map. Expand the window by moving the right pointer and count characters. If the count of distinct characters exceeds k, shrink the window by moving the left pointer.
 
 def at_most_k_distinct(s, k):
     left, res = 0, 0
@@ -22,7 +22,8 @@ def at_most_k_distinct(s, k):
         res += (right - left + 1)
     return res
 
-# Function to count substrings with exactly k distinct characters
+#For each valid window, add (right - left + 1) to the result.
+#To find substrings with exactly k distinct characters, calculate: atMostKDistinct(s, k) - atMostKDistinct(s, k-1)
 def count_substrings(s, k):
     return at_most_k_distinct(s, k) - at_most_k_distinct(s, k - 1)
 s=input("Enter the string: ")
