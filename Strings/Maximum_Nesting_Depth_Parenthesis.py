@@ -1,9 +1,9 @@
-class Solution:
-    # Method to compute maximum depth of parentheses
-    def maxDepth(self, s: str) -> int:
+
+ # Method to compute maximum depth of parentheses
+def maxDepth(str):
         p = 0  
         ans = 0
-        for ch in s:
+        for ch in str:
             # Increase depth on open parenthesis
             if ch == '(':
                 p += 1
@@ -13,8 +13,5 @@ class Solution:
             # Update maximum depth encountered
             ans = max(ans, p)
         return ans  
-if __name__ == "__main__":
-    sol = Solution()
-    s = "(1+(2*3)+((8)/4))+1"
-    result = sol.maxDepth(s)
-    print("Max Depth:", result)
+str=input("Enter the string: ")
+print("The maximum depth of nested parentheses is:", maxDepth(str))
