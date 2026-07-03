@@ -6,6 +6,7 @@
 #Each closing bracket signals returning to the previous level of nesting.
 #By tracking how deep we go at each step, we can monitor the peak nesting level
 
+
 def maxDepth(str):
         p = 0  
         ans = 0
