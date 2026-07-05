@@ -1,3 +1,7 @@
+#Time Complexity: O(N), We traverse the string once from right to left and construct the result directly without extra passes.
+
+#Space Complexity: O(1),Ignoring the output string, no additional data structures proportional to input size are used.
+
 class Solution:
     # Function to reverse the order of words 
     def reverseWords(self, s: str) -> str:
