@@ -8,6 +8,11 @@
 #Space Complexity:
 #Frequency map uses at most 26 characters → O(26) = O(1).
 #No extra data structures apart from that.
+
+#Loop through all substrings of the string.
+#Maintain a frequency map of characters for each substring.
+#For each substring:
+#Find the most frequent character's count.
 def beauty_sum(s):
     n = len(s)
     total = 0
