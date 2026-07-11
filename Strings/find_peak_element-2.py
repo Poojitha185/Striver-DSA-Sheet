@@ -1,3 +1,7 @@
+#Time Complexity: O(N * logM), where N is the number of rows in the matrix, M is the number of columns in each row. The complexity arises because binary search is performed on the columns, and for each mid column, a linear search through the rows is executed to find the maximum element.
+
+#Space Complexity: O(1) as no additional space is used.
+
 class Solution:
       # Helper function to find the index of the row 
       # with the maximum element in a given column
