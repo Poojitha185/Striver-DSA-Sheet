@@ -2,6 +2,11 @@
 
 #Space Complexity: O(1) as no additional space is used.
 
+#To solve this problem we use the binary search approach. The key idea comes from how we find a peak in a 1-D array:
+#For any middle position (mid), we check if it’s larger than both its neighbors, if it is, we’ve found a peak.
+#If mid is smaller than the element on its left, that means a peak must be somewhere to the left, so we can discard the right half.
+#If mid is smaller than the element on its right, then a peak must lie to the right, allowing us to discard the left half.
+#This method reduces the number of elements we need to consider in every step, improving efficiency.
 class Solution:
       # Helper function to find the index of the row 
       # with the maximum element in a given column
