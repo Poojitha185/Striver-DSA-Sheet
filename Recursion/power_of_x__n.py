@@ -1,3 +1,7 @@
+#Time Complexity: O(n), where n is the absolute value of the exponent. This is because we multiply the base x, n times.
+
+#Space Complexity: O(1), as we are using a constant amount of space for the variables used in the computation.
+
 def myPow(x, n):
         if n == 0 or x == 1.0:
             return 1
