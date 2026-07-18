@@ -5,6 +5,7 @@
 #Initialize the result variable, ans, to 1. This serves as the base case where any number raised to the power of 0 is 1. Check if the exponent n is less than 0: If true, invert x by setting x = 1/x and make n positive by setting n = -n. This transformation allows handling of negative exponents.
 #Use a loop to iterate from 0 to n (converted to an integer). In each iteration, multiply ans by x. This effectively computes x raised to the power of n.
 #Return the result stored in ans, which now contains the value of x^n.
+
 def myPow(x, n):
         if n == 0 or x == 1.0:
             return 1
