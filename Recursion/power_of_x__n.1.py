@@ -4,8 +4,10 @@
 
 #If the exponent n is even: If true, recursively calculate the power by squaring the base and halving the exponent:
 #power(x, n) = power(x * x, n / 2)
+
 #If the exponent n is odd: If true, recursively calculate the power by multiplying the base with the result of the power function for n - 1:
 #power(x, n) = x * power(x, n - 1)
+
 #Handle negative exponents:
 #If the exponent is negative, calculate the power for the positive exponent and take the reciprocal of the result.
 
