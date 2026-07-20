@@ -5,6 +5,7 @@ def insert(stack,temp):
     val=stack.pop()
     insert(stack,temp)
     stack.append(val)
+    
 def sortstack(stack):
     if stack:
         temp=stack.pop()
