@@ -1,3 +1,7 @@
+#Time Complexity: O(n²), as each element is popped and inserted at the bottom (O(n) per element).
+
+#Space Complexity: O(n), as only the recursion stack is used.
+
 def insert_bottom(stack, temp):
     if not stack:
         stack.append(temp)
