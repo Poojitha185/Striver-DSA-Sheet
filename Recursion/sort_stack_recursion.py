@@ -1,3 +1,7 @@
+#Time Complexity: O(n2), where n is the number of elements in the stack.
+
+#Space Complexity: O(n), due to the recursion stack.
+
 def insert(stack,temp):
     if not stack or stack[-1]<=temp:
         stack.append(temp)
@@ -5,7 +9,7 @@ def insert(stack,temp):
     val=stack.pop()
     insert(stack,temp)
     stack.append(val)
-    
+
 def sortstack(stack):
     if stack:
         temp=stack.pop()
