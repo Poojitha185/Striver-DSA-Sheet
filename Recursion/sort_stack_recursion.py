@@ -2,6 +2,9 @@
 
 #Space Complexity: O(n), due to the recursion stack.
 
+#If the stack is empty, stop.Remove the top element of the stack.Sort the remaining stack recursively.
+#Insert the removed element back into the stack while maintaining descending order. Use a helper function to place the element in its correct position.
+
 def insert(stack,temp):
     if not stack or stack[-1]<=temp:
         stack.append(temp)
