@@ -27,6 +27,7 @@ def generate_parenthesis(n):
     result=[]
     generate_all("",n,result)
     return result
+
 n=int(input("enter the n value: "))
 print("The generated parenthesis are:")
 res=generate_parenthesis(n)
