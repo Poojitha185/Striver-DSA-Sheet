@@ -8,7 +8,6 @@
 #If close < open, add ')' and recurse.
 #If curr.length == 2 * n, add it to the result.
 
-
 def backtrack(curr, open, close, n, res):
     if len(curr) == 2 * n:
         res.append(curr)
