@@ -1,3 +1,7 @@
+#Time Complexity: O(2^n) (Catalan number): C(n) = (2n)! / (n!(n+1)!) is the number of valid sequences.Each sequence takes O(n) to build.So, total complexity: O(C(n) × n)
+
+#Space Complexity: O(n) recursion depth. O(C(n) × n) to store results.
+
 def backtrack(curr, open, close, n, res):
     if len(curr) == 2 * n:
         res.append(curr)
