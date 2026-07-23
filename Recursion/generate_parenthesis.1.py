@@ -7,6 +7,11 @@
 #If open < n, add '(' and recurse.
 #If close < open, add ')' and recurse.
 #If curr.length == 2 * n, add it to the result.
+#backtracking:
+   #Make a valid choice.
+   #Recurse.
+   #Return and try the next valid choice.
+   #This is why this solution is much faster than generating every possible string and checking it later.
 
 def backtrack(curr, open, close, n, res):
     if len(curr) == 2 * n:
