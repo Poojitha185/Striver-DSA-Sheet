@@ -1,3 +1,7 @@
+#Time Complexity: O(2t * k) due to exploring all combinations up to the target with copying each valid combination of average length k.
+
+#Space Complexity: O(k * x) to store all valid combinations, where x is the number of combinations and k is their average length.
+
 def combination_sum(ind,target,curr_list,comb_list,arr):
     if ind==len(arr):
         if target==0:
