@@ -25,7 +25,6 @@ def combination_sum(ind,target,curr_list,comb_list,arr):
             combination_sum(ind,target-arr[ind],curr_list,comb_list,arr)
             curr_list.pop()
     combination_sum(ind+1,target,curr_list,comb_list,arr)
-
 arr=list(map(int,input("enter the array: ").split(',')))
 target=int(input("enter the target value: "))
 comb_list=[]
