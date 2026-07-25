@@ -2,6 +2,19 @@
 
 #Space Complexity: O(k * x) to store all valid combinations, where x is the number of combinations and k is their average length.
 
+#questions like printing combinations or subsequences, the first thing that should strike your mind is recursion.
+#At every step, we have two choices:
+    #Pick the element at the current index:
+    #We reduce the target by arr[index].
+    #Add arr[index] to the DS.
+    #We stay on the same index since we can reuse the same element.
+#Not pick the element:
+    #We move to the next index.
+    #Target remains unchanged.
+    #Element is not added to the DS.
+#While backtracking, remove the last inserted element to explore new paths.
+#This process is repeated while index < array.size() for a given recursion call.
+
 def combination_sum(ind,target,curr_list,comb_list,arr):
     if ind==len(arr):
         if target==0:
