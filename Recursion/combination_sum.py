@@ -1,7 +1,7 @@
 #Time Complexity: O(2t * k) due to exploring all combinations up to the target with copying each valid combination of average length k.
 
 #Space Complexity: O(k * x) to store all valid combinations, where x is the number of combinations and k is their average length.
-
+#Recursion
 #questions like printing combinations or subsequences, the first thing that should strike your mind is recursion.
 #At every step, we have two choices:
     #Pick the element at the current index:
@@ -25,6 +25,7 @@ def combination_sum(ind,target,curr_list,comb_list,arr):
             combination_sum(ind,target-arr[ind],curr_list,comb_list,arr)
             curr_list.pop()
     combination_sum(ind+1,target,curr_list,comb_list,arr)
+
 arr=list(map(int,input("enter the array: ").split(',')))
 target=int(input("enter the target value: "))
 comb_list=[]
