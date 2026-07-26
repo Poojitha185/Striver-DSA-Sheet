@@ -2,7 +2,7 @@
 
 #Space Complexity: O(k * x) to store all valid combinations, where x is the number of combinations and k is their average length.
 #This process is repeated while index < array.size() for a given recursion call.
-#A set only removes exactly identical tuples. It doesn't know that (7,1) and (1,7) represent the same combination.Best fixSort the array first:
+#A set only removes exactly identical tuples. It doesn't know that (7,1) and (1,7) represent the same combination.Best fixSort the array first
 def combination_sum2(ind,target,curr_list,comb_list,arr):
     arr.sort()
     if ind==len(arr):
