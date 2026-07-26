@@ -1,6 +1,9 @@
-#Time Complexity: O(2t * k) due to exploring all combinations up to the target with copying each valid combination of average length k.
+#Time Complexity: O(2^t * k*log(set size)) due to exploring all combinations up to the target with copying each valid combination of average length k.
 
 #Space Complexity: O(k * x) to store all valid combinations, where x is the number of combinations and k is their average length.
+#At each index, you have two choices:
+   #Include the current element.
+   #Exclude the current element.
 #This process is repeated while index < array.size() for a given recursion call.
 #A set only removes exactly identical tuples. It doesn't know that (7,1) and (1,7) represent the same combination.Best fixSort the array first
 def combination_sum2(ind,target,curr_list,comb_list,arr):
