@@ -24,5 +24,5 @@ comb_list=set()
 combination_sum2(0,target,[],comb_list,arr)
 print("The combinations are:")
 for i in comb_list:
-    print(list(i))
+    print(list(i))           #prints lists from lists of list
 
