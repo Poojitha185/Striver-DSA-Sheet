@@ -15,9 +15,9 @@ def combination_sum2(ind,target,curr_list,comb_list,arr):
         return 
     n=len(arr)
     for i in range(ind,n):
-        if i>ind and arr[i]==arr[i-1]:
+        if i>ind and arr[i]==arr[i-1]:    #i>ind is wrote bcz same elements containing combination can be skipped bcz of arr[i]==arr[i-1] condition this condition ensures that if same elements picking again at same position then only it can be that combionation to avoid duplicates.#
             continue
-        if arr[i]>target:
+        if arr[i]>target:                 
             break
         curr_list.append(arr[i])
         combination_sum2(i+1,target-arr[i],curr_list,comb_list,arr)
@@ -29,5 +29,5 @@ target=int(input("enter the target value: "))
 comb_list=[]
 combination_sum2(0,target,[],comb_list,arr)
 print("The combinations are:")
-print(comb_list)
+print(comb_list)                       #print lists of list
 
