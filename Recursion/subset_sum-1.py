@@ -1,3 +1,5 @@
+
+#We can solve this more cleanly using recursion without generating all bitmasks. Start from index 0, maintain a running sum, and at each index, make two recursive calls—one including the current element and one excluding it. When we reach the end of the array, store the current sum in our result list. This avoids explicitly storing subsets, reduces unnecessary operations, and still generates all sums in O(2^N) time. Sorting at the end gives the required increasing order.
 def subset_sum(ind,sum,arr,ans):
     n=len(arr)
     if ind==n:
