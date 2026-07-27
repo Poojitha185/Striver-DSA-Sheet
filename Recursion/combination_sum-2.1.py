@@ -1,3 +1,7 @@
+#Time Complexity: O(2n * k), For each of the 2n subsequences, storing takes O(k) time where k is the average length of each combination.
+
+#Space Complexity: O(k * x), To store all x valid combinations, each of average length k.
+
 #Sort the array before starting recursion to ensure combinations are in sorted order and to avoid duplicates.
 #Begin recursion from index 0 and explore each element for inclusion in the current combination.
 #If the current element is suitable (≤ target), add it to the combination and move to the next index.
