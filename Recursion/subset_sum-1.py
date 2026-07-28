@@ -19,7 +19,6 @@ def find(arr,ans):
     subset_sum(0,0,arr,ans)
     ans.sort()
     return ans
-
 arr=list(map(int,input("enter the array: ").split(',')))
 ans=[]
 print(find(arr,ans))
