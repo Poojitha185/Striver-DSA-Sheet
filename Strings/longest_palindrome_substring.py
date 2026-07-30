@@ -27,8 +27,6 @@ def longest_palindrome(s):
             start, end = l2, r2
 
     return s[start:end + 1]
-
-
 # Example
 print(longest_palindrome("babad"))  # "bab" or "aba"
 print(longest_palindrome("cbbd"))   # "bb"
