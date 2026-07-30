@@ -17,6 +17,7 @@ def isomorphicString( s, t):
               m2[ord(t[i])] = i + 1
           # Return True if no inconsistencies found
           return True
+
 s=input("enter the first string: ")
 t=input("enter the second string: ")
 print("The two strings are isomorphic:",isomorphicString(s,t))

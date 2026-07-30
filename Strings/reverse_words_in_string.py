@@ -6,5 +6,6 @@ def reverse(s):
     for i in range(len(t)-1,-1,-1):                 #or using builtin function t.reverse()  and return " ".join(t)
         k.append(t[i])
     return " ".join(k)
+
 s=input("enter string:")
 print("reversing of string: ",reverse(s))
