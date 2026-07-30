@@ -15,6 +15,7 @@ def minEatingSpeed(arr,n,h):
       else:
          low=mid+1
    return low
+
 def totaltime(arr,i):
     totaltime=0
     for j in arr:
