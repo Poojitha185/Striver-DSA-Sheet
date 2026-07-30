@@ -2,7 +2,6 @@
 #Time Complexity: O(N*log(max(a[]))), we apply binary search on our search space to reduce it into half at every step.
 #Space Complexity: O(1), since the algorithm does not use any additional space or data structures.
 #using binary search to optimize the solution
-
 import math
 from math import ceil
 
