@@ -15,6 +15,6 @@ def binary_search(arr,target,n):
             high=mid-1
     return -1
 arr=list(map(int,input("enter the array: ").split(',')))
-n=len(arr)
 target=int(input("enter the target: "))
+n=len(arr)
 print("the target is found at index:",binary_search(arr,target,n))

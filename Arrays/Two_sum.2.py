@@ -1,6 +1,6 @@
 #TC:O(nlogn) for sorting the array and O(n) for iterating through the array with two pointers, resulting in an overall time complexity of O(nlogn).
 #SC:O(1), as we are not using any extra space to store the elements and modifying the original array in place.
-#If we cares about time → use hashing
+#If we cares about time → use hashing(dictionary) approach
 #If we cares about space → two-pointer is better
 #Two pointer approach
 def two_sum(arr,n,target):

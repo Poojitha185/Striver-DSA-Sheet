@@ -2,11 +2,7 @@
 
 #Space Complexity:  O(1) as we are not using any extra space to solve this problem.
 
-#We perform Binary Search:
-#We try a middle value of pages per student.
-#We check how many students would be required if no student gets more than that value.
-#If it takes more students than allowed, that value is too low, so we try a higher one.
-#If it fits within the allowed number of students, we store it and try a smaller one to find an even better option.
+#We perform Binary Search
 
 def ispossible(arr,j,n,k):
     d=1

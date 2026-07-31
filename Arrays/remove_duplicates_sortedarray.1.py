@@ -8,7 +8,7 @@ def remove_duplicates(arr,n):
             arr[i+1]=arr[j]
             i=i+1
     return i+1
-arr=arr=list(map(int,input("enter the arary: ").split(',')))
+arr=list(map(int,input("enter the arary: ").split(',')))
 n=len(arr)
 k=remove_duplicates(arr,n)
 print("The number of unique elements are: ",k)

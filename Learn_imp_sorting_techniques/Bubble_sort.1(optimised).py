@@ -1,5 +1,6 @@
 #Time Complexity:O(N2) for the worst and average cases and O(N) for the best case. Here, N = size of the array.bcz If no swaps happen → array is already sorted So we break early → Best Case = O(N)
 #Space Complexity:O(1)
+#using iterative function(optimal approach)
 def bubble_sort(n,arr):
     for i in range(n-1,-1,-1):
         didswap=0

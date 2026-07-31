@@ -1,5 +1,6 @@
 #TC:O(N) as we are iterating through the array once to move the non-zero elements to the temp array and then again iterating through the temp array to copy the non-zero elements back to the original array, and finally iterating through the remaining positions in the original array to fill them with zeros.
-#SC:O(N), at worst case, if all elements in the input array are non-zero, we will be storing all of them in the temp array, which will require O(N) space.
+#SC:O(N), at worst case, if all elements in the input array are non-zero, we will be storing all of them in the temp array, which will require O(N) space. The original array is modified in place, so it does not contribute to additional space complexity.
+def move_zero_end(arr,n):
     temp=[]
     for i in range(n):
         if arr[i]!=0:
