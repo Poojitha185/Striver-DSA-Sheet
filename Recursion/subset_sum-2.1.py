@@ -1,11 +1,14 @@
 #Time Complexity: O(2^N),In the worst case (all unique elements), we generate all possible subsets, which is 2^N. Sorting takes O(N log N), so total complexity is O(2^N + N log N) ≈ O(2^N).
-
 #Space Complexity: O(N) ,Due to recursion depth and storage of the current subset in the call stack. The output storage is O(2^N) for all subsets.
+
+#Instead of generating all subsets and then removing duplicates, we can avoid creating duplicates in the first place. This is done by sorting the input array first so that all duplicate numbers are adjacent. While generating subsets through backtracking, if we encounter a number that is the same as the previous one and it’s not the first in the current recursive call, we skip it. This pruning step ensures we only generate unique subsets without extra storage for duplicate removal.
+
+#Sorting is essential here because without sorting, duplicates would be scattered and hard to skip correctly. This method is efficient and avoids unnecessary subset generation, making it better in both runtime and memory usage compared to the brute force approach.
 def subset(ind,curr,arr,ans):
     n=len(arr)
     ans.append(list(curr))
     for i in range(ind,n):
-        if i>ind and arr[i]==arr[i-1]:    #i>ind is wrote bcz same elements containing combination can be skipped bcz of arr[i]==arr[i-1] condition this condition ensures that if same elements picking again at same position then  that combionation is not taken to avoid duplicates.
+        if i>ind and arr[i]==arr[i-1]:    #if we encounter a number that is the same as the previous one and it’s not the first in the current recursive call, we skip it.
                 continue
         curr.append(arr[i])
         subset(i+1,curr,arr,ans)
