@@ -8,6 +8,7 @@
 #Initialize a list to store the current subset and a list of lists to store all unique subsets.Use a recursive backtracking function that: Adds the current subset to the list of results.Iterates from the current index to the end of the array.
 #If the current element is the same as the previous one and not at the starting index of this recursion, skip it. Include the current element in the subset and recurse for the next index.
 #Backtrack by removing the last added element.
+
 def subset(ind,curr,arr,ans):
     n=len(arr)
     ans.append(list(curr))
