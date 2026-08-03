@@ -1,3 +1,6 @@
+#Time Complexity: O(4^N * N), where n is the length of the input digits. This is because each digit can map to up to 4 letters, and there are n digits.
+
+#Space Complexity: O(N), where n is the length of the input digits. This is due to the recursion stack depth.
 class Solution:
     def __init__(self):
         # Mapping digits to corresponding characters
