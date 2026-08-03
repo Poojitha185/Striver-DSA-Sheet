@@ -34,6 +34,5 @@ if __name__ == "__main__":
     solution = Solution()
     digits = "23"  # Input digits
     result = solution.letterCombinations(digits)  # Get combinations
-
     # Print the results
     print(result)
