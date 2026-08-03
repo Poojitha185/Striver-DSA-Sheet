@@ -30,8 +30,6 @@ class Solution:
         # Initiate recursive function
         self.helper(digits, ans, 0, "")
         return ans  # Return the result
-
-# Main section to demonstrate the usage of the Solution class
 if __name__ == "__main__":
     solution = Solution()
     digits = "23"  # Input digits
