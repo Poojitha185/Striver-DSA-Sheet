@@ -1,6 +1,9 @@
 #Time Complexity: O(4^N * N), where n is the length of the input digits. This is because each digit can map to up to 4 letters, and there are n digits.
 
 #Space Complexity: O(N), where n is the length of the input digits. This is due to the recursion stack depth.
+
+#Define a recursive helper function with three parameters: current index, current combination string, and the result list.
+#Check the base case : if the index reaches the end of the input digit string, add the current combination to the results.
 #For the digit at the current index, loop through all its mapped letters.
 #For each letter, call the helper function again with the next index and the updated combination string.
 def helper(digits, ans, index, current):
