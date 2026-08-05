@@ -20,7 +20,6 @@ def helper(digits, ans, index, current):
             # Recursively call function with next index
             # Add current character to the string
             helper(digits, ans, index + 1, current + char)
-
     # Function to get all letter combinations for a given digit string
 def letterCombinations(digits):
         ans = []  # List to store results
@@ -30,6 +29,7 @@ def letterCombinations(digits):
         # Initiate recursive function
         helper(digits, ans, 0, "")
         return ans  # Return the result
+
 digits=input("enter the digits: ")
 result=letterCombinations(digits)
 print(result)
