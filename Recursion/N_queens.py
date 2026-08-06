@@ -10,7 +10,6 @@ class Solution:
         for j in range(col):
             if board[row][j] == 'Q':
                 return False
-
         # Check upper-left diagonal
         i, j = row, col
         while i >= 0 and j >= 0:
@@ -18,7 +17,6 @@ class Solution:
                 return False
             i -= 1
             j -= 1
-
         # Check lower-left diagonal
         i, j = row, col
         while i < n and j >= 0:
