@@ -42,22 +42,18 @@ class Solution:
                 self.solve(col + 1, board, ans, n)  
                 # Backtrack
                 board[row][col] = '.'       
-
     # Main function
     def solveNQueens(self, n):
         board = [['.' for _ in range(n)] for _ in range(n)]
         ans = []
         self.solve(0, board, ans, n)
         return ans
-
 # Driver code
 if __name__ == "__main__":
     # Create object
     obj = Solution()
-
     # Set size
     n = 4
-
     # Solve
     res = obj.solveNQueens(n)
 
