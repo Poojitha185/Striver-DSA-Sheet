@@ -1,3 +1,7 @@
+#Time Complexity: O(N!*N), we try all possible permutations of placing the queens and check for safety.
+#Space Complexity: O(N^2 + N), additional space used for storing distinct boards and stack space.
+
+
 class Solution:
     # Function to check if placing a queen is safe
     def isSafe(self, row, col, board, n):
