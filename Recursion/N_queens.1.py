@@ -36,7 +36,6 @@ class Solution:
         upperDiagonal = [0] * (2 * n - 1)
         self.solve(0, board, n, leftRow, upperDiagonal, lowerDiagonal, ans)
         return ans
-
 # Driver code
 sol = Solution()
 res = sol.solveNQueens(4)
