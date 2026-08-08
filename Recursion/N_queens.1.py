@@ -26,8 +26,6 @@ class Solution:
                 # Backtrack
                 board[row][col] = '.'
                 leftRow[row] = lowerDiagonal[row + col] = upperDiagonal[n - 1 + col - row] = 0
-
-    # Main function
     def solveNQueens(self, n):
         ans = []
         board = [['.' for _ in range(n)] for _ in range(n)]
