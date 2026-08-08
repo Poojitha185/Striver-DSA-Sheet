@@ -33,7 +33,6 @@ class Solution:
         self.solve(0, board, n, leftRow, upperDiagonal, lowerDiagonal, ans)
         return ans
 
-
 # Driver code
 sol = Solution()
 res = sol.solveNQueens(4)
