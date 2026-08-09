@@ -1,6 +1,6 @@
 #Time Complexity: O(N!), we try all possible permutations of placing the queens.
 #Space Complexity: O(N), three boolean arrays are stored to check for safety.
-
+#Instead of checking every row, column, and diagonal every time we place a queen (which is slow), we use precomputed boolean arrays to instantly check if a queen can be safely placed. Each array acts like a hash for fast lookup. A row array keeps track of which rows already have a queen. Two diagonal arrays (lowerDiagonal and upperDiagonal) keep track of the diagonals that are under attack. This avoids repetitive scanning and makes the backtracking highly efficient.
 def solve(col,board,ans,leftrow,upperdiagonal,lowerdiagonal,n):
     if col==n:
         ans.append([''.join(row) for row in board])
