@@ -1,3 +1,6 @@
+#Time Complexity: O(N!), we try all possible permutations of placing the queens.
+#Space Complexity: O(N), three boolean arrays are stored to check for safety.
+
 def solve(col,board,ans,leftrow,upperdiagonal,lowerdiagonal,n):
     if col==n:
         ans.append([''.join(row) for row in board])
