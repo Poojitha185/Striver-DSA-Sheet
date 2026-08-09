@@ -29,6 +29,7 @@ def Nqueens(n):
     lowerdiagonal = [0] * (2 * n - 1)
     solve(0,board,ans,leftrow,upperdiagonal,lowerdiagonal,n)
     return ans
+
 n=int(input("enter the value of n: "))
 ans=Nqueens(n)
 for i in ans:
