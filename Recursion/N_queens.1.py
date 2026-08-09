@@ -16,6 +16,7 @@ def solve(col,board,ans,leftrow,upperdiagonal,lowerdiagonal,n):
         leftrow[row]=0
         upperdiagonal[(n-1)+(col-row)]=0
         lowerdiagonal[col+row]=0
+        
 def Nqueens(n):
     board=[]
     for i in range(n):
