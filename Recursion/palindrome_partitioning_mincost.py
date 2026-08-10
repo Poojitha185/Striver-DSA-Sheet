@@ -17,6 +17,7 @@ def ispalindrome(i,j,s):
         i=i+1
         j=j-1
     return True
+
 s=input("enter the string: ")
 n=len(s)
 print(palindrome_partitoning(0,n,s)-1)
