@@ -5,6 +5,7 @@
 # 3.If the substring is a palindrome, recursively partition the remaining string.
 # 4.Take the minimum number of palindrome parts.
 # 5.Finally, subtract 1 because cuts = parts - 1.
+
 def palindrome_partitoning(i,n,s):
     if i==n:
         return 0
