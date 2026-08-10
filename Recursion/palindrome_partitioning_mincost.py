@@ -1,5 +1,4 @@
 #TC:number of recursive states/partitions × choices per state × palindrome checking = 2ⁿ × n × n.
-
 #SC:Your space complexity remains O(n) because of the recursion stack.
 
 def palindrome_partitoning(i,n,s):
