@@ -7,6 +7,7 @@
 # 4.Recursively partition the remaining string from j+1.
 # 5.If i reaches n, add a copy of cur to ans.
 # 6.Backtrack by removing the last added substring from cur.
+
 def palindrome_partitoning(i,n,s,ans,cur):
     if i==n:
         ans.append(cur[:])     #cu[:]->copy the entire list
