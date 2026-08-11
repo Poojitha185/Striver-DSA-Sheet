@@ -1,5 +1,6 @@
-#TC:number of recursive states/partitions × choices per state × palindrome checking = 2ⁿ × n × n.
-#SC:Your space complexity remains O(n) because of the recursion stack.
+#Time Complexity:  O(N² × 2ᴺ) There can be up to 2^(N-1) possible partitions.For every possible substring, ispalindrome() can take O(N) in the worst case.At the base case:ans.append(cur[:])you copy the current partition, which can contain up to N strings, costing up to O(N).
+#Space Complexity: O(N × 2ᴺ)  Because you store all possible palindrome partitions in ans.There can be exponentially many partitions, and each partition can contain up to N strings.Number of partitions → O(2ᴺ)Size of each partition → O(N)
+#Auxiliary Space: O(N)        ← recursion + current partition
 
 def palindrome_partitoning(i,n,s,ans,cur):
     if i==n:
