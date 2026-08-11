@@ -10,11 +10,11 @@
 
 def palindrome_partitoning(i,n,s,ans,cur):
     if i==n:
-        ans.append(cur[:])     #cu[:]->copy the entire list
+        ans.append(cur[:])          #cu[:]->copy the entire list
         return 
     for j in range(i,n):
         if(ispalindrome(i,j,s)):
-           cur.append(s[i:j+1])
+           cur.append(s[i:j+1])      #It includes letters till j
            palindrome_partitoning(j+1,n,s,ans,cur)
            cur.pop()
 def ispalindrome(i,j,s):
