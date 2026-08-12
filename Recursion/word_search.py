@@ -18,6 +18,7 @@ def exist(rows,cols,board,word):
       if search_by_dfs(i,j,0,board,word,rows,cols):
         return True
   return False                                     #return False outside the loops allows the loops to continue when DFS fails. return True inside the loop immediately stops everything when the word is found.
+
 import ast
 board = ast.literal_eval(input("Enter board: "))   #You can convert the entered string into a Python list using ast.literal_eval()
 rows=len(board)
