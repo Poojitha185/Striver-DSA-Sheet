@@ -1,4 +1,6 @@
+#Time Complexity: O(m * n * 4^L),We may start from each of the m×n cells, and explore up to 4 directions for each of the L letters in the word.
 
+#Space Complexity: O(L),Recursion depth equals the length of the word; we also modify the board in-place, so no extra space for visited tracking.
 def search_by_dfs(i,j,idx,board,word,rows,cols):
   if idx==len(word):
     return True
