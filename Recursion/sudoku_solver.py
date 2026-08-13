@@ -70,11 +70,9 @@ if __name__ == "__main__":
         ['.', '9', '1', '.', '3', '6', '.', '7', '5'],
         ['7', '.', '6', '1', '8', '5', '4', '.', '9']
     ]
-
     sol = Solution()
     # Solve the Sudoku board in-place
     sol.solveSudoku(board)
-
     # Print the solved Sudoku board row-wise
     for row in board:
         print(" ".join(row))
