@@ -1,9 +1,7 @@
 #Time Complexity: O(9(n ^ 2)), in the worst case, for each cell in the n2 board, we have 9 possible numbers.
 
 #Space Complexity: O(1), since we are refilling the given board itself, there is no extra space required, so constant space complexity.
-
 from typing import List
-
 class Solution:
     # Check if placing character c at board[row][col] is valid
     def isValid(self, board: List[List[str]], row: int, col: int, c: str) -> bool:
@@ -33,7 +31,6 @@ class Solution:
         
         # If no conflicts, placement is valid
         return True
-
     # Recursive backtracking function to solve the Sudoku board
     def solveSudoku(self, board: List[List[str]]) -> bool:
         # Iterate through all rows
@@ -51,16 +48,13 @@ class Solution:
                             
                             # Recursively attempt to solve rest of the board
                             if self.solveSudoku(board):
-                                return True
-                            
+                                return True                     
                             # If placing c doesn't lead to a solution, backtrack
-                            board[i][j] = '.'
-                    
+                            board[i][j] = '.'                   
                     # If no digit fits here, trigger backtracking
                     return False
         # If all cells are filled correctly, return True to indicate success
         return True
-
 # Driver code to test the solution
 if __name__ == "__main__":
     board = [
