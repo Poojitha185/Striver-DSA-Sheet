@@ -1,3 +1,5 @@
+#Time Complexity: O(4^(N*N)),, because on every cell we need to try 4 different directions.
+#Space Complexity: O(N*N), additional space for visited array and maximum Depth of the recursion tree(auxiliary space).
 def solve(i,j,n,maze,visited,ans,move):
     if(i==n-1 and j==n-1):
         ans.append(move)
