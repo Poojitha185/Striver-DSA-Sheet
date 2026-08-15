@@ -36,6 +36,7 @@ visited = [[0 for _ in range(n)] for _ in range(n)]
 ans=[]
 if maze[0][0]==1:
    solve(0,0,n,maze,visited,ans,"")
+   
 print(ans)
     
 
