@@ -18,6 +18,11 @@ def solve(board):
                 return False
     return True
 
+#Validating Board
+#Now, let's see how we are validating the sudoku board. After determining a number for a cell(at i'th row, j'th col), we try to check the validity. As we know, a valid sudoku needs to satisfy 3 conditions, we can use three loops. But we can do within a single loop itself. Let's try to understand that.
+#We loop from 0 to 8 and check the values - board[i][col](1st condition) and board[row][i](2nd condition), whether the number is already included. For the 3rd condition - the expression (3 * (row / 3) + i / 3) evaluates to the row numbers of that 3x3 submatrix and the expression (3 * (col / 3) + i % 3) evaluates to the column numbers.
+#For eg, if row= 5 and col= 3, the cells visited are It covers all the cells in the sub-matrix.
+
 def isvalid(board,row,col,c):
     for i in range(9):
         if(board[i][col]==c):
