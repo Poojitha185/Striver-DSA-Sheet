@@ -22,8 +22,9 @@ maze = ast.literal_eval(input("Enter the maze: "))      #is used because when yo
 n=len(maze)
 visited = [[0 for _ in range(n)] for _ in range(n)]
 ans=[]
-di=[1,0,0,-1]
+di=[1,0,0,-1]                         
 dj=[0,-1,1,0]
 if maze[0][0]==1:
    solve(0,0,n,maze,visited,ans,"",di,dj)
+   
 print(ans)
