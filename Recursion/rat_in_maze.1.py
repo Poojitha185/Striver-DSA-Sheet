@@ -28,5 +28,4 @@ di=[1,0,0,-1]                                                                   
 dj=[0,-1,1,0]
 if maze[0][0]==1:
    solve(0,0,n,maze,visited,ans,"",di,dj)
-
 print(ans)
