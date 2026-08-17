@@ -13,13 +13,12 @@ def solve(i,j,n,maze,visited,ans,move,di,dj):
         return
     direction='DLRU'
     for ind in range(4):
-        nexti=i+di[ind]                                      # di and dj work togethher  di[ind] -> change in row dj[ind] -> change in column
+        nexti=i+di[ind]                            # di and dj work togethher  di[ind] -> change in row dj[ind] -> change in column
         nextj=j+dj[ind]
         if(nexti>=0 and nextj>=0 and nexti<n and nextj<n and not visited[nexti][nextj] and maze[nexti][nextj]==1 ):
             visited[i][j]=1
-            solve(nexti,nextj,n,maze,visited,ans,move+direction[ind],di,dj)     # direction[ind] stores the corresponding direction character.
-            visited[i][j]=0                                                     # nexti and nextj represent the cell we are ABOUT TO MOVE INTO.
-
+            solve(nexti,nextj,n,maze,visited,ans,move+direction[ind],di,dj)     # direction[ind] stores the corresponding direction character.# nexti and nextj represent the cell we are ABOUT TO MOVE INTO.
+            visited[i][j]=0                                                     # Backtarcking
 import ast
 maze = ast.literal_eval(input("Enter the maze: "))                            #is used because when you type a 2D list through input(), Python initially receives it as a string.   ast.literal_eval(...) takes that string and converts it into the corresponding Python data structure.
 n=len(maze)
