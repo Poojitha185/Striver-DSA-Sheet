@@ -1,3 +1,7 @@
+#Time Complexity: O(2^n), where n is the number of elements in the array. This is because each element can either be included or excluded from the subsequence, leading to 2^n possible combinations.
+
+#Space Complexity: O(n), where n is the depth of the recursion stack. In the worst case, the recursion can go as deep as the number of elements in the array.
+
 def countSubsequenceWithTargetSum(ind, sum, nums):
         # Base case: if sum is 0, one valid subsequence is found
         if sum == 0:
