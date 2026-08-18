@@ -2,7 +2,8 @@
 
 #Space Complexity: O(n), where n is the depth of the recursion stack. In the worst case, the recursion can go as deep as the number of elements in the array.
 
-##Use recursion to explore all combinations of elements that could contribute to the target sum.
+#A subsequence is formed by selecting elements while keeping their original order, but you can skip elements.
+#Use recursion to explore all combinations of elements that could contribute to the target sum.
 #At each step, decide whether to include or exclude the current element.
 #Sum the results of both choices — inclusion and exclusion — to get the total number of valid subsets.
 
@@ -19,5 +20,5 @@ def countSubsequenceWithTargetSum(ind, sum, nums):
 import ast
 nums = ast.literal_eval(input("Enter the array: "))
 target = int(input("Enter the target sum: "))
-print("The number of subsequences with target sum is:", countSubsequenceWithTargetSum(0, target, nums))
+print("The number of subsequences with target sum is:", countSubsequenceWithTargetSum(0,target,nums))
 
