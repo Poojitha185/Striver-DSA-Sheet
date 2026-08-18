@@ -2,6 +2,9 @@
 
 #Space Complexity: O(n), where n is the depth of the recursion stack. In the worst case, the recursion can go as deep as the number of elements in the array.
 
+##Use recursion to explore all combinations of elements that could contribute to the target sum.
+#At each step, decide whether to include or exclude the current element.
+#Sum the results of both choices — inclusion and exclusion — to get the total number of valid subsets.
 def countSubsequenceWithTargetSum(ind, sum, nums):
         # Base case: if sum is 0, one valid subsequence is found
         if sum == 0:
