@@ -17,9 +17,8 @@ def checkIfExists(i, n, arr, k):
     if i == n:
             return k == 0       #k==0 is a boolean expression that evaluates to True if k is 0,and False if k is not equal to zero and index reaches n
                                 #if i==n: return False, instead of checking k==0 we can directly return False after index i reaches n bcz if it equals to zero after reaches n it is check by k==0 condition at first and thereby return True so no need to check again
-        
-        # Recursive call: include the current element in the subsequence
-        # or exclude the current element from the subsequence
+    # Recursive call: include the current element in the subsequence
+    # or exclude the current element from the subsequence
     return checkIfExists(i + 1, n, arr, k - arr[i]) or checkIfExists(i + 1, n, arr, k)
 
 import ast
