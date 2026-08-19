@@ -1,6 +1,11 @@
 #Time Complexity: O(2^n), where n is the number of elements in the input array. This is because each element can either be included or excluded from the subsequence, leading to 2^n possible combinations.
 
 #Space Complexity: O(n), where n is the depth of the recursion stack. In the worst case, the recursion can go as deep as n levels, leading to a space complexity of O(n) due to the call stack.
+
+#Treat the problem as a decision tree where each item has two choices: include it or skip it.
+#Recursively apply this decision process to the remaining items while updating the remaining target amount.
+#Explore all possible combinations to determine if any subset matches the exact target.
+
 def checkIfExists(i, n, arr, k):
         # Base case: if the sum k is 0, a subsequence is found
         if k == 0:
