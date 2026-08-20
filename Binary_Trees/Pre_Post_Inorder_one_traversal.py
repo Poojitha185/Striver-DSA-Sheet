@@ -1,3 +1,6 @@
+#Time Complexity: O(3*N), we process each node thrice, once for every traversal.
+#Space Complexity: O(4*N), extra space used for storing postorder, inorder, preorder traversal and stack.
+
 # Node structure for the binary tree
 class Node:
     # Constructor to initialize the node with a value
