@@ -7,7 +7,6 @@ class Node:
         self.data = val
         self.left = None
         self.right = None
-
 # Solution class containing the traversal function
 class Solution:
     # Function to get the Preorder,
@@ -16,12 +15,9 @@ class Solution:
     def preInPostTraversal(self, root):
         # Lists to store traversals
         pre, ino, post = [], [], []
-
         # If the tree is empty, return empty traversals
         if root is None:
             return []
-
-        # Stack to maintain nodes and their traversal state
         st = [(root, 1)]
 
         while st:
