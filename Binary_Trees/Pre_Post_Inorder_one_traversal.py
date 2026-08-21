@@ -1,5 +1,9 @@
 #Time Complexity: O(3*N), we process each node thrice, once for every traversal.
 #Space Complexity: O(4*N), extra space used for storing postorder, inorder, preorder traversal and stack.
+#This approach traverses the binary tree in a single pass while computing the preorder, inorder and postorder traversals at the same time. A stack is used for state management. The stack keeps track of the traversal state for each node. 
+#It stores nodes and their state information allowing the algorithm to resume traversal from intermediate points. For each node, it identifies its state i.e. if it's in the preorder state, it records the node's value and pushes the left child onto the stack.
+#Moving to the inorder state, it records the node's value and pushes the right child onto the stack. Finally, in the post-order state, it stores the node's value and pops the node. As the algorithm executes over each node, it pushes each value in separate arrays for preorder, inorder and postorder traversals depending upon the current order and sequence. Hence, we are able to traverse the tree just once and get all three traversals from it.
+
 
 #representation of binary tree in python
 class node:                   #creates a blueprint/template for a tree node.
@@ -16,12 +20,12 @@ def pre_in_post(root):
         return []
     while stack:
         node,state=stack.pop()
-        if state==1:
+        if state==1:                         #If the state is ‘1’ ie. preorder: store the node’s data in the preorder array and move its state to 2 (inorder) for this node. Push this updated state back onto the stack and push its left child as well.
             preorder.append(node.data)
             stack.append((node,2))
             if node.left:
                 stack.append((node.left,1))
-        elif state==2:
+        elif state==2:                         #If the state is ‘2’ ie. inorder: store the node’s data is the inorder array and update its state to 3 (postorder) for this node. Push the updated state back onto the stack and push the right child onto the stack as well.
             inorder.append(node.data)
             stack.append((node,3))
             if node.right:
