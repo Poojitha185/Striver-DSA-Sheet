@@ -1,4 +1,5 @@
-
+#Time Complexity: O(3*N), we process each node thrice, once for every traversal.
+#Space Complexity: O(4*N), extra space used for storing postorder, inorder, preorder traversal and stack.
 
 #representation of binary tree in python
 class node:                   #creates a blueprint/template for a tree node.
