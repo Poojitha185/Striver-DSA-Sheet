@@ -11,6 +11,7 @@ class node:                   #creates a blueprint/template for a tree node.
         self.data=data        #self means the current Node object.
         self.left=None        #None simply means there is currently no child there.In Python, None is basically the equivalent of null in languages like C, C++, Java, and JavaScript.
         self.right=None
+        
 def pre_in_post(root):
     preorder=[]
     inorder=[]
@@ -20,17 +21,17 @@ def pre_in_post(root):
         return []
     while stack:
         node,state=stack.pop()
-        if state==1:                         #If the state is ‘1’ ie. preorder: store the node’s data in the preorder array and move its state to 2 (inorder) for this node. Push this updated state back onto the stack and push its left child as well.
+        if state==1:                           #If the state is ‘1’ ie. preorder: store the node’s data in the preorder array and move its state to 2 (inorder) for this node. Push this updated state back onto the stack and push its left child as well.
             preorder.append(node.data)
             stack.append((node,2))
             if node.left:
                 stack.append((node.left,1))
-        elif state==2:                         #If the state is ‘2’ ie. inorder: store the node’s data is the inorder array and update its state to 3 (postorder) for this node. Push the updated state back onto the stack and push the right child onto the stack as well.
+        elif state==2:                          #If the state is ‘2’ ie. inorder: store the node’s data is the inorder array and update its state to 3 (postorder) for this node. Push the updated state back onto the stack and push the right child onto the stack as well.
             inorder.append(node.data)
             stack.append((node,3))
             if node.right:
                 stack.append((node.right,1))
-        else:
+        else:                                   #If the state is ‘3’ ie. postorder: store the node’s data in the postorder array and pop it.
             postorder.append(node.data)
     return [preorder,inorder,postorder]
 
