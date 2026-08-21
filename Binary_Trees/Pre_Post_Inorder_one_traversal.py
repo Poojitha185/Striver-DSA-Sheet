@@ -1,78 +1,49 @@
-#Time Complexity: O(3*N), we process each node thrice, once for every traversal.
-#Space Complexity: O(4*N), extra space used for storing postorder, inorder, preorder traversal and stack.
-# Node structure for the binary tree
-class Node:
-    # Constructor to initialize the node with a value
-    def __init__(self, val):
-        self.data = val
-        self.left = None
-        self.right = None
-# Solution class containing the traversal function
-class Solution:
-    # Function to get the Preorder,
-    # Inorder and Postorder traversal
-    # Of Binary Tree in One traversal
-    def preInPostTraversal(self, root):
-        # Lists to store traversals
-        pre, ino, post = [], [], []
-        # If the tree is empty, return empty traversals
-        if root is None:
-            return []
-        st = [(root, 1)]
 
-        while st:
-            node, state = st.pop()
 
-            # this is part of pre
-            if state == 1:
-                # Store the node's data in the preorder traversal
-                pre.append(node.data)
-                # Move to state 2 (inorder) for this node
-                st.append((node, 2))
+#representation of binary tree in python
+class node:                   #creates a blueprint/template for a tree node.
+    def __init__(self,data):  #__init__ is a special Python method that runs automatically when you create an object.You could technically use another method, but then you'd have to call it yourself. __init__ is convenient because Python calls it automatically when the object is created.
+        self.data=data        #self means the current Node object.
+        self.left=None        #None simply means there is currently no child there.In Python, None is basically the equivalent of null in languages like C, C++, Java, and JavaScript.
+        self.right=None
+def pre_in_post(root):
+    preorder=[]
+    inorder=[]
+    postorder=[]
+    stack=[(root,1)]
+    if root is None:
+        return []
+    while stack:
+        node,state=stack.pop()
+        if state==1:
+            preorder.append(node.data)
+            stack.append((node,2))
+            if node.left:
+                stack.append((node.left,1))
+        elif state==2:
+            inorder.append(node.data)
+            stack.append((node,3))
+            if node.right:
+                stack.append((node.right,1))
+        else:
+            postorder.append(node.data)
+    return [preorder,inorder,postorder]
 
-                # Push left child onto the stack for processing
-                if node.left:
-                    st.append((node.left, 1))
+def create_tree():
+    data = int(input("Enter data (-1 for no node): "))
+    if data == -1:
+        return None
+    root = node(data)
+    print("Enter left child of", data)
+    root.left = create_tree()
+    print("Enter right child of", data)
+    root.right = create_tree()
+    return root
 
-            # this is a part of in
-            elif state == 2:
-                # Store the node's data in the inorder traversal
-                ino.append(node.data)
-                # Move to state 3 (postorder) for this node
-                st.append((node, 3))
-
-                # Push right child onto the stack for processing
-                if node.right:
-                    st.append((node.right, 1))
-
-            # this is part of post
-            else:
-                # Store the node's data in the postorder traversal
-                post.append(node.data)
-
-        # Returning the traversals
-        return [pre, ino, post]
-
-# Main function
-if __name__ == "__main__":
-    # Creating a sample binary tree
-    root = Node(1)
-    root.left = Node(2)
-    root.right = Node(3)
-    root.left.left = Node(4)
-    root.left.right = Node(5)
-
-    # Create object of Solution class
-    sol = Solution()
-
-    # Getting the traversals
-    traversals = sol.preInPostTraversal(root)
-
-    # Extracting and printing the traversals
-    pre = traversals[0]
-    ino = traversals[1]
-    post = traversals[2]
-
-    print("Preorder traversal:", *pre)
-    print("Inorder traversal:", *ino)
-    print("Postorder traversal:", *post)
+# Create the tree
+root = create_tree()
+# Find traversals
+result = pre_in_post(root)
+print("Preorder:", result[0])
+print("Inorder:", result[1])
+print("Postorder:", result[2])
