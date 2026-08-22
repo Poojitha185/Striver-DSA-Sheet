@@ -23,7 +23,6 @@ def preorder_traversal(node):
     print(node.data)
     preorder_traversal(node.left)
     preorder_traversal(node.right)
-
 # Create the tree
 root = create_tree()
 # Find traversals
