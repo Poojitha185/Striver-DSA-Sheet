@@ -14,7 +14,7 @@ def create_tree():
     root.right = create_tree()
     return root
 def preorder_traversal(node):
-    if node==None:                  #After creating the tree, a missing child is None, not -1.
+    if node is None:                  #After creating the tree, a missing child is None, not -1.
         return
     print(node.data)
     preorder_traversal(node.left)
