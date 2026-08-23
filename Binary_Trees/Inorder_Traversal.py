@@ -1,6 +1,5 @@
 #Time Complexity: O(N), where N is the number of nodes in the binary tree. Each node is visited exactly once during the traversal.
-#Space Complexity: O(N), where N is the number of nodes in the binary tree. The space is used for the recursion stack and the vector to store the inorder traversal result.
-#Traverse Left Subtree: Recursively call the inorder function on the left child of the current node, exploring the left subtree first in a depth-first manner.
+#Space Complexity: O(N), where N is the number of nodes in the binary tree. The space is used for the recursion stack during the traversal, which can go as deep as the height of the tree in the worst case (for a skewed tree). 
 #Process Current Node: Once the left subtree is fully explored, the current node is processed (e.g., adding its value to an array or printing it).
 #Traverse Right Subtree: After processing the current node, recursively explore the right subtree by invoking the inorder function on the right child of the current node.
 
