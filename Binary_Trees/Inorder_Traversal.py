@@ -1,5 +1,8 @@
 #Time Complexity: O(N), where N is the number of nodes in the binary tree. Each node is visited exactly once during the traversal.
 #Space Complexity: O(N), where N is the number of nodes in the binary tree. The space is used for the recursion stack and the vector to store the inorder traversal result.
+#Traverse Left Subtree: Recursively call the inorder function on the left child of the current node, exploring the left subtree first in a depth-first manner.
+#Process Current Node: Once the left subtree is fully explored, the current node is processed (e.g., adding its value to an array or printing it).
+#Traverse Right Subtree: After processing the current node, recursively explore the right subtree by invoking the inorder function on the right child of the current node.
 
 class node:                   #creates a blueprint/template for a tree node.
     def __init__(self,data):  #__init__ is a special Python method that runs automatically when you create an object.You could technically use another method, but then you'd have to call it yourself. __init__ is convenient because Python calls it automatically when the object is created.
