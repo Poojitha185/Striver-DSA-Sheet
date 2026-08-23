@@ -1,4 +1,5 @@
-
+#Time Complexity: O(N), where N is the number of nodes in the binary tree. Each node is visited exactly once during the traversal.
+#Space Complexity: O(N), where N is the number of nodes in the binary tree. The space is used for the recursion stack and the vector to store the inorder traversal result.
 
 class node:                   #creates a blueprint/template for a tree node.
     def __init__(self,data):  #__init__ is a special Python method that runs automatically when you create an object.You could technically use another method, but then you'd have to call it yourself. __init__ is convenient because Python calls it automatically when the object is created.
@@ -16,7 +17,7 @@ def create_tree():
     root.right = create_tree()
     return root
 def Inorder_traversal(node):
-    if node is None:                  #After creating the tree, a missing child is None, not -1.
+    if node is None:                  
         return
     
     Inorder_traversal(node.left)
