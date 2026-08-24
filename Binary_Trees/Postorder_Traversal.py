@@ -7,7 +7,6 @@
 #Push its right child (if it exists) onto the first stack.
 #Once the first stack is empty, retrieve the nodes in the postorder sequence by popping nodes from the second stack one by one and store them in the postorder array.
 
-
 class node:                   #creates a blueprint/template for a tree node.
     def __init__(self,data):  #__init__ is a special Python method that runs automatically when you create an object.You could technically use another method, but then you'd have to call it yourself. __init__ is convenient because Python calls it automatically when the object is created.
         self.data=data        #self means the current Node object.
@@ -24,6 +23,7 @@ def create_tree():
     print("Enter right child of", data)
     root.right = create_tree()
     return root
+
 def postorder_traversal(node):
     postorder=[]
     if node is None:
