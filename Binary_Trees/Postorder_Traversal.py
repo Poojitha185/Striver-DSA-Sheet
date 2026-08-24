@@ -1,3 +1,5 @@
+#Time Complexity: O(N), where N is the number of nodes in the binary tree. Each node is visited once during the traversal.
+#Space Complexity: O(2N),The space is used by the 2 stacks to store nodes during traversal.
 class node:                   #creates a blueprint/template for a tree node.
     def __init__(self,data):  #__init__ is a special Python method that runs automatically when you create an object.You could technically use another method, but then you'd have to call it yourself. __init__ is convenient because Python calls it automatically when the object is created.
         self.data=data        #self means the current Node object.
