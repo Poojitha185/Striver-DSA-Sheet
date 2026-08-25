@@ -9,6 +9,7 @@ class node:                   #creates a blueprint/template for a tree node.
         self.data=data        #self means the current Node object.
         self.left=None        #None simply means there is currently no child there.In Python, None is basically the equivalent of null in languages like C, C++, Java, and JavaScript.
         self.right=None
+
 def create_tree():
     data = int(input("Enter data (-1 for no node): "))
     if data == -1:
@@ -35,9 +36,8 @@ def preorderTraversal(root):
             stack.append(node.left)
     return preorder
 
- # Getting the preorder traversal
 root=create_tree()
 result = preorderTraversal(root)
 
-# Displaying the preorder traversal result
+
 print("Preorder Traversal:", result)
