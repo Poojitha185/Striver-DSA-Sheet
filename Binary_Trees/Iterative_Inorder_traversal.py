@@ -7,7 +7,7 @@ class node:                   #creates a blueprint/template for a tree node.
         self.data=data        #self means the current Node object.
         self.left=None        #None simply means there is currently no child there.In Python, None is basically the equivalent of null in languages like C, C++, Java, and JavaScript.
         self.right=None
-        
+
 class Solution:
     # Function to perform inorder traversal
     # of a binary tree iteratively
@@ -48,13 +48,6 @@ class Solution:
         # Return the inorder
         # traversal result
         return inorder
-
-# Creating a binary tree
-root = TreeNode(1)
-root.left = TreeNode(2)
-root.right = TreeNode(3)
-root.left.left = TreeNode(4)
-root.left.right = TreeNode(5)
 
 # Initializing the Solution class
 sol = Solution()
