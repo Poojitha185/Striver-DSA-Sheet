@@ -2,12 +2,12 @@
 #Time Complexity: O(n), where n is the number of nodes in the binary tree. Each node is visited exactly once.
 
 #Space Complexity: O(h), where h is the height of the binary tree. This is the space required for the stack to store the nodes during traversal.
-class TreeNode:
-    def __init__(self, x):
-        self.data = x
-        self.left = None
-        self.right = None
-
+class node:                   #creates a blueprint/template for a tree node.
+    def __init__(self,data):  #__init__ is a special Python method that runs automatically when you create an object.You could technically use another method, but then you'd have to call it yourself. __init__ is convenient because Python calls it automatically when the object is created.
+        self.data=data        #self means the current Node object.
+        self.left=None        #None simply means there is currently no child there.In Python, None is basically the equivalent of null in languages like C, C++, Java, and JavaScript.
+        self.right=None
+        
 class Solution:
     # Function to perform inorder traversal
     # of a binary tree iteratively
