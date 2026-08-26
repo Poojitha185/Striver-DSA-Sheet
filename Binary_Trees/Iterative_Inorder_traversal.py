@@ -1,4 +1,7 @@
 # Define the TreeNode structure
+#Time Complexity: O(n), where n is the number of nodes in the binary tree. Each node is visited exactly once.
+
+#Space Complexity: O(h), where h is the height of the binary tree. This is the space required for the stack to store the nodes during traversal.
 class TreeNode:
     def __init__(self, x):
         self.data = x
