@@ -9,7 +9,6 @@ class node:                   #creates a blueprint/template for a tree node.
         self.data=data        #self means the current Node object.
         self.left=None        #None simply means there is currently no child there.In Python, None is basically the equivalent of null in languages like C, C++, Java, and JavaScript.
         self.right=None
-
 def create_tree():
     data = int(input("Enter data (-1 for no node): "))
     if data == -1:
@@ -20,7 +19,6 @@ def create_tree():
     print("Enter right child of", data)
     root.right = create_tree()
     return root
-
 def postorder_traversal(node):
     postorder=[]
     if node is None:
@@ -38,7 +36,6 @@ def postorder_traversal(node):
     while st2:
         postorder.append(st2.pop().data)
     return postorder
-
 # Create the tree
 root = create_tree()
 # Find traversals
