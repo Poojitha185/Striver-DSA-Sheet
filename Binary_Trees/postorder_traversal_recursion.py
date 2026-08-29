@@ -1,5 +1,9 @@
 #Time Complexity: O(N), we process each node once in traversal.
 #Space Complexity: O(N), extra space used for storing post order traversal and recursion stack space.
+#Postorder traversal, another depth-first method in tree exploration, follows a sequence where the algorithm first explores the left subtree, then the right subtree, and finally visits the root node. In postorder traversal, we visit (or add to the array) the current node after traversing both its left and right subtrees.The sequence of steps in postorder traversal follows: Left, Right, Root.
+#Start at the root of the binary tree.First, recursively traverse the entire left subtree.Then, recursively traverse the entire right subtree.
+#Finally, process (visit) the current node.
+
 class node:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
