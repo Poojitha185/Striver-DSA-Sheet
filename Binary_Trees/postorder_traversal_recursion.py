@@ -10,7 +10,6 @@ class node:
         self.val = val
         self.left = left
         self.right = right
-
 def create_tree():
     data = int(input("Enter data (-1 for no node): "))
     if data == -1:
