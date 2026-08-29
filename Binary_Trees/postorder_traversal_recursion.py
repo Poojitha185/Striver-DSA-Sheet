@@ -9,6 +9,7 @@ class node:
         self.val = val
         self.left = left
         self.right = right
+
 def create_tree():
     data = int(input("Enter data (-1 for no node): "))
     if data == -1:
@@ -19,6 +20,7 @@ def create_tree():
     print("Enter right child of", data)
     root.right = create_tree()
     return root
+
 def postorderTraversal(root, result):
         # Base case: if node is None
         if not root:
