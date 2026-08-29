@@ -1,4 +1,5 @@
-# Tree node definition
+#Time Complexity: O(N), we process each node once in traversal.
+#Space Complexity: O(N), extra space used for storing post order traversal and recursion stack space.
 class node:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
