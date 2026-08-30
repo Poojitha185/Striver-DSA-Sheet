@@ -1,6 +1,7 @@
 #Time Complexity: O(N), each node is processed exactly once
 #Space Complexity: O(N), if tree is skewed
 # using Recursion approach 
+
 class node:                   
     def __init__(self,data):    
         self.data=data        
@@ -24,5 +25,6 @@ def maximum_depth(root):
     lt=maximum_depth(root.left)
     rt=maximum_depth(root.right)
     return 1+max(lt,rt)
+
 root=create_tree()
 print("Maximum depth of the binary tree is:", maximum_depth(root))
