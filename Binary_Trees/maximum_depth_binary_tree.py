@@ -1,5 +1,6 @@
-#Time Complexity: O(N), each node is processed
+#Time Complexity: O(N), each node is processed exactly once
 #Space Complexity: O(N), if tree is skewed
+# using Recursion approach 
 class node:                   
     def __init__(self,data):    
         self.data=data        
