@@ -1,0 +1,36 @@
+
+class node:                   
+    def __init__(self,data):    
+        self.data=data        
+        self.left=None         
+        self.right=None
+
+def create_tree():
+    data = int(input("Enter data (-1 for no node): "))
+    if data == -1:
+        return None
+    root = node(data)
+    print("Enter left child of", data)
+    root.left = create_tree()
+    print("Enter right child of", data)
+    root.right = create_tree()
+    return root
+from queue import Queue
+def max_depth(root):
+    if root is None:
+        return 0
+    q=Queue()
+    level=0
+    q.put(root)                 #put() is used with Python's Queue to add an element to the queue
+    while not q.empty():
+        size=q.qsize()          #qsize() simply means “queue size”. It tells you how many elements are currently inside the queue.
+        for i in range(size):
+            front = q.get()      # Get the front node in the queue
+            if front.left is not None: 
+                q.put(front.left) # Enqueue left child if exists
+            if front.right is not None: 
+                q.put(front.right) # Enqueue right child if exists
+        level += 1
+    return level
+root=create_tree()
+print("Maximum depth of the binary tree is:", max_depth(root))
