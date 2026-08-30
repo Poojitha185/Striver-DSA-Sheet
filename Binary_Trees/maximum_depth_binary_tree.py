@@ -1,4 +1,5 @@
-
+#Time Complexity: O(N), each node is processed
+#Space Complexity: O(N), if tree is skewed
 class node:                   
     def __init__(self,data):    
         self.data=data        
