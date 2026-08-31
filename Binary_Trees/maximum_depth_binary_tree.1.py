@@ -1,6 +1,6 @@
 #Time Complexity: O(N), each node is processed once in Level Order Traversal.
 #Space Complexity: O(N), in worst case, a maximum of N/2 nodes can be present in queue.
-
+#To find the depth (or height) of a binary tree using BFS, we can take advantage of level-order traversal. Since each level of the tree corresponds to one unit of depth, we can traverse the tree level by level, and the number of levels we visit gives us the depth.
 class node:                   
     def __init__(self,data):    
         self.data=data        
