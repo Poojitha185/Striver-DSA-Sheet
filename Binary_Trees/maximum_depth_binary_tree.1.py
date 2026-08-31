@@ -1,3 +1,5 @@
+#Time Complexity: O(N), each node is processed once in Level Order Traversal.
+#Space Complexity: O(N), in worst case, a maximum of N/2 nodes can be present in queue.
 
 class node:                   
     def __init__(self,data):    
