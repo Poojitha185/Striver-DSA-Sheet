@@ -21,14 +21,12 @@ def create_tree():
     print("Enter right child of", data)
     root.right = create_tree()
     return root
-
 def maximum_depth(root):
     if root==None:
         return 0
     lt=maximum_depth(root.left)
     rt=maximum_depth(root.right)
     return 1 + max(lt, rt)
-
 # Checks every node
 def is_balanced(tree_data):
     for i in tree_data:
