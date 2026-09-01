@@ -1,4 +1,5 @@
 #Time Complexity: O(N2), where N is the number of nodes in the binary tree. For each node, we calculate the height of its left and right subtrees, and height calculation takes O(N) in the worst case, leading to an overall O(N × N) = O(N²).
+
 #Space Complexity: O(H), where H is the height of the tree. This space is used by the recursive call stack of the getHeight function. In the worst case (skewed tree), H = N, and in the best case (balanced tree), H = log N. No additional data structures are used, so auxiliary space remains constant.
 
 #Base Case: If the root is null, it indicates an empty tree, which is considered balanced. So, return true.
@@ -35,7 +36,8 @@ def isBalanced( root):
             return True
         # If any condition fails, the tree is unbalanced
         return False
-    # Function to calculate the height of a subtree
+
+# Function to calculate the height of a subtree
 def getHeight(root):
         # Base case: if the current node is NULL, return 0 (height of an empty tree)
         if root is None:
