@@ -12,7 +12,6 @@ class node:
         self.data=data        
         self.left=None         
         self.right=None
-
 def create_tree():
     data = int(input("Enter data (-1 for no node): "))
     if data == -1:
@@ -28,11 +27,9 @@ def isBalanced( root):
         # If the tree is empty, it's balanced
         if root is None:
             return True
-
         # Calculate the height of left and right subtrees
         leftHeight = getHeight(root.left)
         rightHeight = getHeight(root.right)
-
         # Check if the absolute difference in heights of left and right subtrees is <= 1
         if abs(leftHeight - rightHeight) <= 1 and isBalanced(root.left) and isBalanced(root.right):         #abs() is a built-in Python function that returns the absolute value of a number. In simple words: it removes the negative sign.
             return True
@@ -43,12 +40,11 @@ def getHeight(root):
         # Base case: if the current node is NULL, return 0 (height of an empty tree)
         if root is None:
             return 0
-
         # Recursively calculate the height of left and right subtrees
         leftHeight = getHeight(root.left)
         rightHeight = getHeight(root.right)
-
         # Return the maximum height of left and right subtrees plus 1 (for the current node)
         return max(leftHeight, rightHeight) + 1
+
 root=create_tree()
 print("is the binary tree balanced?",isBalanced(root) )
