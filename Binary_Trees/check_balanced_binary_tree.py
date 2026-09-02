@@ -9,7 +9,9 @@ class node:
         self.left=None         
         self.right=None
 
-tree_data=[]                 #it contains node objects but not the values of the nodes. and objects also iterable in list. So, we can iterate over the list of node objects and access their left and right children to check if the tree is balanced or not.
+#It contains node objects but not the values of the nodes. and objects also iterable in list. So, we can iterate over the list of node objects and access their left and right children to check if the tree is balanced or not.
+tree_data=[] 
+                
 def create_tree():
     data = int(input("Enter data (-1 for no node): "))
     if data == -1:
@@ -21,6 +23,7 @@ def create_tree():
     print("Enter right child of", data)
     root.right = create_tree()
     return root
+
 def maximum_depth(root):
     if root==None:
         return 0
