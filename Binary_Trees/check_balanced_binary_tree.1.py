@@ -1,3 +1,8 @@
+#Time Complexity: O(N2), where N is the number of nodes in the binary tree. For each node, we calculate the height of its left and right subtrees, and height calculation takes O(N) in the worst case, leading to an overall O(N × N) = O(N²).
+
+#Space Complexity: O(H), where H is the height of the tree. This space is used by the recursive call stack of the getHeight function. In the worst case (skewed tree), H = N, and in the best case (balanced tree), H = log N. No additional data structures are used, so auxiliary space remains constant.
+
+
 class node:                   
     def __init__(self,data):    
         self.data=data        
