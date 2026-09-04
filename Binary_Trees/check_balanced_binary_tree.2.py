@@ -2,6 +2,8 @@
 
 #Space Complexity: O(1), since no extra data structures are used that grow with input size. However, O(H) auxiliary space is used by the recursion stack, where H is the height of the tree. In the best case (balanced tree), H = log₂N; in the worst case (skewed tree), H = N.
 
+#The O(N²) time complexity of the previous approach can be optimized by checking the balance condition while traversing the tree in a bottom-up manner. Instead of repeatedly calculating the height at each node, we compute subtree heights during postorder traversal and evaluate the balance condition at the same time.
+#This avoids redundant height calculations and allows early detection of unbalanced nodes, thereby preventing unnecessary recursive calls. Postorder traversal helps ensure that we already have the height information of both subtrees when we assess the balance condition at any node.
 class node:                   
     def __init__(self,data):    
         self.data=data        
