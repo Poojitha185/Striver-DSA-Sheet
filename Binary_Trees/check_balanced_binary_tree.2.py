@@ -4,6 +4,9 @@
 
 #The O(N²) time complexity of the previous approach can be optimized by checking the balance condition while traversing the tree in a bottom-up manner. Instead of repeatedly calculating the height at each node, we compute subtree heights during postorder traversal and evaluate the balance condition at the same time.
 #This avoids redundant height calculations and allows early detection of unbalanced nodes, thereby preventing unnecessary recursive calls. Postorder traversal helps ensure that we already have the height information of both subtrees when we assess the balance condition at any node.
+#Traverse the Binary Tree in post-order using recursion: visit the left subtree, then the right subtree, and finally the current node.
+#Check the absolute difference between the heights of the left and right subtrees. If the difference is greater than 1, or if either subtree is already unbalanced (returns -1), return -1 to indicate an unbalanced state.
+#Continue the traversal until all nodes are visited. If no -1 is returned, the tree is balanced.
 
 class node:                   
     def __init__(self,data):    
