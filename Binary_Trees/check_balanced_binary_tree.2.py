@@ -4,12 +4,12 @@
 
 #The O(N²) time complexity of the previous approach can be optimized by checking the balance condition while traversing the tree in a bottom-up manner. Instead of repeatedly calculating the height at each node, we compute subtree heights during postorder traversal and evaluate the balance condition at the same time.
 #This avoids redundant height calculations and allows early detection of unbalanced nodes, thereby preventing unnecessary recursive calls. Postorder traversal helps ensure that we already have the height information of both subtrees when we assess the balance condition at any node.
+
 class node:                   
     def __init__(self,data):    
         self.data=data        
         self.left=None         
         self.right=None
-
 def create_tree():
     data = int(input("Enter data (-1 for no node): "))
     if data == -1:
@@ -35,8 +35,10 @@ def maximum_depth(root):
     return 1+max(lt,rt)
 
 root=create_tree()
+
 def is_balanced(root):
   if(maximum_depth(root)==-1):
     return False
   return True
+
 print(is_balanced(root))
