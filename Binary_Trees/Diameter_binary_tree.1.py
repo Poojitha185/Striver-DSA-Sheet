@@ -1,3 +1,6 @@
+#Time Complexity: O(N) where N is the number of nodes in the Binary Tree. This complexity arises from visiting each node exactly once during the postorder traversal.
+
+#Space Complexity : O(H), where H is the height of the binary tree due to the recursion call stack (O(log N) for a balanced tree and O(N) for a skewed tree).
 class node:                   
     def __init__(self,data):    
         self.data=data        
