@@ -1,4 +1,6 @@
 #The diameter of a binary tree is the length of the longest path between any two nodes in the tree. It may or may not pass through the root.
+#Time Complexity: O(N*N) where N is the number of nodes in the Binary Tree.
+#Space Complexity : O(1) as no additional data structures or memory is allocated.
 class node:                   
     def __init__(self,data):    
         self.data=data        
