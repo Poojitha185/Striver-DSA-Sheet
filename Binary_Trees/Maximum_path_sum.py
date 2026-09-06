@@ -1,3 +1,6 @@
+#Time Complexity: O(N), each node is processed once in DFS Traversal.
+#Space Complexity: O(H), auxiliary stack space, where H is height of Binary Tree.
+
 class node:                   
     def __init__(self,data):    
         self.data=data        
@@ -22,7 +25,7 @@ def height(root,maximum_path):
     rt=height(root.right,maximum_path)
     current_path=root.data+lt+rt                 #current_path is just a temporary variable, so you don't need to initialise it outside the function.
     maximum_path[0]=max(maximum_path[0],current_path)
-    return root.data+max(lt,rt)
+    return root.data+max(lt,rt)                  #Return one-sided path
 
 def maximum_sum(root):
     maximum_path=[float('-inf')]
