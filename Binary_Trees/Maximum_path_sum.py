@@ -25,7 +25,7 @@ def height(root,maximum_path):
     return root.data+max(lt,rt)
 
 def maximum_sum(root):
-    maximum_path=[0]
+    maximum_path=[float('-inf')]
     height(root,maximum_path)
     return maximum_path[0]
 root=create_tree()
