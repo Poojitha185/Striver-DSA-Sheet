@@ -4,13 +4,11 @@
 #To imagine the Binary Tree from above, we visualise vertical lines passing through the tree. Each vertical line represents a unique vertical position. Nodes to the right of the tree’s centre are assigned positive vertical indexes. As we move to the right, the vertical index increases. Nodes to the left of the tree’s centre are assigned negative vertical indexes. As we move to the left, the vertical index decreases.
 #We use a map data structure to store the nodes corresponding to each vertical level 
 
-
 class node:                   #creates a blueprint/template for a tree node.
     def __init__(self,data):  #__init__ is a special Python method that runs automatically when you create an object.You could technically use another method, but then you'd have to call it yourself. __init__ is convenient because Python calls it automatically when the object is created.
         self.data=data        #self means the current Node object.
         self.left=None        #None simply means there is currently no child there.In Python, None is basically the equivalent of null in languages like C, C++, Java, and JavaScript.
         self.right=None
-
 def create_tree():
     data = int(input("Enter data (-1 for no node): "))
     if data == -1:
@@ -33,12 +31,13 @@ def top_view(root):
         if line not in dic:
             dic[line]=front.data
         if front.left:
-            q.put((front.left,line-1))
+            q.put((front.left,line-1))     #ading tuple (front.left, line-1) to the queue. The left child is associated with a vertical index decremented by 1.
         if front.right:
             q.put((front.right,line+1))
     for i in sorted(dic.keys()):
         ans.append(dic[i])
     return ans
+
 # Create the tree
 root = create_tree()
 # Find traversals
