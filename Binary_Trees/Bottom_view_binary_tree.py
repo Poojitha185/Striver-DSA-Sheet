@@ -2,6 +2,7 @@
 #Space Complexity: O(N/2 + N/2) where N represents the number of nodes in the Binary Tre
 
 #it is same as top view algorithm but here We update the map at this index with the current node’s data. This ensures that the latest (i.e., bottom-most) node at this vertical index is stored.
+
 class node:                   #creates a blueprint/template for a tree node.
     def __init__(self,data):  #__init__ is a special Python method that runs automatically when you create an object.You could technically use another method, but then you'd have to call it yourself. __init__ is convenient because Python calls it automatically when the object is created.
         self.data=data        #self means the current Node object.
