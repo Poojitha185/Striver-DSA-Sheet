@@ -1,3 +1,7 @@
+#Time Complexity: O(N) where N is the number of nodes in the Binary Tree. This complexity arises from visiting each node exactly once during the BFS traversal.
+
+#Space Complexity: O(N/2 + N/2) where N represents the number of nodes in the Binary Tre
+
 class node:                   #creates a blueprint/template for a tree node.
     def __init__(self,data):  #__init__ is a special Python method that runs automatically when you create an object.You could technically use another method, but then you'd have to call it yourself. __init__ is convenient because Python calls it automatically when the object is created.
         self.data=data        #self means the current Node object.
@@ -19,10 +23,10 @@ def bottom_view(root):
     ans=[]
     dic={}
     q=Queue()
-    q.put((root,0))              #put() is used with Python's Queue to add an element to the queue
+    q.put((root,0))                        #put() is used with Python's Queue to add an element to the queue
     while not q.empty():
         front,line = q.get()
-        dic[line]=front.data
+        dic[line]=front.data               #We keep overwriting, so the last/bottommost node remains.
         if front.left:
             q.put((front.left,line-1))     #ading tuple (front.left, line-1) to the queue. The left child is associated with a vertical index decremented by 1.
         if front.right:
