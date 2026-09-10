@@ -27,7 +27,7 @@ def bottom_view(root):
     q.put((root,0))                        #put() is used with Python's Queue to add an element to the queue
     while not q.empty():
         t=q.get()
-        front,line = t[0],t[1]
+        front,line = t[0],t[1]             #or with only q.get() we can get the front and line vaalues bcz we inserted tuple (root,0) in the queue. So we can unpack the tuple directly into front and line variables.
         dic[line]=front.data               #We keep overwriting, so the last/bottommost node remains.
         if front.left:
             q.put((front.left,line-1))     #ading tuple (front.left, line-1) to the queue. The left child is associated with a vertical index decremented by 1.
