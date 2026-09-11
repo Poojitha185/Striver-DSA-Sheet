@@ -11,80 +11,66 @@ class Node:
         self.data = val
         self.left = None
         self.right = None
+def create_tree():
+    data = int(input("Enter data (-1 for no node): "))
+    if data == -1:
+        return None
+    root = Node(data)
+    print("Enter left child of", data)
+    root.left = create_tree()
+    print("Enter right child of", data)
+    root.right = create_tree()
+    return root
 
-class Solution:
-
-    # Function to perform level order traversal
-    def levelOrder(self, root):
+# Function to perform level order traversal
+def levelOrder(root):
         # Final 2D result list
         ans = []
-
         # Return empty if tree is empty
         if not root:
             return ans
-
         # Create queue for BFS
         q = deque()
         q.append(root)
-
         # Loop until queue is empty
         while q:
             # Get number of nodes at current level
             size = len(q)
-
             # List to hold current level values
             level = []
-
             # Process all nodes at this level
             for _ in range(size):
                 # Pop node from queue
                 node = q.popleft()
-
                 # Store its value
                 level.append(node.data)
-
                 # Add left child if exists
                 if node.left:
                     q.append(node.left)
-
                 # Add right child if exists
                 if node.right:
                     q.append(node.right)
-
             # Append this level to answer
             ans.append(level)
 
         return ans
 
-    # Function to return left view
-    def leftView(self, root):
-        levels = self.levelOrder(root)
+# Function to return left view
+def leftView( root):
+        levels = levelOrder(root)
         return [level[0] for level in levels]
-
-    # Function to return right view
-    def rightView(self, root):
-        levels = self.levelOrder(root)
+# Function to return right view
+def rightView(root):
+        levels = levelOrder(root)
         return [level[-1] for level in levels]
 
-# Driver code
-if __name__ == "__main__":
-    # Build tree manually
-    root = Node(1)
-    root.left = Node(2)
-    root.right = Node(3)
-    root.left.left = Node(4)
-    root.right.right = Node(5)
-
-    # Create solution instance
-    sol = Solution()
-
-    # Get and print level order
-    print("Level Order Traversal:")
-    for level in sol.levelOrder(root):
+# Create the tree
+root = create_tree()
+# Get and print level order
+print("Level Order Traversal:")
+for level in levelOrder(root):
         print(level)
-
     # Print left view
-    print("Left View:", sol.leftView(root))
-
+print("Left View:", leftView(root))
     # Print right view
-    print("Right View:", sol.rightView(root))
+print("Right View:", rightView(root))
