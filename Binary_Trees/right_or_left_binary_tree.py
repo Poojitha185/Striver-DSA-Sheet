@@ -51,7 +51,6 @@ def levelOrder(root):
                     q.append(node.right)
             # Append this level to answer
             ans.append(level)
-
         return ans
 
 # Function to return left view
