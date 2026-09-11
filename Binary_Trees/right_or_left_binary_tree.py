@@ -4,8 +4,6 @@
 #To get the left and right views of a binary tree, we use level order traversal (BFS). We queue nodes level by level. For each level, we record all node values in order. The left view is formed by picking the first node of each level, and the right view by picking the last node of each level.
 
 from collections import deque
-
-# Definition of tree node
 class Node:
     def __init__(self, val):
         self.data = val
@@ -59,6 +57,7 @@ def levelOrder(root):
 def leftView( root):
         levels = levelOrder(root)
         return [level[0] for level in levels]
+
 # Function to return right view
 def rightView(root):
         levels = levelOrder(root)
