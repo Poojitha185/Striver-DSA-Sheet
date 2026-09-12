@@ -44,13 +44,11 @@ def rightDFS(node, level, res):
         # Recurse to left child
         rightDFS(node.left, level + 1, res)
 
-    # Wrapper function for left view
 def leftView(root):
     res = []
     leftDFS(root, 0, res)
     return res
 
-    # Wrapper function for right view
 def rightView(root):
     res = []
     rightDFS(root, 0, res)
