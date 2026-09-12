@@ -2,73 +2,63 @@
 
 #Space Complexity: O(H),The space complexity depends on the height (H) of the binary tree due to the recursion stack in depth-first traversal (like preorder, inorder, postorder). In a balanced binary tree, the height is log₂N, leading to O(log N) space. However, in the worst case (a skewed tree), the height is N, resulting in O(N) space. So the space complexity is O(H), where H is the height of the tree.
 
-class TreeNode:
+class Node:
     def __init__(self, val):
         self.val = val
         self.left = None
         self.right = None
+def create_tree():
+    data = int(input("Enter data (-1 for no node): "))
+    if data == -1:
+        return None
+    root = Node(data)
+    print("Enter left child of", data)
+    root.left = create_tree()
+    print("Enter right child of", data)
+    root.right = create_tree()
+    return root
 
-class Solution:
-    # Recursive function to get left view
-    def leftDFS(self, node, level, res):
+
+#Here we use preorder traversal
+def leftDFS(node, level, res):
         # Base case
         if not node:
             return
-
         # If we are visiting the level for the first time
         if len(res) == level:
             res.append(node.val)
-
         # Recurse to left child
-        self.leftDFS(node.left, level + 1, res)
-
+        leftDFS(node.left, level + 1, res)
         # Recurse to right child
-        self.leftDFS(node.right, level + 1, res)
+        leftDFS(node.right, level + 1, res)
 
-    # Recursive function to get right view
-    def rightDFS(self, node, level, res):
+# Recursive function to get right view
+# this is opposite to left view we first go to right child and then left child i.e reverse preorder traversal
+def rightDFS(node, level, res):
         if not node:
             return
-
         if len(res) == level:
             res.append(node.val)
-
         # Recurse to right child
-        self.rightDFS(node.right, level + 1, res)
-
+        rightDFS(node.right, level + 1, res)
         # Recurse to left child
-        self.rightDFS(node.left, level + 1, res)
+        rightDFS(node.left, level + 1, res)
 
     # Wrapper function for left view
-    def leftView(self, root):
-        res = []
-        self.leftDFS(root, 0, res)
-        return res
+def leftView(root):
+    res = []
+    leftDFS(root, 0, res)
+    return res
 
     # Wrapper function for right view
-    def rightView(self, root):
-        res = []
-        self.rightDFS(root, 0, res)
-        return res
+def rightView(root):
+    res = []
+    rightDFS(root, 0, res)
+    return res
 
-# Driver code
-if __name__ == "__main__":
-    # Create the binary tree
-    root = TreeNode(1)
-    root.left = TreeNode(2)
-    root.right = TreeNode(3)
-    root.left.right = TreeNode(4)
-    root.left.right.right = TreeNode(5)
-    root.left.right.right.right = TreeNode(6)
-
-    sol = Solution()
-
-    # Get left and right view
-    left = sol.leftView(root)
-    right = sol.rightView(root)
-
-    # Print left view
-    print("Left View:", left)
-
-    # Print right view
-    print("Right View:", right)
+root = create_tree()
+ # Get left and right view
+left = leftView(root)
+right = rightView(root)
+print("Left View:", left)
+print("Right View:", right)
