@@ -19,6 +19,10 @@ def create_tree():
 
 
 #Here we use preorder traversal
+#Check if the size of the result vector is equal to the current level. If true, it means that we have not yet encountered any node at this level in the result vector. Add the value of the current node to the result vector.
+#Recursively call the function for the current node’s left child, then right child, with an increased level (level + 1).
+#We call the left child first as we want to traverse the left-most nodes. If there is no left child, the recursion backtracks and explores the right child.
+
 def leftDFS(node, level, res):
         # Base case
         if not node:
