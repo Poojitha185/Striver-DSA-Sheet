@@ -22,7 +22,6 @@ def create_tree():
 #Check if the size of the result vector is equal to the current level. If true, it means that we have not yet encountered any node at this level in the result vector. Add the value of the current node to the result vector.
 #Recursively call the function for the current node’s left child, then right child, with an increased level (level + 1).
 #We call the left child first as we want to traverse the left-most nodes. If there is no left child, the recursion backtracks and explores the right child.
-
 def leftDFS(node, level, res):
         # Base case
         if not node:
@@ -37,6 +36,9 @@ def leftDFS(node, level, res):
 
 # Recursive function to get right view
 # this is opposite to left view we first go to right child and then left child i.e reverse preorder traversal
+#Check if the size of the result vector is equal to the current level. If true, it means that we have not yet encountered any node at this level in the result vector. Add the value of the current node to the result vector.
+#Recursively call the function for the current node’s right child, then left child, with an increased level (level + 1).
+#We call the right child first as we want to traverse the right-most nodes. If there is no right child, the recursion backtracks and explores the left child.
 def rightDFS(node, level, res):
         if not node:
             return
