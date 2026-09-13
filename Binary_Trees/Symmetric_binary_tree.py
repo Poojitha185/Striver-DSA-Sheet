@@ -3,9 +3,12 @@
 #A binary tree is symmetric if its left and right sides are mirror images of each other. If a vertical line is drawn through the center, both sides should align perfectly.
 
 #Symmetry conditions:
-
 #The tree must visually mirror itself from left to right.
 #This mirror pattern must be consistent at every level of the tree.
+
+#Both nodes should have the same value.
+#Left of left side matches right of right side.
+#Right of left side matches left of right side.
 
 class Node:
     def __init__(self, val):
@@ -32,6 +35,7 @@ def symmetric(left,right):
         return False
     return symmetric(left.left,right.right) and symmetric(left.right,right.left)  #simultaneously traversing left and right subtree of root ,traversing left subtree in inorder fashion whereas right subtree in reverse inorder fashion
 def issymmetric(root):
+    # if root is null then they are symmetric
     if root is None:
         return True
     else:
