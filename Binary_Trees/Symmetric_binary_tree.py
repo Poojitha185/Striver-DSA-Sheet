@@ -1,5 +1,11 @@
 #Time Complexity: O(N) where N is the number of nodes in the Binary Tree. This complexity arises from visiting each node exactly once during the traversal and the function compares the nodes in a symmetric manner.
 #Space Complexity: O(1) as no additional data structures or memory is allocated.
+#A binary tree is symmetric if its left and right sides are mirror images of each other. If a vertical line is drawn through the center, both sides should align perfectly.
+
+#Symmetry conditions:
+
+#The tree must visually mirror itself from left to right.
+#This mirror pattern must be consistent at every level of the tree.
 
 class Node:
     def __init__(self, val):
