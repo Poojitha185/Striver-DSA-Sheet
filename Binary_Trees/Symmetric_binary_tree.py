@@ -1,3 +1,6 @@
+#Time Complexity: O(N) where N is the number of nodes in the Binary Tree. This complexity arises from visiting each node exactly once during the traversal and the function compares the nodes in a symmetric manner.
+#Space Complexity: O(1) as no additional data structures or memory is allocated.
+
 class Node:
     def __init__(self, val):
         self.data = val
