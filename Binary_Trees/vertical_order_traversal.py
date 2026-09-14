@@ -16,11 +16,9 @@ class Solution:
         from collections import deque, defaultdict
         todo = deque()
         todo.append((root, 0, 0))
-
         # BFS loop
         while todo:
             temp, x, y = todo.popleft()
-
             # Insert into dictionary
             if x not in nodes:
                 nodes[x] = {}
@@ -42,7 +40,6 @@ class Solution:
             for y in sorted(nodes[x].keys()):
                 col.extend(sorted(nodes[x][y]))
             ans.append(col)
-
         return ans
 
 # Function to print result
