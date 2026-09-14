@@ -1,4 +1,8 @@
+#Time Complexity: O(N * log²N * log²N * log²N), where N represents the number of nodes in the Binary Tree. Postorder traversal is performed using BFS with a time complexity of O(N), since each node is visited exactly once. Multiset operations for inserting overlapping nodes at specific vertical and horizontal levels take O(log²N) time. Map operations involve insertion and retrieval of nodes using vertical and level as keys. Since there are two nested maps, the total complexity becomes O(log²N * log²N).
+
+#Space Complexity: O(N + N/2), where N represents the number of nodes in the Binary Tree. The map storing nodes based on vertical and level information occupies O(N) space, as it stores all N nodes of the tree. The queue for BFS traversal occupies space proportional to the maximum number of nodes at any level, which can be O(N/2) in the worst case for a balanced tree.
 # This class defines a node in the binary tree
+
 class Node:
     def __init__(self, val):
         self.data = val
