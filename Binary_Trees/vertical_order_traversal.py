@@ -1,5 +1,16 @@
 #Time Complexity: O(N log N)
 #Space Complexity: O(N)
+# 1. Use BFS traversal so that nodes are processed level by level.
+# 2. Assign coordinates to every node:
+#       x = vertical column
+#       y = level/depth
+# 3. Store each node in a nested dictionary using nodes[x][y].
+# 4. For the left child, decrease x by 1 and increase y by 1.
+# 5. For the right child, increase x by 1 and increase y by 1.
+# 6. Sort x values to get columns from left to right.
+# 7. Sort y values to get nodes from top to bottom.
+# 8. If multiple nodes have the same x and y, sort their values.
+# 9. Add each column to the final answer.
 
 class node:
     def __init__(self, data):
