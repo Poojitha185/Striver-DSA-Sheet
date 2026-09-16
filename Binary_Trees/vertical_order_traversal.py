@@ -11,6 +11,7 @@
 # 7. Sort y values to get nodes from top to bottom.
 # 8. If multiple nodes have the same x and y, sort their values.
 # 9. Add each column to the final answer.
+#we can use any traversals(inorder etc...) for this.
 
 class node:
     def __init__(self, data):
