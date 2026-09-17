@@ -1,3 +1,6 @@
+# Time Complexity: O(N) We search the tree to find the path to p and q. Each search can visit all N nodes in the worst case. Comparing the two paths also takes O(N) in the worst case.
+# Space Complexity: O(N) path1 and path2 store the paths from root to p and q. In the worst case, each path can contain N nodes. The recursion stack can also take O(N) space for a skewed tree.
+
 class node:                
     def __init__(self,data):    
         self.data=data        
