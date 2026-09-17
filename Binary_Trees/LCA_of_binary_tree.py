@@ -1,6 +1,12 @@
 # Time Complexity: O(N) We search the tree to find the path to p and q. Each search can visit all N nodes in the worst case. Comparing the two paths also takes O(N) in the worst case.
 # Space Complexity: O(N) path1 and path2 store the paths from root to p and q. In the worst case, each path can contain N nodes. The recursion stack can also take O(N) space for a skewed tree.
 
+#Find the path from the root to node p.
+# Find the path from the root to node q.
+# Compare both paths from the root.
+# Find the last common node in both paths.
+# The last common node is the Lowest Common Ancestor (LCA)
+
 class node:                
     def __init__(self,data):    
         self.data=data        
