@@ -2,10 +2,10 @@
 # Space Complexity: O(N) path1 and path2 store the paths from root to p and q. In the worst case, each path can contain N nodes. The recursion stack can also take O(N) space for a skewed tree.
 
 #Find the path from the root to node p.
-# Find the path from the root to node q.
-# Compare both paths from the root.
-# Find the last common node in both paths.
-# The last common node is the Lowest Common Ancestor (LCA)
+#Find the path from the root to node q.
+#Compare both paths from the root.
+#Find the last common node in both paths.
+#The last common node is the Lowest Common Ancestor (LCA)
 
 class node:                
     def __init__(self,data):    
@@ -23,6 +23,11 @@ def create_tree():
     root.right = create_tree()
     return root
 
+# Finds the path from root to the target node
+# Adds each visited node to the path
+# If target is found, return True
+# If target is not found in either subtree, remove the current node
+# and return False
 def find_path(root, target, path):
     if root is None:
         return False
