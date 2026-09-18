@@ -1,4 +1,5 @@
 #LCA = the first/common meeting point when you travel UP from both nodes. And importantly, a node can be the LCA of itself and another node.
+
 #Time Complexity: O(N), where N is the number of nodes in the binary tree. In the worst case, we may need to traverse all nodes to find the LCA.
 #Space Complexity: O(H), where H is the height of the binary tree. This is due to the recursive stack space used during the traversal. In the worst case, for a skewed tree, H can be equal to N, but for a balanced tree, H will be log(N).class node:                   
 
