@@ -1,3 +1,6 @@
+#Time Complexity: O(N) ,We visit each node exactly once when building the parent map using BFS ,O(N). We again visit each node at most once during the second BFS traversal from the target, O(N). Hence, the total time complexity is O(N), where N is the number of nodes in the binary tree.
+#Space Complexity: O(N) , The parent map stores one entry per node,O(N). The queue and visited set used in BFS also take up to O(N) space in the worst case. Therefore, the total space complexity is O(N).
+
 class node:                
     def __init__(self,data):    
         self.data=data        
