@@ -1,5 +1,6 @@
 #Time Complexity: O(N) ,We visit each node exactly once when building the parent map using BFS ,O(N). We again visit each node at most once during the second BFS traversal from the target, O(N). Hence, the total time complexity is O(N), where N is the number of nodes in the binary tree.
 #Space Complexity: O(N) , The parent map stores one entry per node,O(N). The queue and visited set used in BFS also take up to O(N) space in the worst case. Therefore, the total space complexity is O(N).
+
 #In a binary tree, each node only has references to its children. To find all nodes at a specific distance K from a given target node, we must be able to move both downward (to children) and upward (to parent). Since the binary tree doesn’t store parent links, we simulate this by converting the tree into an undirected graph. This allows traversal in all directions: left, right, and parent. Once we treat the tree as a graph, we perform a standard Breadth-First Search (BFS) starting from the target node and collect all nodes that are exactly K steps away.
 
 class node:                
@@ -35,10 +36,7 @@ def parentnodes(root,parent_track):
             q.put(cur.right)
     return parent_track
 
-#Perform BFS from the Target Node:
-#Begin a level-order (BFS) traversal from the target node to explore all nodes at increasing distances.
-#Initialize a queue with the target node and a set to track visited nodes.
-#For each node at the current BFS level:Visit the left child if it exists and hasn't been visited.Visit the right child if it exists and hasn't been visited.
+#finding the target node in the binary tree and using that node object we can perform BFS traversal from that node to find all nodes at distance K.
 def find_target(root, target):
     if root is None:
         return None
@@ -49,6 +47,10 @@ def find_target(root, target):
         return left
     return find_target(root.right, target)
 
+#Perform BFS from the Target Node:
+#Begin a level-order (BFS) traversal from the target node to explore all nodes at increasing distances.
+#Initialize a queue with the target node and a set to track visited nodes.
+#For each node at the current BFS level:Visit the left child if it exists and hasn't been visited.Visit the right child if it exists and hasn't been visited.
 def print_nodes_distance_k(root, target, k,ans):
     parent_track={}
     parentnodes(root,parent_track)
