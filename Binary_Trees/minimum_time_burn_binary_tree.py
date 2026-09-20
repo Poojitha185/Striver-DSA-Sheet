@@ -1,5 +1,12 @@
 #Time Complexity: O(N), where N is the number of nodes in the binary tree. Every tree edge is added to the adjacency structure a constant number of times, and every node is processed at most once during BFS.
 #Space Complexity: O(N). The adjacency list, burned set, and BFS queue can together store information for up to N nodes.
+
+#A binary tree normally provides links only from a parent to its children. Burning, however, must be allowed to spread in both directions.
+#Therefore, every parent-child connection is converted into an undirected edge. Once this conversion is performed, the tree behaves like an undirected graph in which the fire can move to every directly connected node.
+#A BFS is then started from the target.
+#A queue is used because nodes that burn at the same second must be processed together. The variable levelSize stores the number of nodes burning during the current second so that exactly one BFS level can be processed at a time.
+#A set named burned is maintained to represent nodes that have already caught fire. It prevents the same node from being reached repeatedly through the bidirectional graph.
+#A boolean variable spread is used to record whether at least one new node caught fire during the current BFS level. Time is increased only when spread becomes true, because a second should be counted only when the fire actually reaches another node.
 class node:                
     def __init__(self,data):    
         self.data=data        
