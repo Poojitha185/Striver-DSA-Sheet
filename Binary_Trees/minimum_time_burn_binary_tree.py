@@ -7,6 +7,7 @@
 #A queue is used because nodes that burn at the same second must be processed together. The variable levelSize stores the number of nodes burning during the current second so that exactly one BFS level can be processed at a time.
 #A set named burned is maintained to represent nodes that have already caught fire. It prevents the same node from being reached repeatedly through the bidirectional graph.
 #A boolean variable spread is used to record whether at least one new node caught fire during the current BFS level. Time is increased only when spread becomes true, because a second should be counted only when the fire actually reaches another node.
+
 class node:                
     def __init__(self,data):    
         self.data=data        
