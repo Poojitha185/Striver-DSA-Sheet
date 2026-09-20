@@ -1,6 +1,7 @@
 #Time Complexity: O(N), where N is the number of nodes in the binary tree. Every tree edge is added to the adjacency structure a constant number of times, and every node is processed at most once during BFS.
 #Space Complexity: O(N). The adjacency list, burned set, and BFS queue can together store information for up to N nodes.
 
+#Approach:
 #A binary tree normally provides links only from a parent to its children. Burning, however, must be allowed to spread in both directions.
 #Therefore, every parent-child connection is converted into an undirected edge. Once this conversion is performed, the tree behaves like an undirected graph in which the fire can move to every directly connected node.
 #A BFS is then started from the target.
@@ -40,7 +41,6 @@ def parentnodes(root,parent_track):
             parent_track[cur.right]=cur
             q.put(cur.right)
     return parent_track
-
 #finding the target node in the binary tree and using that node object we can perform BFS traversal from that node to find all nodes at distance K.
 def find_target(root,target):
     if root is None:
