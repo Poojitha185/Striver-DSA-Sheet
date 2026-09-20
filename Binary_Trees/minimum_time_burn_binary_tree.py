@@ -1,4 +1,5 @@
-
+#Time Complexity: O(N), where N is the number of nodes in the binary tree. Every tree edge is added to the adjacency structure a constant number of times, and every node is processed at most once during BFS.
+#Space Complexity: O(N). The adjacency list, burned set, and BFS queue can together store information for up to N nodes.
 class node:                
     def __init__(self,data):    
         self.data=data        
