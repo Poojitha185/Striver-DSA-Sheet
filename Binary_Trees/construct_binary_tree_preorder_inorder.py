@@ -7,7 +7,6 @@ class TreeNode:
         self.left = None
         self.right = None
 class Solution:
-
     # Builds the tree using the current inorder range.
     def build(
         self,
