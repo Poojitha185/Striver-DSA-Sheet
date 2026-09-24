@@ -1,3 +1,7 @@
+#Time Complexity: O(N), where N is the number of nodes in the tree. The inorder index map is built once in O(N) time, and every node is created exactly once with O(1) average-time lookup of its inorder position.
+
+#Space Complexity: O(N + H). The inorder index map stores N entries, while the recursion stack requires O(H) space. Since H ≤ N, the overall auxiliary space is O(N)
+
 class node:                   #creates a blueprint/template for a tree node.
     def __init__(self,data):  #__init__ is a special Python method that runs automatically when you create an object.You could technically use another method, but then you'd have to call it yourself. __init__ is convenient because Python calls it automatically when the object is created.
         self.data=data        #self means the current Node object.
