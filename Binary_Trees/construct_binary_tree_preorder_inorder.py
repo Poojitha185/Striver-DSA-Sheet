@@ -1,76 +1,46 @@
-#Time Complexity: O(N²) in the worst case. For each of the N nodes, its position may be searched linearly in the current inorder range. In a skewed tree, these searches can have sizes N, N-1, N-2, ..., resulting in quadratic time.
-#Space Complexity: O(H), where H is the height of the constructed binary tree, due to the recursion stack. This becomes O(N) for a skewed tree and O(log N) for a balanced tree.
+class node:                   #creates a blueprint/template for a tree node.
+    def __init__(self,data):  #__init__ is a special Python method that runs automatically when you create an object.You could technically use another method, but then you'd have to call it yourself. __init__ is convenient because Python calls it automatically when the object is created.
+        self.data=data        #self means the current Node object.
+        self.left=None        #None simply means there is currently no child there.In Python, None is basically the equivalent of null in languages like C, C++, Java, and JavaScript.
+        self.right=None
 
-class TreeNode:
-    def __init__(self, val):
-        self.val = val
-        self.left = None
-        self.right = None
-class Solution:
-    # Builds the tree using the current inorder range.
-    def build(
-        self,
-        preorder,
-        inorder,
-        in_start,
-        in_end
-    ):
+def build_tree(inorder,preorder):
+    pre_index = [0]
+    inorder_ind={}
+    for i in range(len(inorder)):
+        inorder_ind[inorder[i]]=i
+    return(build(preorder,0,len(inorder)-1,pre_index,inorder_ind))
+
+def build(preorder,in_start,in_end,pre_index,inorder_ind):
         if in_start > in_end:
             return None
-
-        # preorder[pre_index] is the root
-        # of the current subtree.
-        root_value = preorder[self.pre_index]
-        self.pre_index += 1
-
-        root = TreeNode(root_value)
-
-        root_index = in_start
-
-        # The root position splits inorder
-        # into left and right subtree ranges.
-        while (
-            root_index <= in_end
-            and inorder[root_index] != root_value
-        ):
-            root_index += 1
-
-        root.left = self.build(
-            preorder,
-            inorder,
-            in_start,
-            root_index - 1
-        )
-
-        root.right = self.build(
-            preorder,
-            inorder,
-            root_index + 1,
-            in_end
-        )
-
+        root_value = preorder[pre_index[0]]
+        pre_index[0] += 1
+        root = node(root_value)
+        # The stored inorder position divides. the current subtree into two ranges.
+        root_index = inorder_ind[root_value]
+        root.left = build( preorder,in_start,root_index - 1,pre_index,inorder_ind)
+        root.right = build(preorder,root_index + 1,in_end,pre_index,inorder_ind)
         return root
+def print_tree(root):
+    if root is None:
+        print([])
+        return
+    queue = [root]
+    result = []
+    while queue:
+        current = queue.pop(0)
+        if current is None:
+            result.append(None)
+            continue
+        result.append(current.data)
+        queue.append(current.left)
+        queue.append(current.right)
+    while result[-1] is None:
+        result.pop()
+    print(result)
+inorder = list(map(int, input("Enter the inorder traversal of the binary tree: ").replace(",", " ").split()))
+preorder = list(map(int, input("Enter the preorder traversal of the binary tree: ").replace(",", " ").split()))
+root = build_tree(inorder,preorder)
+print_tree(root)
 
-    # Reconstructs the binary tree from
-    # preorder and inorder traversals.
-    def build_tree(self, preorder, inorder):
-        self.pre_index = 0
-
-        return self.build(
-            preorder,
-            inorder,
-            0,
-            len(inorder) - 1
-        )
-
-
-if __name__ == "__main__":
-    preorder = [3, 9, 20, 15, 7]
-    inorder = [9, 3, 15, 20, 7]
-
-    solution = Solution()
-
-    root = solution.build_tree(
-        preorder,
-        inorder
-    )
