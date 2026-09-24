@@ -29,7 +29,6 @@ def build(preorder,in_start,in_end,pre_index,inorder_ind):
         root.left = build( preorder,in_start,root_index - 1,pre_index,inorder_ind)
         root.right = build(preorder,root_index + 1,in_end,pre_index,inorder_ind)
         return root
-
 #printing the binary tree
 def print_tree(root):
     if root is None:
