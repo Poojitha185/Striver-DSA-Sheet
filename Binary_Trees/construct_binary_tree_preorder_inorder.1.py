@@ -6,11 +6,10 @@
 #The variables inStart and inEnd represent the left and right boundaries of the inorder section belonging to that subtree. Once the current root's inorder index is obtained from the hash map, these boundaries can be divided directly into the ranges belonging to the left and right subtrees. Therefore: preorder determines which node becomes the root, inorder determines which nodes belong to its left and right subtrees.
 #Each node is created exactly once, and repeated inorder scanning is eliminated.
 
-class node:                   #creates a blueprint/template for a tree node.
-    def __init__(self,data):  #__init__ is a special Python method that runs automatically when you create an object.You could technically use another method, but then you'd have to call it yourself. __init__ is convenient because Python calls it automatically when the object is created.
-        self.data=data        #self means the current Node object.
-        self.left=None        #None simply means there is currently no child there.In Python, None is basically the equivalent of null in languages like C, C++, Java, and JavaScript.
-        self.right=None
+class node:                   
+    def __init__(self,data):  
+        self.data=data        
+        self.left=None        
 
 def build_tree(inorder,preorder):
     pre_index = [0]
@@ -30,6 +29,7 @@ def build(preorder,in_start,in_end,pre_index,inorder_ind):
         root.left = build( preorder,in_start,root_index - 1,pre_index,inorder_ind)
         root.right = build(preorder,root_index + 1,in_end,pre_index,inorder_ind)
         return root
+
 #printing the binary tree
 def print_tree(root):
     if root is None:
