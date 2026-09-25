@@ -1,6 +1,12 @@
 #Time Complexity: O(N²) in the worst case. For each of the N nodes, its position may be searched linearly in the current inorder range. In a skewed tree, these searches can have sizes N, N-1, N-2, ..., resulting in quadratic time.
 #Space Complexity: O(H), where H is the height of the constructed binary tree, due to the recursion stack. This becomes O(N) for a skewed tree and O(log N) for a balanced tree.
 
+#Preorder traversal provides the most important information first: the root of the current subtree. Once that root is located in inorder, the inorder traversal divides the current subtree into: Left Subtree | Root | Right Subtree. This process can then be repeated recursively.
+#A variable named preIndex is maintained to represent the index of the next unused element in preorder. Since preorder always visits the root before its children, preorder[preIndex] always gives the root of the subtree currently being constructed.
+#Two variables, inStart and inEnd, represent the boundaries of the portion of the inorder array belonging to the current subtree. These boundaries prevent recursive calls from processing nodes that belong to some other subtree.
+#For every newly selected root, its position is searched linearly between inStart and inEnd. This correctly divides the current subtree into its left and right portions.
+#The repeated linear search makes this approach inefficient in the worst case.
+
 class node:                   
     def __init__(self,data):  
         self.data=data        
