@@ -22,9 +22,8 @@ def build(preorder,inorder,in_start,in_end,pre_index):
         root_value = preorder[pre_index[0]]
         pre_index[0] += 1
         root = node(root_value)
-        root_index = in_start
-        # The root position splits inorder
-        # into left and right subtree ranges.
+        root_index = in_start              # The root position splits inorder into left and right subtree ranges.
+        
         while (root_index <= in_end and inorder[root_index] != root_value):    #linear search
             root_index += 1
         root.left = build( preorder,inorder,in_start,root_index - 1,pre_index)
