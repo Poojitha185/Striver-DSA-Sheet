@@ -17,7 +17,11 @@ def build(postorder,in_start,in_end,post_index,inorder_ind):
         root_value = postorder[post_index[0]]
         post_index[0] -= 1
         root = node(root_value)
-        # The stored inorder position divides. the current subtree into two ranges.
+    # Postorder traversal is: LEFT -> RIGHT -> ROOT.
+    # Since we start reading postorder from the END,
+    # the order becomes: ROOT -> RIGHT -> LEFT.
+    # Therefore, after creating the root, we must build
+    # the RIGHT subtree first and then the LEFT subtree.
         root_index = inorder_ind[root_value]
         root.right = build(postorder,root_index + 1,in_end,post_index,inorder_ind)
         root.left = build( postorder,in_start,root_index - 1,post_index,inorder_ind)
