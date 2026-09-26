@@ -1,5 +1,6 @@
 #Time Complexity: O(N), where N is the number of nodes in the tree. The inorder index map is built once in O(N) time, and every node is created exactly once with O(1) average-time lookup of its inorder position.
 #Space Complexity: O(N + H). The inorder index map stores N entries, while the recursion stack requires O(H) space. Since H ≤ N, the overall auxiliary space is O(N)
+# same as inorder-preorder approach but we build right subtree first and then left subtree as we moving backwards in postorder(root at the end and before value is next root of right subtree) otherwise it will give index out of range error
 
 class node:                   
     def __init__(self,data):  
@@ -28,7 +29,6 @@ def build(postorder,in_start,in_end,post_index,inorder_ind):
         root_index = inorder_ind[root_value]
         root.right = build(postorder,root_index + 1,in_end,post_index,inorder_ind)
         root.left = build( postorder,in_start,root_index - 1,post_index,inorder_ind)
-        
         return root
 #printing the binary tree
 def print_tree(root):
