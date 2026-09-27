@@ -78,7 +78,6 @@ def print_tree(root):
     while result[-1] is None:
         result.pop()
     print(result)
-
 root=create_tree()
 result=serialize(root)
 same_root=deserialize(result)
