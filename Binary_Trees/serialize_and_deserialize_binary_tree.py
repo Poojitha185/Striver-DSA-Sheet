@@ -1,3 +1,5 @@
+#Time Complexity: O(N) for both serialization and deserialization because the sequence contains only O(N) node values and null markers.
+#Space complexity: O(N) because the complete serialized representation is stored as a string. Auxiliary Queue Space: O(W) because the queue may simultaneously store nodes from the widest part of the tree. Since W ≤ N, the queue requires O(N) auxiliary space in the worst case. The reconstructed tree itself requires O(N) space, but it is the required output of deserialization and is not counted as auxiliary space.
 class node:                
     def __init__(self,data):    
         self.data=data        
