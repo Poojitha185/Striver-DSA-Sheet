@@ -1,5 +1,11 @@
 #Time Complexity: O(N) for both serialization and deserialization because the sequence contains only O(N) node values and null markers.
 #Space complexity: O(N) because the complete serialized representation is stored as a string. Auxiliary Queue Space: O(W) because the queue may simultaneously store nodes from the widest part of the tree. Since W ≤ N, the queue requires O(N) auxiliary space in the worst case. The reconstructed tree itself requires O(N) space, but it is the required output of deserialization and is not counted as auxiliary space.
+
+#The tree can also be serialized level by level using BFS.
+#A queue is used to process nodes from top to bottom. For every non-null node, its value is recorded and its two child positions are added to the queue. When a child is missing, null is recorded. These null markers preserve the exact left and right positions of every child.
+#During deserialization, the first token is used to create the root. The remaining tokens are consumed in pairs for every parent removed from the queue: The first token represents its left child. The second token represents its right child.
+#The tree is therefore reconstructed level by level.
+
 class node:                
     def __init__(self,data):    
         self.data=data        
