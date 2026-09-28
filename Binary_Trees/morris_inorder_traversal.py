@@ -1,6 +1,7 @@
 # TC: O(N) ,Each node is processed a constant number of times.
 # SC: O(1),Morris traversal does not use recursion or a stack.
 # Note: inorder_list itself takes O(N) space for storing the output.
+
 #Inorder traversal visits the nodes of a binary tree in the following order: Left Subtree → Root → Right Subtree
 #The usual recursive method uses the call stack to remember how to return to a node after processing its left subtree. An iterative method replaces the recursion stack with an explicit stack. Both methods require additional space proportional to the height of the tree ,O(H)
 #Morris Inorder Traversal performs the same traversal without recursion and without an explicit stack. It temporarily creates links inside the tree so that traversal can return from a node’s left subtree to the node itself.
@@ -34,12 +35,12 @@ def inorder(root):
         else:
             prev=cur.left
             while(prev.right and prev.right!=cur): 
-                prev=prev.right
+                prev=prev.right                       #In inorder traversal, the node visited immediately before the current node is the rightmost node in its left subtree. This node is called the current node’s inorder predecessor.
             if prev.right==None:
-                prev.right=cur                        # creating temporary link to get back to root
+                prev.right=cur                        # The predecessor normally has no right child. Morris traversal temporarily changes this NULL pointer so that it points to the current node: predecessor.right = current, This temporary connection is called a thread.creating temporary link to get back to root
                 cur=cur.left
             else:
-                prev.right=None                       # removing temporary link after getting back to root
+                prev.right=None                       # After the left subtree is completed, traversal reaches the predecessor again. Its temporary right pointer leads back to the current node. The thread is then removed: predecessor.right = NULL .removing temporary link after getting back to root
                 inorder_list.append(cur.data)
                 cur=cur.right
     return inorder_list
