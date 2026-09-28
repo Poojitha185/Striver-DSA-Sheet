@@ -1,10 +1,11 @@
-
-# TC: O(N)
-# Each node is processed a constant number of times.
-
-# SC: O(1)
-# Morris traversal does not use recursion or a stack.
+# TC: O(N) ,Each node is processed a constant number of times.
+# SC: O(1),Morris traversal does not use recursion or a stack.
 # Note: inorder_list itself takes O(N) space for storing the output.
+#Inorder traversal visits the nodes of a binary tree in the following order: Left Subtree → Root → Right Subtree
+#The usual recursive method uses the call stack to remember how to return to a node after processing its left subtree. An iterative method replaces the recursion stack with an explicit stack. Both methods require additional space proportional to the height of the tree ,O(H)
+#Morris Inorder Traversal performs the same traversal without recursion and without an explicit stack. It temporarily creates links inside the tree so that traversal can return from a node’s left subtree to the node itself.
+# #After using a temporary link, Morris traversal removes it. Therefore, the original tree structure is restored before the traversal finishes.
+#The major advantage is: Auxiliary Space Complexity: O(1)
 
 class node:                   #creates a blueprint/template for a tree node.
     def __init__(self,data):  #__init__ is a special Python method that runs automatically when you create an object.You could technically use another method, but then you'd have to call it yourself. __init__ is convenient because Python calls it automatically when the object is created.
