@@ -1,3 +1,11 @@
+
+# TC: O(N)
+# Each node is processed a constant number of times.
+
+# SC: O(1)
+# Morris traversal does not use recursion or a stack.
+# Note: inorder_list itself takes O(N) space for storing the output.
+
 class node:                   #creates a blueprint/template for a tree node.
     def __init__(self,data):  #__init__ is a special Python method that runs automatically when you create an object.You could technically use another method, but then you'd have to call it yourself. __init__ is convenient because Python calls it automatically when the object is created.
         self.data=data        #self means the current Node object.
@@ -18,19 +26,19 @@ def create_tree():
 def inorder(root):
     cur=root
     inorder_list=[]
-    while(cur!=None):
+    while(cur!=None):                    #tc:o(n)
         if cur.left==None:
             inorder_list.append(cur.data)
             cur=cur.right
         else:
             prev=cur.left
-            while(prev.right and prev.right!=cur):
+            while(prev.right and prev.right!=cur): 
                 prev=prev.right
             if prev.right==None:
-                prev.right=cur
+                prev.right=cur                        # creating temporary link to get back to root
                 cur=cur.left
             else:
-                prev.right=None
+                prev.right=None                       # removing temporary link after getting back to root
                 inorder_list.append(cur.data)
                 cur=cur.right
     return inorder_list
