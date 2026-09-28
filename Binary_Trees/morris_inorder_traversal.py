@@ -44,6 +44,7 @@ def inorder(root):
                 inorder_list.append(cur.data)
                 cur=cur.right
     return inorder_list
+
 root=create_tree()
 print("The inorder traversal of binary tree: ",inorder(root))
 
