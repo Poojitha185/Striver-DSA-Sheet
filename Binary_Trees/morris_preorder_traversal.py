@@ -8,12 +8,11 @@
 #After using a temporary link, Morris traversal removes it. Therefore, the original tree structure is restored before the traversal finishes. 
 #The major advantage is: Auxiliary Space Complexity: O(1) 
  
-class node:                   #creates a blueprint/template for a tree node. 
-    def __init__(self,data):  #__init__ is a special Python method that runs automatically when you create an object.You could technically use another method, but then you'd have to call it yourself. __init__ is convenient because Python calls it automatically when the object is created. 
-        self.data=data        #self means the current Node object. 
-        self.left=None        #None simply means there is currently no child there.In Python, None is basically the equivalent of null in languages like C, C++, Java, and JavaScript. 
-        self.right=None 
- 
+class node:                   
+    def __init__(self,data): 
+        self.data=data       
+        self.left=None        
+        self.right=None
 def create_tree(): 
     data = int(input("Enter data (-1 for no node): ")) 
     if data == -1: 
