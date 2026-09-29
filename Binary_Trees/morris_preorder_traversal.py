@@ -44,6 +44,5 @@ def preorder(root):
                 prev.right=None                       #removing temporary link after getting back to root 
                 cur=cur.right 
     return preorder_list 
- 
 root=create_tree() 
 print("The preorder traversal of binary tree: ",preorder(root))
