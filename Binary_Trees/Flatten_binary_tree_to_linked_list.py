@@ -1,3 +1,6 @@
+#Time Complexity: O(N), where N is the number of nodes in the binary tree. Every node is processed exactly once.
+#Space Complexity: O(H), where H is the height of the binary tree, due to the recursion stack. This becomes O(N) for a skewed tree and O(log N) for a balanced tree.
+
 class node:                   
     def __init__(self,data):    
         self.data=data        
