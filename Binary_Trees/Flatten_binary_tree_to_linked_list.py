@@ -6,6 +6,7 @@
 #If the tree is processed in the reverse order: Right → Left → Root
 #a pointer named previous can be maintained. The name represents the node that should appear immediately after the current node in the final flattened preorder sequence.
 #Once both subtrees have been processed, the current node can be connected directly to previous.
+
 class node:                   
     def __init__(self,data):    
         self.data=data        
@@ -30,7 +31,6 @@ def reverse_preorder(root,prev):
     root.right=prev[0]
     root.left=None
     prev[0]=root
-
 def flatten(root):
     prev=[None]
     reverse_preorder(root,prev)
