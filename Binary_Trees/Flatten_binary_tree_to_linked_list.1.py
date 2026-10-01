@@ -1,3 +1,15 @@
+#Time Complexity: O(N), where N is the number of nodes in the binary tree. Every node is processed exactly once.
+#Space Complexity: O(H), where H is the height of the binary tree, due to the recursion stack. This becomes O(N) for a skewed tree and O(log N) for a balanced tree.
+
+#Approach:
+# We need the nodes in preorder: Root -> Left -> Right.
+# Use a stack to process nodes in preorder.
+# Since stack follows LIFO, push the right child first and then the left child,
+# so the left child comes out first.
+# For every current node, make its right pointer point to the next node in preorder
+# and set its left pointer to None.
+# We are modifying the existing tree itself, so no new nodes are created.
+
 class node:                   
     def __init__(self,data):    
         self.data=data        
