@@ -19,5 +19,6 @@ def length_of_longest_substring(s):
                 max_len = max(
                     max_len, j-i + 1)
         return max_len
+
 s=input("enter the string: ")
 print(length_of_longest_substring(s))
