@@ -1,3 +1,5 @@
+#Time Complexity: O(N²), where N represents the string length. Expansion from each starting position may scan many later characters.
+#Space Complexity: O(N), because the set may store every distinct character from one growing substring.
 
 def length_of_longest_substring(s):
         n = len(s)
