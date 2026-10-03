@@ -9,7 +9,7 @@ def length_of_longest_substring(s):
         max_len = 0
         # Try every possible start.
         for i in range(n):
-            l=set()                     # Use a set to store characters for O(1) lookups
+            l=set()                     # Use a set to store characters for O(1) lookups.
             # Extend the substring
             # from the current start.
             for j in range(i, n):
