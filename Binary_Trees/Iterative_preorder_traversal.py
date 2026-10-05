@@ -38,6 +38,4 @@ def preorderTraversal(root):
 
 root=create_tree()
 result = preorderTraversal(root)
-
-
 print("Preorder Traversal:", result)
