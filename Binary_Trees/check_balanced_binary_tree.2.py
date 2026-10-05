@@ -7,7 +7,6 @@
 #Traverse the Binary Tree in post-order using recursion: visit the left subtree, then the right subtree, and finally the current node.
 #Check the absolute difference between the heights of the left and right subtrees. If the difference is greater than 1, or if either subtree is already unbalanced (returns -1), return -1 to indicate an unbalanced state.
 #Continue the traversal until all nodes are visited. If no -1 is returned, the tree is balanced.
-
 class node:                   
     def __init__(self,data):    
         self.data=data        
