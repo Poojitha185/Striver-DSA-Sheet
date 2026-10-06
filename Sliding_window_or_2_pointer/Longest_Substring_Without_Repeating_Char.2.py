@@ -1,41 +1,16 @@
-class Solution:
+def length_of_substring(s):
+    seen={}
+    left,right=0,0
+    maxlen=0
+    while(right<len(s)):
+        if s[right] in seen:
+            if seen[s[right]]>=left:
+                left=seen[s[right]]+1
+        seen[s[right]]=right
+        length=right-left+1
+        maxlen=max(length,maxlen)
+        right=right+1
+    return maxlen
+s=input("enter the string:")
+print("The length of a longest substring without repeating characters: ",length_of_substring(s))
 
-    # Uses last-seen positions
-    # to move the left boundary directly.
-    def length_of_longest_substring(
-        self,
-        s: str
-    ) -> int:
-        last_seen = {}
-
-        left = 0
-        max_len = 0
-
-        # Move right across the string.
-        for right in range(len(s)):
-            current = s[right]
-
-            # Move left only when the
-            # duplicate is inside the window.
-            if (
-                current in last_seen
-                and last_seen[current] >= left
-            ):
-                left = last_seen[current] + 1
-
-            last_seen[current] = right
-
-            max_len = max(
-                max_len,
-                right - left + 1
-            )
-
-        return max_len
-
-
-if __name__ == "__main__":
-    s = "abcabcbb"
-
-    solution = Solution()
-
-    print(solution.length_of_longest_substring(s))
