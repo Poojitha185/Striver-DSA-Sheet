@@ -1,3 +1,5 @@
+#Time Complexity: O(N), where N is the length of the string. Each character is processed once by the right pointer, and the left pointer only moves forward.
+#Space Complexity: O(1), because the frequency array stores counts for only 26 uppercase English letters.
 
 def longest_character_replacement(s, k):
     l,r,maxlen=0,0,0
