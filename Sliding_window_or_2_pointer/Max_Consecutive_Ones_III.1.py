@@ -1,5 +1,8 @@
 #TC:O(2n)
 #SC:O(1)
+
+#optimal approach 1 using while loop inside which traverse array once at worst case so o(n)+o(n)=o(2n) 
+
 #A sliding window can represent the current subarray capable of becoming all 1s. The window remains valid while the number of zeroes stays at most k.
 #Pointer right expands the window and explores longer candidates. After the zero count exceeds k, pointer left removes elements until the window becomes valid again. Every pointer moves only forward, eliminating repeated examination of the same subarrays.
 
