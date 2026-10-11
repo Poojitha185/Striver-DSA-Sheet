@@ -1,5 +1,7 @@
 #TC:O(2n)
 #SC:O(1)
+#A sliding window can represent the current subarray capable of becoming all 1s. The window remains valid while the number of zeroes stays at most k.
+#Pointer right expands the window and explores longer candidates. After the zero count exceeds k, pointer left removes elements until the window becomes valid again. Every pointer moves only forward, eliminating repeated examination of the same subarrays.
 
 def max_consecutive_ones(nums,n,k):    #or longest_subarray_with_atmost_kzeros
     maxlen=0
