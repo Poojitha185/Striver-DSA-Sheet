@@ -5,8 +5,7 @@
 #A valid collection can begin and end at any pair of tree positions. Therefore, every possible continuous section must receive examination.
 #For each selected section, a fresh set records distinct fruit types. A section remains valid when the set contains at most two types. Complete checking guarantees the correct answer, but repeated scanning of overlapping sections creates considerable extra work.
 
-def total_fruit(fruits):
-        n = len(fruits)
+def total_fruit(fruits,n):
         max_fruits = 0
         # Try every tree as the beginning of a collection.
         for start in range(n):
@@ -21,5 +20,6 @@ def total_fruit(fruits):
                     break          
         return max_fruits
 fruits=list(map(int, input("Enter the array of fruits: ").split(",")))
-result=total_fruit(fruits)
+n = len(fruits)
+result=total_fruit(fruits,n)
 print("Maximum number of fruits that can be collected:", result)
