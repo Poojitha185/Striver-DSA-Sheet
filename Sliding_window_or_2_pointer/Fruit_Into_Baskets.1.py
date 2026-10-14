@@ -1,3 +1,6 @@
+# TC: O(n) - Each fruit is added and removed from the window at most once.
+# SC: O(1) - Frequency dictionary stores at most 3 fruit types temporarily.
+
 def total_fruit(fruits):
         frequency = {}
         left = 0
