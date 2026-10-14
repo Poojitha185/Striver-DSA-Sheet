@@ -1,0 +1,24 @@
+def total_fruit(fruits):
+        frequency = {}
+        left = 0
+        max_fruits = 0
+        right=0
+        while(right<len(fruits)):
+            fruit = fruits[right]
+            frequency[fruit] = (frequency.get(fruit, 0) + 1)
+            if len(frequency) > 2:
+                while(len(frequency) > 2):
+                  left_fruit = fruits[left]
+                  frequency[left_fruit] -= 1
+                # Remove a type after its final fruit leaves the window.
+                  if frequency[left_fruit] == 0:
+                    del frequency[left_fruit]
+                left += 1
+            if len(frequency) <= 2:
+                max_fruits = max(max_fruits,right - left + 1)
+            right += 1
+        return max_fruits
+
+fruits=list(map(int, input("Enter the array of fruits: ").split(",")))
+result=total_fruit(fruits)
+print("Maximum number of fruits that can be collected:", result)
