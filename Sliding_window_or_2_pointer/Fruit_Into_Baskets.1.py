@@ -11,14 +11,17 @@ def total_fruit(fruits):
         while(right<len(fruits)):  #o(n) for travelling entire array.
             fruit = fruits[right]
             frequency[fruit] = (frequency.get(fruit, 0) + 1)
+            
             if len(frequency) > 2:
                 while(len(frequency) > 2):    #o(n) for travelling entire array at worst case.
                   left_fruit = fruits[left]
                   frequency[left_fruit] -= 1
+
                 # Remove a type after its final fruit leaves the window.
                   if frequency[left_fruit] == 0:
                     del frequency[left_fruit]
                 left += 1
+
             if len(frequency) <= 2:
                 max_fruits = max(max_fruits,right - left + 1)
             right += 1
