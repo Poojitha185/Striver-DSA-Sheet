@@ -4,6 +4,8 @@
 #Starting a fresh expansion from every index repeats earlier work. A sliding window keeps one active section and allows both boundaries to move only forward.
 #The right pointer adds fruits to the section. After a third type appears, a single left-side fruit is removed during the same iteration. A single if condition may leave the window temporarily invalid, but an invalid window never grows beyond the best valid length because one fruit enters and one fruit leaves together. The answer changes only after the window contains at most two fruit types again.
 
+#when invalid subarray found  we dont allow the maxlen to increase its length till the valid subarray is found and move left once at each step to make the subarray valid again and then check for maxlen
+
 def total_fruit(fruits):
         frequency = {}
         left = 0
@@ -23,6 +25,7 @@ def total_fruit(fruits):
                 max_fruits = max(max_fruits,right - left + 1)
             right += 1
         return max_fruits
+
 fruits=list(map(int, input("Enter the array of fruits: ").split(",")))
 result=total_fruit(fruits)
 print("Maximum number of fruits that can be collected:", result)
