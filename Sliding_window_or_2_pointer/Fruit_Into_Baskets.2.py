@@ -1,6 +1,9 @@
 #Time Complexity: O(N), where N represents the array size. The right pointer processes every fruit once, while the left pointer moves only forward.
 #Space Complexity: O(N) in the worst case for the single-if variant. Temporary invalid windows may retain more than two fruit types inside the frequency map. A standard while-based shrink keeps the map bounded by the basket limit and uses O(1) auxiliary space for two baskets.
 
+#Starting a fresh expansion from every index repeats earlier work. A sliding window keeps one active section and allows both boundaries to move only forward.
+#The right pointer adds fruits to the section. After a third type appears, a single left-side fruit is removed during the same iteration. A single if condition may leave the window temporarily invalid, but an invalid window never grows beyond the best valid length because one fruit enters and one fruit leaves together. The answer changes only after the window contains at most two fruit types again.
+
 def total_fruit(fruits):
         frequency = {}
         left = 0
