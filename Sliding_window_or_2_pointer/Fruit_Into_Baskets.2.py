@@ -1,3 +1,5 @@
+#Time Complexity: O(N), where N represents the array size. The right pointer processes every fruit once, while the left pointer moves only forward.
+#Space Complexity: O(N) in the worst case for the single-if variant. Temporary invalid windows may retain more than two fruit types inside the frequency map. A standard while-based shrink keeps the map bounded by the basket limit and uses O(1) auxiliary space for two baskets.
 
 def total_fruit(fruits):
         frequency = {}
