@@ -1,3 +1,6 @@
+#Time Complexity: O(N²), where N is the length of the string. For every starting index, the ending index can move toward the right until the substring becomes invalid.
+#Space Complexity: O(1), because the frequency array stores counts for only 26 uppercase English letters.
+
 def longest_character_replacement(s,k):
     n=len(s)
     maxlen=0
