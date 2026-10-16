@@ -3,7 +3,7 @@
 
 def longest_character_replacement(s,k):
     n=len(s)
-    maxlen=0
+    maxlen=0                               # maxlen stores the length of the longest valid substring found so far.
     for i in range(n):
         dic={}
         maxfreq=0
@@ -16,6 +16,7 @@ def longest_character_replacement(s,k):
             else:
                 break
     return maxlen
+
 s=input("enter the string:")
 k=int(input("enter the value of k:"))
 print("The length of the longest substring after replacement is:",longest_character_replacement(s,k))
