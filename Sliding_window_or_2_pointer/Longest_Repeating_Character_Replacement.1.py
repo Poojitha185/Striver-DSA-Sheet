@@ -8,10 +8,10 @@ def longest_character_replacement(s, k):
     while(r<len(s)):
         dic[s[r]]=dic.get(s[r],0)+1
         maxfreq=max(maxfreq,dic[s[r]])
-        while((r-l+1)-(maxfreq)>k):
+        while((r-l+1)-(maxfreq)>k):                     #tc:o(n) overall bcz it travels entire string only once.so o(n)+o(n)=o(2n)
              dic[s[r]]=dic.get(s[r],0)-1
              maxfreq=0
-             for i in range(26):
+             for i in range(26):                         #tc:o(26)
                  maxfreq=max(maxfreq,dic[s[r]])
              l=l+1
         if((r-l+1)-(maxfreq)<=k):
