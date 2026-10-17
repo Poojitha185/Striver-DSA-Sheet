@@ -1,3 +1,6 @@
+# Time Complexity: O(26*2N) = O(N), because for every shrinking step, we traverse 26 characters to update maxfreq.
+# Space Complexity: O(1), because the dictionary stores at most 26 characters.
+
 def longest_character_replacement(s, k):
     l,r,maxlen=0,0,0
     maxfreq=0
