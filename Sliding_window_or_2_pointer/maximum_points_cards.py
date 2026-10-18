@@ -1,3 +1,5 @@
+#Time Complexity: O(K), because the first K cards require one summation and K replacements generate all remaining splits.
+#Space Complexity: O(1), because only score variables and index variables require auxiliary storage.
 def max_points(cards,k):
     lsum,rsum,maxsum=0,0,0
     for i in range(k):
