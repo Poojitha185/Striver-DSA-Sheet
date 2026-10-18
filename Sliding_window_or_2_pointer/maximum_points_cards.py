@@ -18,6 +18,7 @@ def max_points(cards,k):
         rindex-=1
         maxsum=max(maxsum,lsum+rsum)
     return maxsum
+
 cards = list(map(int, input("Enter the array of 0s and 1s: ").split(",")))
 k=int(input("enter the value of k(no of cards to be picked): "))
 print("The maximum points that can be obtained by picking k cards from either end is: ",max_points(cards,k))
