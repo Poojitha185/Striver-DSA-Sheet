@@ -16,7 +16,8 @@ def max_points(cards,k):
         lsum-=cards[i]
         rsum+=cards[rindex]
         rindex-=1
-        maxsum=max(maxsum,lsum+rsum)
+        if (lsum+rsum > maxsum):
+            maxsum=lsum+rsum
     return maxsum
 
 cards = list(map(int, input("Enter the array of 0s and 1s: ").split(",")))
