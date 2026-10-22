@@ -1,3 +1,6 @@
+#Time Complexity: O(N²), where N is the length of s. For every starting index, the ending index may move toward the right until a valid window is found.
+#Space Complexity: O(1), because fixed-size frequency arrays are used for ASCII characters.
+
 def minimum_window_substring(s,t):
     mincount=float('inf')
     startind=0
