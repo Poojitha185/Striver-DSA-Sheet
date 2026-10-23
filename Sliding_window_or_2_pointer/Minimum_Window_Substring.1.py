@@ -18,7 +18,10 @@ def minimum_window_substring(s,t):
                     mincount=j-i+1
                     startind=i
                     break
+    if mincount == float('inf'):
+       return ""
     return s[startind:startind+mincount]
+
 s=input("Enter the string s: ")
 t=input("Enter the string t: ")
 result=minimum_window_substring(s,t)
