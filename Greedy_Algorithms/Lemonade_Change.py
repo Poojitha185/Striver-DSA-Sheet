@@ -1,3 +1,6 @@
+#Time Complexity: O(n), where n is the number of customers, because each bill is processed once.
+#Space Complexity: O(1), because only constant space is used.
+
 def lemonade_change(arr):
     five,tens=0,0
     for i in range(len(arr)):
