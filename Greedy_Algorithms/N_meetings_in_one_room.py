@@ -1,3 +1,6 @@
+#Time Complexity: O(n log n) because the meetings are sorted by their ending time.
+#Space Complexity: O(n) because an extra list of meetings is used for sorting.
+
 class data:                   
     def __init__(self,start,end,pos):  
         self.start=start        
