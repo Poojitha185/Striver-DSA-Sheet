@@ -12,6 +12,7 @@ class data:
         self.start=start        
         self.end=end
         self.pos=pos     
+
 def max_meetings(start,end,n):
     arr = [data(0, 0, 0) for i in range(n)]
     for i in range(n):
@@ -28,6 +29,7 @@ def max_meetings(start,end,n):
             freetime=arr[i].end
             ans.append((arr[i].start,arr[i].end))
     return ans
+
 start=list(map(int,input("enter the start array: ").split(",")))
 end=list(map(int,input("enter the end array: ").split(",")))
 n=len(start)
