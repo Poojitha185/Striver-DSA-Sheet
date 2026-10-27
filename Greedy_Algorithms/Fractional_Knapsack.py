@@ -1,3 +1,6 @@
+# Time Complexity: O(n log n)
+# Space Complexity: O(n)
+
 class data:                   
     def __init__(self,weight,value):
         self.weight=weight
