@@ -1,4 +1,4 @@
-# Time Complexity: O(n log n)
+# Time Complexity: O(n log n + n)
 # Space Complexity: O(n)
 
 class data:                   
