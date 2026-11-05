@@ -1,3 +1,6 @@
+#Time Complexity (TC) :O(n² × m × n) = O(n³ × m), n² – Two nested loops generate all possible substrings. m – Loop through every character in t. n – count() takes O(n) time in the worst case.
+#Space Complexity (SC):O(n + m), O(n) – Creating the current window substring. O(m) – Storing the input string t (if counting input space).
+
 def minimum_window_substring(s,t):
     mincount=float('inf')
     substring=''
