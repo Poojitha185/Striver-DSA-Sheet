@@ -6,6 +6,8 @@ def longest_substring_at_most_k_distinct(arr,k):
                 frequency[arr[end]] = (frequency.get(arr[end], 0) + 1)
                 if len(frequency)==k:
                     count+=1
+                if len(frequency) > k:
+                    break
         return count
 
 arr=list(map(int,input("enter the array: ").split(",")))
