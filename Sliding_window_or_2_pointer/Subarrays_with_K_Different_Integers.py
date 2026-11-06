@@ -1,3 +1,6 @@
+# TC: O(n^2) because we use two nested loops
+# SC: O(k) because the frequency dictionary stores at most k distinct elements
+
 def longest_substring_at_most_k_distinct(arr,k):
         count=0
         for start in range(len(arr)):
