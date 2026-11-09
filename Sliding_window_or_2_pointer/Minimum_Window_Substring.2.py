@@ -1,3 +1,5 @@
+#Time Complexity: O(N + M), where N is the length of s and M is the length of t. The string t is processed once, and every character of s enters and leaves the sliding window at most once.
+#Space Complexity: O(1), because fixed-size frequency arrays are used for ASCII characters.
 
 def minimum_window_substring(s,t):
     mincount=float('inf')
