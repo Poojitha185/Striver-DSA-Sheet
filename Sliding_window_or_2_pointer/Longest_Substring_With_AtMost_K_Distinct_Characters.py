@@ -11,6 +11,7 @@ def longest_substring_at_most_k_distinct(s,k):
                     break
                 max_length = max(max_length,end - start + 1)
         return max_length
+
 s=input("Enter the string: ")
 k=int(input("Enter the value of k: "))
 print(longest_substring_at_most_k_distinct(s,k))
