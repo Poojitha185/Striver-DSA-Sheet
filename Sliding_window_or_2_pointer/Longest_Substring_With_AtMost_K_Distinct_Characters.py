@@ -1,3 +1,5 @@
+#Time Complexity: O(N²), where N represents the string length. Expansion from every starting position may process many later characters.
+#Space Complexity: O(N), because the frequency map may store many distinct characters for a general string.
 
 def longest_substring_at_most_k_distinct(s,k):
         max_length = 0
