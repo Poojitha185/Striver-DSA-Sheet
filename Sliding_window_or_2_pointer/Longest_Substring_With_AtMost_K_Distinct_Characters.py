@@ -1,3 +1,8 @@
+
+#Time Complexity: O(N²), where N represents the string length. Expansion from every starting position may process many later characters.
+
+#Space Complexity: O(N), because the frequency map may store many distinct characters for a general string.
+
 class Solution:
 
     # Expands from every start
