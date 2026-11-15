@@ -1,7 +1,7 @@
 #Time Complexity: O(N), where N represents the string length. Pointer right processes every character once, while pointer left moves only forward.
 #Space Complexity: O(N), because the frequency map may contain up to N distinct characters for a general character set. A fixed-size character set reduces auxiliary space to O(1).
-#Initialize left and maxLength with 0, and create a frequency map for characters inside the current window.
 
+#Initialize left and maxLength with 0, and create a frequency map for characters inside the current window.
 #Move right from 0 to n - 1 and increase the frequency of s[right], because the current character enters the window.
 #While the map contains more than k characters, decrease the frequency of s[left], erase a zero-frequency entry, and move left forward.
 #Update maxLength with right - left + 1 after restoring validity, because the current window now contains at most k distinct characters. Return maxLength after right processes every character.
