@@ -14,6 +14,7 @@ def longest_substring_at_most_k_distinct(s,k):
                 frequency[s[r]] = frequency.get(s[r], 0) + 1
                 while len(frequency) > k:
                         frequency[s[l]] -= 1
+
                         # If frequency becomes 0, remove the character from the dictionary.
                         # len(frequency) counts keys, even if their value is 0.
                         # So we delete it to correctly count the number of distinct characters.
@@ -23,6 +24,7 @@ def longest_substring_at_most_k_distinct(s,k):
                 max_length = max(max_length,r - l + 1)
                 r = r + 1
         return max_length
+
 s = input("Enter the string: ")
 k = int(input("Enter the value of k: "))
 print(longest_substring_at_most_k_distinct(s,k))
