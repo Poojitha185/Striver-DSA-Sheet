@@ -1,3 +1,6 @@
+#Time Complexity: O(N), where N represents the string length. Pointer right processes every character once, while pointer left moves only forward.
+#Space Complexity: O(N), because the frequency map may contain up to N distinct characters for a general character set. A fixed-size character set reduces auxiliary space to O(1).
+
 def longest_substring_at_most_k_distinct(s,k):
         max_length = 0
         l,r = 0,0
