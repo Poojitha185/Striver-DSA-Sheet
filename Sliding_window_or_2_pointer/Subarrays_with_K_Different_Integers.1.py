@@ -9,6 +9,9 @@
 #Once the window contains at most limit distinct integers, every subarray ending at right and starting from any index between left and right is valid. Therefore, right - left + 1 is added to count. Finally, the answer is returned as countAtMost(k) - countAtMost(k - 1).
 
 def at_most_k_distinct(arr, k):
+        if k <= 0:
+            return 0
+ 
         count = 0
         l = 0
         r = 0
