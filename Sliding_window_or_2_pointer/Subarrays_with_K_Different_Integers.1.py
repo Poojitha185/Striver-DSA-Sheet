@@ -1,3 +1,6 @@
+#Time Complexity: O(N), where N is the size of the array. The helper function countAtMost runs in O(N), and it is called twice. So, the overall time complexity is O(2N), which simplifies to O(N).
+#Space Complexity: O(N), because the frequency map may store distinct values from the current window
+
 def at_most_k_distinct(arr, k):
         count = 0
         l = 0
