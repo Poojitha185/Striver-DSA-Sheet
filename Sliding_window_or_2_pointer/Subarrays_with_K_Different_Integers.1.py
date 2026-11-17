@@ -11,7 +11,6 @@
 def at_most_k_distinct(arr, k):
         if k <= 0:
             return 0
- 
         count = 0
         l = 0
         r = 0
