@@ -7,8 +7,7 @@
 #Stop when all children are satisfied or all cookies are used, then return the satisfied count.
 
 def assign_cookies(g,s):
-    m=len(g)
-    n=len(s)
+    m,n=len(g),len(s)
     g.sort() 
     s.sort()
     l,r=0,0
