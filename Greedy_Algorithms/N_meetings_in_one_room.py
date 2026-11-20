@@ -1,6 +1,12 @@
 #Time Complexity: O(n log n) because the meetings are sorted by their ending time.
 #Space Complexity: O(n) because an extra list of meetings is used for sorting.
 
+#Store every meeting as a pair of start time and end time. This is done so that each meeting can be sorted and processed as one unit.
+#Sort all meetings by their end time. This is the main greedy step because the meeting that ends earlier keeps the room available for more future meetings.
+#Keep a variable lastEndTime to remember when the last selected meeting ended. This helps check whether the next meeting can fit after it.
+#Go through the sorted meetings one by one. If the current meeting starts strictly after lastEndTime, select it because it does not overlap with the previous selected meeting.
+#Every time a meeting is selected, increase the answer and update lastEndTime to the current meeting’s end time. This prepares the room availability check for the next meetings.
+
 class data:                   
     def __init__(self,start,end,pos):  
         self.start=start        
