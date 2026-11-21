@@ -7,6 +7,8 @@ def can_jump(arr):
         if i>max_jump:
             return False
         max_jump=max(max_jump,i+arr[i])
+        if max_jump>=len(arr)-1:
+            return True
     return True
 arr=list(map(int,input("Enter the list of maximum jump lengths: ").split(",")))
 print(can_jump(arr))
