@@ -1,3 +1,6 @@
+#Time Complexity: O(n), because the array is scanned once.
+#Space Complexity: O(1), because constant space is used.
+
 def can_jump(arr):
     max_jump=0
     for i in range(len(arr)):
