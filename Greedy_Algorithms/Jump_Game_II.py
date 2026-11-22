@@ -1,3 +1,12 @@
+#Time Complexity: Exponential — \(O(2^n)\) upper bound
+   #- At every index, you can make multiple recursive calls.
+   #- Each call explores all possible jump lengths.
+   #- The same index can be visited through different paths, so subproblems are repeated.
+#A tighter general bound for this recursion is \(O(2^n)\).
+#Space Complexity: \(O(n)\)
+   #- Recursion stack stores function calls.
+   #- In the worst case, recursion can go up to n levels (when jumping one position at a time).
+
 def minimum(ind,jumps,arr):
     n=len(arr)
     mini=float('inf')
